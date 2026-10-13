@@ -1,0 +1,266 @@
+date,category,merchant,amount,payment_method
+2026-01-01,Housing,Apartment Rent,1100.0,Bank transfer
+2026-01-01,Transport,Metro & Rides,13.01,Cash
+2026-01-01,Dining,Corner Cafe,27.96,Cash
+2026-01-05,Utilities,City Utilities,129.02,Bank transfer
+2026-01-05,Shopping,Everyday Store,63.71,Credit card
+2026-01-05,Transport,Metro & Rides,12.98,Cash
+2026-01-06,Dining,Corner Cafe,25.27,Credit card
+2026-01-06,Entertainment,Cinema & Events,35.52,Credit card
+2026-01-07,Dining,Corner Cafe,34.16,Debit card
+2026-01-07,Transport,Metro & Rides,21.61,Debit card
+2026-01-07,Groceries,Fresh Market,16.68,Cash
+2026-01-09,Entertainment,Cinema & Events,44.96,Credit card
+2026-01-11,Transport,Metro & Rides,13.65,Cash
+2026-01-11,Dining,Corner Cafe,5.37,Debit card
+2026-01-12,Transport,Metro & Rides,18.01,Credit card
+2026-01-12,Transport,Metro & Rides,12.63,Credit card
+2026-01-15,Transport,Metro & Rides,10.52,Cash
+2026-01-15,Entertainment,Cinema & Events,43.6,Debit card
+2026-01-16,Transport,Metro & Rides,18.84,Cash
+2026-01-17,Shopping,Everyday Store,78.78,Cash
+2026-01-17,Dining,Corner Cafe,20.89,Cash
+2026-01-17,Shopping,Everyday Store,86.36,Cash
+2026-01-18,Shopping,Everyday Store,77.72,Credit card
+2026-01-18,Groceries,Fresh Market,73.46,Credit card
+2026-01-19,Entertainment,Cinema & Events,28.76,Debit card
+2026-01-19,Entertainment,Cinema & Events,33.99,Credit card
+2026-01-21,Transport,Metro & Rides,18.97,Credit card
+2026-01-22,Entertainment,Cinema & Events,39.48,Cash
+2026-01-22,Entertainment,Cinema & Events,23.63,Cash
+2026-01-22,Groceries,Fresh Market,75.52,Credit card
+2026-01-23,Groceries,Fresh Market,34.0,Debit card
+2026-01-23,Shopping,Everyday Store,85.16,Credit card
+2026-01-24,Transport,Metro & Rides,7.11,Credit card
+2026-01-24,Dining,Corner Cafe,8.7,Debit card
+2026-01-24,Dining,Corner Cafe,35.14,Credit card
+2026-01-26,Entertainment,Cinema & Events,15.39,Credit card
+2026-01-26,Shopping,Everyday Store,73.6,Cash
+2026-01-26,Transport,Metro & Rides,17.74,Debit card
+2026-01-28,Dining,Corner Cafe,28.91,Credit card
+2026-01-29,Entertainment,Cinema & Events,14.05,Credit card
+2026-01-29,Groceries,Fresh Market,63.09,Cash
+2026-01-29,Groceries,Fresh Market,38.33,Debit card
+2026-01-31,Groceries,Fresh Market,55.43,Credit card
+2026-01-31,Dining,Corner Cafe,15.59,Debit card
+2026-02-01,Housing,Apartment Rent,1100.0,Bank transfer
+2026-02-01,Transport,Metro & Rides,13.11,Credit card
+2026-02-01,Groceries,Fresh Market,34.09,Debit card
+2026-02-02,Groceries,Fresh Market,16.07,Cash
+2026-02-02,Entertainment,Cinema & Events,27.99,Debit card
+2026-02-03,Entertainment,Cinema & Events,21.15,Debit card
+2026-02-03,Transport,Metro & Rides,13.91,Debit card
+2026-02-05,Utilities,City Utilities,118.68,Bank transfer
+2026-02-05,Entertainment,Cinema & Events,25.53,Debit card
+2026-02-05,Groceries,Fresh Market,47.95,Cash
+2026-02-08,Groceries,Fresh Market,21.03,Credit card
+2026-02-08,Dining,Corner Cafe,28.25,Cash
+2026-02-08,Shopping,Everyday Store,64.31,Credit card
+2026-02-09,Dining,Corner Cafe,28.53,Cash
+2026-02-09,Entertainment,Cinema & Events,12.75,Credit card
+2026-02-10,Groceries,Fresh Market,71.9,Cash
+2026-02-11,Groceries,Fresh Market,46.89,Cash
+2026-02-11,Shopping,Everyday Store,52.64,Debit card
+2026-02-11,Dining,Corner Cafe,33.42,Cash
+2026-02-12,Transport,Metro & Rides,10.45,Cash
+2026-02-12,Transport,Metro & Rides,17.99,Credit card
+2026-02-13,Shopping,Everyday Store,17.42,Credit card
+2026-02-13,Groceries,Fresh Market,39.6,Credit card
+2026-02-13,Dining,Corner Cafe,14.31,Credit card
+2026-02-14,Entertainment,Cinema & Events,13.6,Cash
+2026-02-16,Entertainment,Cinema & Events,32.73,Credit card
+2026-02-16,Entertainment,Cinema & Events,26.13,Cash
+2026-02-17,Dining,Corner Cafe,25.49,Cash
+2026-02-17,Dining,Corner Cafe,37.14,Credit card
+2026-02-17,Groceries,Fresh Market,38.85,Cash
+2026-02-18,Shopping,Everyday Store,60.38,Credit card
+2026-02-18,Entertainment,Cinema & Events,34.29,Debit card
+2026-02-18,Groceries,Fresh Market,66.76,Cash
+2026-02-19,Groceries,Fresh Market,56.45,Credit card
+2026-02-19,Transport,Metro & Rides,13.55,Credit card
+2026-02-19,Dining,Corner Cafe,15.17,Credit card
+2026-02-22,Transport,Metro & Rides,12.39,Cash
+2026-02-22,Groceries,Fresh Market,21.34,Debit card
+2026-02-22,Entertainment,Cinema & Events,41.61,Cash
+2026-02-24,Dining,Corner Cafe,19.95,Credit card
+2026-02-25,Entertainment,Cinema & Events,30.23,Debit card
+2026-02-25,Dining,Corner Cafe,27.49,Credit card
+2026-02-25,Transport,Metro & Rides,13.84,Cash
+2026-02-26,Shopping,Everyday Store,72.42,Credit card
+2026-02-26,Groceries,Fresh Market,55.79,Cash
+2026-02-27,Dining,Corner Cafe,33.13,Debit card
+2026-02-27,Transport,Metro & Rides,20.12,Debit card
+2026-02-27,Groceries,Fresh Market,64.23,Credit card
+2026-03-01,Housing,Apartment Rent,1100.0,Bank transfer
+2026-03-01,Groceries,Fresh Market,31.47,Cash
+2026-03-01,Entertainment,Cinema & Events,23.8,Credit card
+2026-03-02,Shopping,Everyday Store,45.53,Cash
+2026-03-02,Dining,Corner Cafe,26.86,Credit card
+2026-03-02,Dining,Corner Cafe,11.21,Credit card
+2026-03-03,Shopping,Everyday Store,27.34,Cash
+2026-03-03,Dining,Corner Cafe,9.43,Debit card
+2026-03-05,Utilities,City Utilities,108.64,Bank transfer
+2026-03-05,Shopping,Everyday Store,93.0,Debit card
+2026-03-05,Groceries,Fresh Market,24.61,Credit card
+2026-03-05,Shopping,Everyday Store,86.49,Cash
+2026-03-06,Entertainment,Cinema & Events,16.29,Cash
+2026-03-06,Shopping,Everyday Store,59.16,Credit card
+2026-03-06,Shopping,Everyday Store,43.42,Debit card
+2026-03-07,Entertainment,Cinema & Events,10.26,Credit card
+2026-03-07,Dining,Corner Cafe,28.5,Credit card
+2026-03-07,Shopping,Everyday Store,89.13,Cash
+2026-03-08,Groceries,Fresh Market,83.48,Cash
+2026-03-08,Shopping,Everyday Store,71.39,Debit card
+2026-03-09,Groceries,Fresh Market,24.95,Cash
+2026-03-09,Entertainment,Cinema & Events,44.43,Credit card
+2026-03-09,Shopping,Everyday Store,56.36,Cash
+2026-03-11,Shopping,Everyday Store,65.45,Cash
+2026-03-13,Entertainment,Cinema & Events,11.85,Credit card
+2026-03-13,Entertainment,Cinema & Events,37.25,Credit card
+2026-03-14,Entertainment,Cinema & Events,41.71,Cash
+2026-03-14,Transport,Metro & Rides,11.0,Credit card
+2026-03-14,Transport,Metro & Rides,6.18,Cash
+2026-03-15,Entertainment,Cinema & Events,19.12,Cash
+2026-03-15,Shopping,Everyday Store,61.25,Cash
+2026-03-17,Entertainment,Cinema & Events,10.96,Credit card
+2026-03-17,Groceries,Fresh Market,23.88,Debit card
+2026-03-18,Transport,Metro & Rides,5.52,Credit card
+2026-03-18,Transport,Metro & Rides,19.3,Debit card
+2026-03-20,Entertainment,Cinema & Events,35.86,Cash
+2026-03-21,Transport,Metro & Rides,18.35,Credit card
+2026-03-21,Dining,Corner Cafe,21.0,Cash
+2026-03-21,Groceries,Fresh Market,39.0,Debit card
+2026-03-22,Entertainment,Cinema & Events,42.69,Debit card
+2026-03-23,Shopping,Everyday Store,76.63,Debit card
+2026-03-23,Shopping,Everyday Store,73.08,Debit card
+2026-03-23,Dining,Corner Cafe,24.07,Credit card
+2026-03-25,Groceries,Fresh Market,18.68,Credit card
+2026-03-25,Shopping,Everyday Store,53.1,Credit card
+2026-03-26,Shopping,Everyday Store,69.68,Credit card
+2026-03-27,Transport,Metro & Rides,5.76,Credit card
+2026-03-27,Groceries,Fresh Market,35.22,Credit card
+2026-03-27,Shopping,Everyday Store,69.28,Cash
+2026-03-30,Shopping,Everyday Store,63.84,Cash
+2026-03-30,Transport,Metro & Rides,9.36,Credit card
+2026-04-01,Housing,Apartment Rent,1100.0,Bank transfer
+2026-04-01,Entertainment,Cinema & Events,23.69,Cash
+2026-04-01,Dining,Corner Cafe,29.23,Cash
+2026-04-02,Entertainment,Cinema & Events,21.81,Cash
+2026-04-03,Transport,Metro & Rides,13.4,Cash
+2026-04-05,Utilities,City Utilities,149.9,Bank transfer
+2026-04-06,Groceries,Fresh Market,51.77,Cash
+2026-04-06,Shopping,Everyday Store,43.12,Cash
+2026-04-06,Transport,Metro & Rides,7.79,Debit card
+2026-04-10,Entertainment,Cinema & Events,32.33,Cash
+2026-04-13,Shopping,Everyday Store,67.51,Cash
+2026-04-14,Groceries,Fresh Market,63.7,Credit card
+2026-04-15,Shopping,Everyday Store,67.84,Debit card
+2026-04-15,Shopping,Everyday Store,88.82,Credit card
+2026-04-16,Transport,Metro & Rides,7.89,Debit card
+2026-04-16,Transport,Metro & Rides,17.77,Credit card
+2026-04-16,Shopping,Everyday Store,41.61,Debit card
+2026-04-17,Transport,Metro & Rides,6.38,Debit card
+2026-04-17,Shopping,Everyday Store,93.35,Debit card
+2026-04-18,Dining,Corner Cafe,26.3,Debit card
+2026-04-18,Dining,Corner Cafe,22.84,Credit card
+2026-04-18,Dining,Corner Cafe,25.26,Debit card
+2026-04-19,Transport,Metro & Rides,4.96,Debit card
+2026-04-19,Groceries,Fresh Market,54.99,Credit card
+2026-04-19,Shopping,Everyday Store,16.5,Credit card
+2026-04-20,Groceries,Fresh Market,80.3,Cash
+2026-04-21,Transport,Metro & Rides,5.88,Credit card
+2026-04-21,Shopping,Everyday Store,60.97,Cash
+2026-04-21,Shopping,Everyday Store,53.25,Credit card
+2026-04-23,Groceries,Fresh Market,41.91,Cash
+2026-04-24,Groceries,Fresh Market,54.71,Credit card
+2026-04-24,Transport,Metro & Rides,15.95,Credit card
+2026-04-24,Groceries,Fresh Market,59.26,Cash
+2026-04-26,Entertainment,Cinema & Events,39.87,Credit card
+2026-04-26,Groceries,Fresh Market,73.88,Credit card
+2026-04-27,Dining,Corner Cafe,23.3,Credit card
+2026-04-28,Transport,Metro & Rides,16.22,Debit card
+2026-04-29,Shopping,Everyday Store,21.79,Cash
+2026-04-29,Shopping,Everyday Store,73.83,Debit card
+2026-05-01,Housing,Apartment Rent,1100.0,Bank transfer
+2026-05-01,Groceries,Fresh Market,65.38,Cash
+2026-05-02,Shopping,Everyday Store,46.1,Cash
+2026-05-03,Shopping,Everyday Store,57.72,Credit card
+2026-05-03,Groceries,Fresh Market,17.59,Debit card
+2026-05-04,Groceries,Fresh Market,43.39,Debit card
+2026-05-04,Entertainment,Cinema & Events,26.04,Cash
+2026-05-05,Utilities,City Utilities,152.21,Bank transfer
+2026-05-05,Entertainment,Cinema & Events,18.15,Debit card
+2026-05-07,Shopping,Everyday Store,67.31,Credit card
+2026-05-09,Dining,Corner Cafe,5.47,Cash
+2026-05-11,Groceries,Fresh Market,46.93,Debit card
+2026-05-11,Entertainment,Cinema & Events,12.24,Debit card
+2026-05-13,Entertainment,Cinema & Events,37.97,Debit card
+2026-05-13,Groceries,Fresh Market,71.31,Credit card
+2026-05-13,Transport,Metro & Rides,18.42,Cash
+2026-05-14,Transport,Metro & Rides,5.3,Cash
+2026-05-14,Entertainment,Cinema & Events,29.11,Credit card
+2026-05-14,Dining,Corner Cafe,30.22,Cash
+2026-05-15,Transport,Metro & Rides,4.2,Credit card
+2026-05-16,Shopping,Everyday Store,28.44,Credit card
+2026-05-17,Shopping,Everyday Store,34.49,Cash
+2026-05-19,Groceries,Fresh Market,70.37,Cash
+2026-05-20,Dining,Corner Cafe,5.52,Credit card
+2026-05-20,Groceries,Fresh Market,15.44,Debit card
+2026-05-20,Groceries,Fresh Market,64.47,Cash
+2026-05-21,Shopping,Everyday Store,70.48,Credit card
+2026-05-21,Dining,Corner Cafe,11.8,Cash
+2026-05-22,Entertainment,Cinema & Events,25.76,Debit card
+2026-05-22,Dining,Corner Cafe,25.15,Debit card
+2026-05-23,Shopping,Everyday Store,63.96,Debit card
+2026-05-24,Transport,Metro & Rides,10.96,Cash
+2026-05-24,Dining,Corner Cafe,11.33,Cash
+2026-05-26,Entertainment,Cinema & Events,27.76,Credit card
+2026-05-26,Dining,Corner Cafe,14.12,Debit card
+2026-05-28,Shopping,Everyday Store,54.8,Debit card
+2026-05-31,Transport,Metro & Rides,6.98,Credit card
+2026-05-31,Transport,Metro & Rides,14.72,Credit card
+2026-06-01,Housing,Apartment Rent,1100.0,Bank transfer
+2026-06-04,Dining,Corner Cafe,30.92,Credit card
+2026-06-05,Utilities,City Utilities,130.89,Bank transfer
+2026-06-06,Shopping,Everyday Store,62.42,Credit card
+2026-06-07,Dining,Corner Cafe,29.65,Credit card
+2026-06-07,Dining,Corner Cafe,30.71,Credit card
+2026-06-07,Dining,Corner Cafe,8.24,Cash
+2026-06-08,Dining,Corner Cafe,17.39,Debit card
+2026-06-08,Groceries,Fresh Market,47.97,Credit card
+2026-06-08,Groceries,Fresh Market,77.33,Debit card
+2026-06-09,Entertainment,Cinema & Events,25.92,Credit card
+2026-06-10,Dining,Corner Cafe,20.11,Debit card
+2026-06-10,Transport,Metro & Rides,21.54,Debit card
+2026-06-11,Dining,Corner Cafe,6.06,Cash
+2026-06-11,Groceries,Fresh Market,34.64,Debit card
+2026-06-12,Shopping,Everyday Store,48.46,Credit card
+2026-06-12,Dining,Corner Cafe,34.25,Cash
+2026-06-12,Dining,Corner Cafe,31.06,Cash
+2026-06-13,Entertainment,Cinema & Events,43.95,Debit card
+2026-06-15,Entertainment,Cinema & Events,27.12,Debit card
+2026-06-15,Entertainment,Cinema & Events,26.57,Credit card
+2026-06-15,Transport,Metro & Rides,3.28,Credit card
+2026-06-16,Dining,Corner Cafe,15.8,Cash
+2026-06-17,Entertainment,Cinema & Events,43.12,Cash
+2026-06-19,Groceries,Fresh Market,17.8,Credit card
+2026-06-19,Entertainment,Cinema & Events,11.18,Cash
+2026-06-19,Shopping,Everyday Store,53.34,Cash
+2026-06-21,Shopping,Everyday Store,34.24,Cash
+2026-06-21,Groceries,Fresh Market,63.52,Credit card
+2026-06-21,Dining,Corner Cafe,9.38,Credit card
+2026-06-22,Groceries,Fresh Market,16.12,Cash
+2026-06-23,Dining,Corner Cafe,28.21,Cash
+2026-06-23,Entertainment,Cinema & Events,10.85,Credit card
+2026-06-24,Dining,Corner Cafe,33.85,Credit card
+2026-06-24,Dining,Corner Cafe,31.07,Credit card
+2026-06-24,Shopping,Everyday Store,71.31,Debit card
+2026-06-26,Transport,Metro & Rides,13.09,Credit card
+2026-06-26,Shopping,Everyday Store,75.23,Cash
+2026-06-26,Entertainment,Cinema & Events,28.99,Debit card
+2026-06-28,Groceries,Fresh Market,51.03,Cash
+2026-06-28,Transport,Metro & Rides,19.87,Debit card
+2026-06-29,Transport,Metro & Rides,11.84,Debit card
+2026-06-29,Transport,Metro & Rides,9.96,Cash
+2026-06-29,Entertainment,Cinema & Events,34.67,Cash
+2026-06-30,Dining,Corner Cafe,37.38,Debit card
