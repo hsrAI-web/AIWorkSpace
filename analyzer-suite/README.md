@@ -2,6 +2,8 @@
 
 Includes Path A (Stock Portfolio), Path B (Ad Campaigns), and Path C (Personal Expenses). Choose an app in the sidebar. Each includes synthetic sample data, CSV upload, shared filters, charts, and CSV exports. No accounts or API keys required.
 
+Read the [complete project guide](docs/PROJECT_GUIDE.md) for features, calculations, testing, design changes, troubleshooting, and publication details.
+
 ## Run
 
 Install Python 3.11 or later. Open a terminal in this folder:
