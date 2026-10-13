@@ -3,7 +3,14 @@ developmentMode = false
 
 [theme]
 primaryColor = "#0D9488"
-backgroundColor = "#F8FAFC"
-secondaryBackgroundColor = "#E8EEF4"
+base = "light"
+backgroundColor = "#EDF4FF"
+secondaryBackgroundColor = "#E1EDF6"
 textColor = "#172033"
 font = "sans serif"
+
+[theme.sidebar]
+backgroundColor = "#142B49"
+secondaryBackgroundColor = "#244760"
+textColor = "#F1F5F9"
+primaryColor = "#5EEAD4"

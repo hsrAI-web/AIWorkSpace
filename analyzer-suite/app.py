@@ -4,6 +4,41 @@ import streamlit as st
 
 ROOT = Path(__file__).parent
 st.set_page_config(page_title="Insight Studio", page_icon="📊", layout="wide")
+st.markdown("""
+<style>
+.stApp { background: linear-gradient(135deg, #edf4ff 0%, #f0fdfa 55%, #faf5ff 100%); }
+[data-testid="stSidebar"] { background: linear-gradient(170deg, #142b49, #164e63); }
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] label,
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"],
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p { color: #f1f5f9; }
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] { color: #cbd5e1; }
+[data-testid="stMetric"] {
+    background: rgba(255,255,255,.94);
+    border: 1px solid #dbe7f3;
+    border-top: 4px solid #0d9488;
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: 0 6px 24px rgba(20,43,73,.06);
+}
+[data-testid="stMetricValue"] { color: #163653; font-size: clamp(1.05rem, 2.2vw, 2rem); }
+[data-testid="stHorizontalBlock"] > div:nth-child(2) [data-testid="stMetric"] { border-top-color: #6366f1; }
+[data-testid="stHorizontalBlock"] > div:nth-child(3) [data-testid="stMetric"] { border-top-color: #f59e0b; }
+[data-testid="stHorizontalBlock"] > div:nth-child(4) [data-testid="stMetric"] { border-top-color: #ec4899; }
+[data-testid="stVegaLiteChart"], [data-testid="stDataFrame"] {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 12px;
+}
+.stTabs [data-baseweb="tab-list"] { gap: 12px; background: #e1edf6; padding: 6px; border-radius: 12px; }
+.stTabs [data-baseweb="tab"] { border-radius: 8px; padding: 10px 18px; }
+.stTabs [aria-selected="true"] { background: #ffffff; color: #0f766e; }
+h1 { color: #143653; letter-spacing: -.035em; }
+</style>
+""", unsafe_allow_html=True)
 st.sidebar.title("Insight Studio")
 choice = st.sidebar.radio("Choose an app", ["Stock Portfolio", "Ad Campaigns", "Personal Expenses"])
 st.sidebar.caption("Three CSV-powered apps · sample data included")
