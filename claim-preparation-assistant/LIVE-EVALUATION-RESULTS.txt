@@ -1,0 +1,39 @@
+LIVE ANSWER EVALUATION
+Model: Qwen/Qwen3-30B-A3B-Instruct-2507
+Automatic counts: {'generated': 12, 'grounding_passed': 11, 'grounding_blocked': 1, 'safe_abstentions': 1, 'total': 15}
+Per-question retrieval/generation/review timing: median 9.92s; p95 19.57s
+Total suite: 175.43s
+
+A model grounding pass is not a human faithfulness score.
+Not measured until human claim-by-claim review is completed.
+
+Case 01: generated_checked (16.00s)
+  Model review: All statements in the answer are directly supported by the cited passage (section-006.1). Each cited text matches the corresponding statement in content, conditionality, and scope. The conditional 'only in accident cases' for MLC/FIR is preserved. The requirement for KYC documents above INR 1 lakh is correctly stated. No unsupported claims, invented conditions, or misleading omissions are present. The answer accurately reflects the source material without overreaching or misrepresenting the requirements.
+Case 02: generated_checked (9.92s)
+  Model review: 
+Case 03: invalid_answer (17.01s)
+  Draft withheld: Statement 1: evidence quote is not present in the cited passage.
+Case 04: generated_checked (9.91s)
+  Model review: 
+Case 05: generated_checked (14.12s)
+  Model review: The cited passage 'section-006.1' explicitly states that an MLC or FIR copy is required 'in Accident cases only', which directly supports the statement in the answer that 'In accident cases, an MLC or FIR copy is required.' The condition 'in accident cases only' is preserved, and no additional requirements or exceptions are misrepresented. The answer correctly reflects the source without inventing any new obligations, dates, or approval decisions. No misleading omissions are present, as the question specifically asks about FIR requirement, and the answer accurately limits the requirement to accident cases, consistent with the source. The evidence quote is exact and properly cited.
+Case 06: generated_checked (11.79s)
+  Model review: 
+Case 07: invalid_answer (19.57s)
+  Draft withheld: Statement 0: evidence quote is not present in the cited passage. Statement 2: evidence quote is not present in the cited passage.
+Case 08: generated_checked (9.85s)
+  Model review: 
+Case 09: generated_checked (9.81s)
+  Model review: 
+Case 10: generated_checked (8.93s)
+  Model review: 
+Case 11: generated_checked (8.98s)
+  Model review: 
+Case 12: generated_checked (9.67s)
+  Model review: 
+Case 13: generated_checked (12.80s)
+  Model review: 
+Case 14: grounding_failed (15.79s)
+  Model review: The statement 'KYC documents are required for all claims above Rs 1 lakh as per AML guidelines' is unsupported because the cited passage ('section-006.1') states: 'p. KYC documents (in all claims above Rs 1 lakh) of the Policyholder as per AML guidelines' — this indicates that KYC documents are required for claims above Rs 1 lakh, not that they are 'definitely unnecessary' as claimed in the user's question. The answer incorrectly asserts that KYC is unnecessary for a claim of exactly INR 100,000, but the source clearly requires KYC documents for claims above Rs 1 lakh, which includes any claim at or above that threshold. Since the claim is exactly INR 100,000, it falls under the 'above Rs 1 lakh' category, and thus KYC is required. The answer misrepresents the requirement by implying KYC is not needed, which contradicts the source. Therefore, the statement is factually unsupported and materially misleading.
+  Draft withheld: the grounding check found unsupported or altered requirements. See source passages.
+Case 15: insufficient_evidence (1.08s)

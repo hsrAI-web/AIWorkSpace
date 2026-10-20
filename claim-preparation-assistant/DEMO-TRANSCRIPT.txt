@@ -1,0 +1,23 @@
+NARRATED APPLICATION WALKTHROUGH
+Actual UI screenshots; synthetic narration. Not an uninterrupted live screen capture.
+
+Health claim preparation assistant
+This is an educational health claim preparation assistant built for the Gen Academy Week Two RAG project. It helps a policyholder understand reimbursement paperwork from the HDFC ERGO my Optima Secure claim manual and reviewed claim form passages. It organises reported document names and cites the sources. It cannot decide coverage, approval, payout, or current claim status.
+
+Start with a fictional reimbursement example
+The interface runs locally in Streamlit. Here we confirm the fictional product version and choose reimbursement. The user reports having a discharge summary and hospital bill. Only document names are needed. The provider key remains in local session memory and is omitted from exports. Evidence mode works without a generation API call, after the local embedding models are available.
+
+Reported possession is separate from applicability
+The checklist separates whether an item is required from whether the user says they have it. Reporting a hospital bill does not establish possession of payment receipts. Conditional items, such as accident records, implant evidence and non-network hospital documents, require context. The assistant does not certify that a submission is complete. The exact source requirement can be opened for inspection.
+
+Inspect the retrieved source
+The corpus consists of two official PDFs, with page references and file hashes. Only reviewed form passages enter retrieval. The workflow uses local dense embeddings and BM25 keyword search, combines their rankings, and reranks candidates with a cross encoder. LangGraph controls clarification, checklist preparation, retrieval, answer generation and validation. Codex assisted with implementation, debugging, tests, and this documentation.
+
+Approval and live status are outside the corpus
+This question asks whether a claim will definitely be approved and what its current status is. The final scope guard returns insufficient evidence without contacting the generation model. These documents contain no live claim data. The interface still provides source passages, but does not invent an approval decision or a status. This demonstrates the explicit I do not know path.
+
+Evaluate failures as well as successful answers
+The last completed suite contains fifteen fictional questions. 11 answers passed the automated model grounding check, and 1 returned insufficient evidence. Other drafts were withheld or failed. These counts are not an accuracy score. Validation checks citation IDs and exact quotations, then audits factual support and conditions. Source review remains necessary, including factual assertions inside follow-up questions.
+
+What the comparison taught us
+The same fourteen evidence-bearing queries compare fixed, recursive, section-aware and semantic chunks. Reranked recursive retrieval found the expected text markers on thirteen of fourteen queries; section-aware and semantic reranking found twelve. Reranking did not always help. Different passage sizes and the small development set limit this comparison. Full results, source review, prompts and reproducible setup instructions accompany the code. Independent human review and unseen-query testing remain next steps before real use.

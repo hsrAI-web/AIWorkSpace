@@ -1,0 +1,49 @@
+GEN ACADEMY WEEK 2 SUBMISSION MATERIALS
+20 October 2026
+
+PROJECT
+Health claim preparation assistant
+Track: Python, LangChain text splitters and LangGraph.
+Use case: financial document intelligence adapted to insurance reimbursement
+submission preparation, with a 15-question evaluation and chunking comparison.
+
+GOOGLE DOC
+https://docs.google.com/document/d/1O3GdeDQ6r6Zpw63qKrIfNl6cQUelgxYJBSEyi5-Aq9c/edit
+
+NARRATED WALKTHROUGH — 3 MINUTES 26 SECONDS
+https://drive.google.com/file/d/1NydeoMkXbXs3NXqpBGxRA_8CYo4d3qof/view
+Actual application screenshots with synthetic narration, rather than an
+uninterrupted live recording. DEMO-TRANSCRIPT.txt preserves the narration.
+If the course expects a personal live presentation, use this walkthrough and
+transcript to record your own demonstration before submitting.
+
+CODE DESTINATION
+https://github.com/hsrAI-web/AIWorkSpace
+Project directory: claim-preparation-assistant
+The repository is private. Reviewers need authorised access or a separate ZIP.
+No visibility or sharing permissions have been changed.
+
+LOCAL ZIP
+claim-preparation-assistant-submission.zip in the parent outputs directory.
+The ZIP contains code, setup instructions, source PDFs, prepared chunks,
+evaluation evidence, tests, prompts and the project report. Model weights,
+virtual environments and API credentials are excluded. The video is separate.
+
+MEASURED STATUS
+26 unit tests and four interface checks pass.
+Final full live suite: 11 automated grounding passes, 3 withheld drafts,
+1 safe scope abstention. Assistant source review found further quality issues
+in some passing drafts; this is not a measured human faithfulness score.
+The report includes failures and does not claim production readiness.
+
+SUBMISSION FORM
+https://forms.gle/Cxad8AnPHBB4sNzw5
+The handout permits late submission. The October 18, 2026 Builder of the Week
+deadline has passed. The course form has not been submitted.
+
+BEFORE YOU SUBMIT
+Review the report, video and documented limitations. Complete independent human
+review if you want to claim a measured faithfulness score. Ensure course
+reviewers can open the document, video and code using your chosen sharing
+arrangements; the files currently retain private access. Submit the reviewed
+materials through the course form. No real insurance claim is being submitted.

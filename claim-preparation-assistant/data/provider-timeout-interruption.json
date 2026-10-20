@@ -1,0 +1,2030 @@
+{
+  "status": "running",
+  "signature": "ec5ef79a179d72d7a90df7ba3b9db88db4746bdf50939d054b902dacd42d930f",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "cases": [
+    {
+      "case": "01",
+      "question": "What documents do I need for hospitalisation reimbursement?",
+      "expectation": "Core requirements cited; conditional items distinguished.",
+      "seconds": 46.58234980003908,
+      "result": {
+        "question": "What documents do I need for hospitalisation reimbursement?",
+        "uin": "HDFHLIP25041V062425",
+        "claim_type": "reimbursement",
+        "documents_reported": [],
+        "checklist": {
+          "items": [
+            {
+              "id": "form",
+              "requirement": "Completed claim form",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                1
+              ],
+              "section": "1.6(a)",
+              "source_text": "a. Duly Completed claim form,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "identity",
+              "requirement": "Photo ID and age proof",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(b)",
+              "source_text": "b. Photo ID and Age Proof,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "hospital_registration",
+              "requirement": "Non-network hospital registration/facility evidence",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(c)",
+              "source_text": "c. Copy of the Hospital’s Registration Certificate/Hospital Registration number in case of Hospitalization in any non- Network Provider of the Company or certificate from Hospital authorities providing facilities available including number of beds,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "discharge",
+              "requirement": "Discharge/day-care/transfer summary",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(d)",
+              "source_text": "d. Discharge Card / Day Care Summary / Transfer Summary,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "bill",
+              "requirement": "Final hospital bill",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(e)",
+              "source_text": "e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "receipt",
+              "requirement": "Hospital deposit/final payment receipts",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(e)",
+              "source_text": "e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "implant",
+              "requirement": "Implant invoice, payment receipt and sticker",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(f)",
+              "source_text": "f. Invoice with payment receipt and implant stickers for all implants used during Surgeries e.g. lens sticker and invoice in cataract Surgery, stent invoice and sticker in Angioplasty Surgery,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "consultation",
+              "requirement": "Consultation and treatment history papers",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(g)",
+              "source_text": "g. All previous consultation papers indicating history and treatment details for current Illness and advice for current Hospitalization,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "diagnostics",
+              "requirement": "Diagnostic reports, prescription, bill and receipt",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(h)",
+              "source_text": "h. All diagnostic reports (including imaging and laboratory) along with prescription by Medical Practitioner and invoice / bill with receipt from diagnostic centre,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "pharmacy",
+              "requirement": "Pharmacy bills and prescriptions",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(i)",
+              "source_text": "i. All medicine / pharmacy bills along with prescription by Medical Practitioner,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "accident",
+              "requirement": "Accident MLC/FIR evidence",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(j)",
+              "source_text": "j. MLC / FIR Copy – in Accident cases only,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "accident_history",
+              "requirement": "Treating-doctor intoxication history certification",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(k)",
+              "source_text": "k. History of alcohol consumption or any intoxication certified by first treating doctor in case of Accident cases,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "death",
+              "requirement": "Death summary and certificate",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(l)",
+              "source_text": "l. Copy of Death Summary and copy of Death Certificate (in death claims only),",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "indoor",
+              "requirement": "Indoor case papers and nursing sheet, if requested",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(m)",
+              "source_text": "m. Copy of indoor case papers with nursing sheet detailing medical history of the Insured Person, treatment details, and patient’s progress (to be submitted wherever required by the Company).",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "vaccination",
+              "requirement": "Vaccination invoice and receipt",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(n)",
+              "source_text": "n. Invoice for vaccination and payment receipt,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "ambulance",
+              "requirement": "Ambulance invoice and prescribed loss details",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(o)",
+              "source_text": "o. Original invoices for the expenses incurred towards ambulance facility along with details of loss in the Company’s prescribed format,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "kyc",
+              "requirement": "KYC documentation",
+              "applicability": "confirm_with_insurer",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(p)",
+              "source_text": "p. KYC documents (in all claims above Rs 1 lakh) of the Policyholderas per AML guidelines,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "bank",
+              "requirement": "NEFT form and cancelled cheque",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(q)",
+              "source_text": "q. Duly filled NEFT form with cancelled blank cheque (with IFSC code, A/C number, and name mentioned on cheque leaf),",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "legal_heir",
+              "requirement": "Legal heir/succession certificate where applicable",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(r)",
+              "source_text": "r. Legal heir/succession certificate, wherever applicable,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            }
+          ],
+          "questions": [
+            "Confirm whether this applies: Non-network hospital registration/facility evidence.",
+            "Confirm whether this applies: Implant invoice, payment receipt and sticker.",
+            "Confirm whether this applies: Accident MLC/FIR evidence.",
+            "Confirm whether this applies: Treating-doctor intoxication history certification.",
+            "Confirm whether this applies: Death summary and certificate.",
+            "Confirm whether this applies: Indoor case papers and nursing sheet, if requested.",
+            "Confirm whether this applies: Vaccination invoice and receipt.",
+            "Confirm whether this applies: Ambulance invoice and prescribed loss details.",
+            "Confirm whether this applies: Legal heir/succession certificate where applicable.",
+            "Confirm KYC requirements with the insurer if the amount is not above INR 100,000; no exemption is inferred."
+          ],
+          "unmatched_reported": [],
+          "readiness": "not_assessed",
+          "note": "Not reported does not mean absent. Reported present does not verify completeness, authenticity, or readiness. Additional insurer requests may apply."
+        },
+        "generate": true,
+        "status": "generation_failed",
+        "questions": [],
+        "evidence": [
+          {
+            "source_id": "M1",
+            "pages": [
+              1,
+              2
+            ],
+            "section": "1.6. List of documents required for a Claim",
+            "text": "1.6. List of documents required for a Claim The reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. a. Duly Completed claim form, b. Photo ID and Age Proof, c. Copy of the Hospital’s Registration Certificate/Hospital Registration number in case of Hospitalization in any non- Network Provider of the Company or certificate from Hospital authorities providing facilities available including number of beds, d. Discharge Card / Day Care Summary / Transfer Summary, e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded, f. Invoice with payment receipt and implant stickers for all implants used during Surgeries e.g. lens sticker and invoice in cataract Surgery, stent invoice and sticker in Angioplasty Surgery, g. All previous consultation papers indicating history and treatment details for current Illness and advice for current Hospitalization, h. All diagnostic reports (including imaging and laboratory) along with prescription by Medical Practitioner and invoice / bill with receipt from diagnostic centre, i. All medicine / pharmacy bills along with prescription by Medical Practitioner, j. MLC / FIR Copy – in Accident cases only, k. History of alcohol consumption or any intoxication certified by first treating doctor in case of Accident cases, l. Copy of Death Summary and copy of Death Certificate (in death claims only), m. Copy of indoor case papers with nursing sheet detailing medical history of the Insured Person, treatment details, and patient’s progress (to be submitted wherever required by the Company). n. Invoice for vaccination and payment receipt, o. Original invoices for the expenses incurred towards ambulance facility along with details of loss in the Company’s prescribed format, p. KYC documents (in all claims above Rs 1 lakh) of the Policyholderas per AML guidelines, q. Duly filled NEFT form with cancelled blank cheque (with IFSC code, A/C number, and name mentioned on cheque leaf), r. Legal heir/succession certificate, wherever applicable,",
+            "id": "section-006.1",
+            "strategy": "section",
+            "word_count": 492,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-006",
+            "tokens": 446,
+            "score": 6.128385543823242,
+            "dense_score": 0.837859570980072,
+            "keyword_score": 2.8209707117629486
+          },
+          {
+            "source_id": "M1",
+            "pages": [
+              1
+            ],
+            "section": "1.5. Procedure for Reimbursement Claims",
+            "text": "1.5. Procedure for Reimbursement Claims For reimbursement of claims, theInsured Person shall submit the necessary documents to the Company within the prescribed time limit as specified hereunder. Type of Claim Prescribed Time limit Reimbursement of Hospitalization, Day Care Treatment or Pre- Hospitalization Expenses Within 30 days of date of discharge from Hospital. Reimbursement of Post- Hospitalization Expenses Within 15 days from completion of post Hospitalization treatment.",
+            "id": "section-005.1",
+            "strategy": "section",
+            "word_count": 66,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-005",
+            "tokens": 97,
+            "score": 4.540956974029541,
+            "dense_score": 0.7459346055984497,
+            "keyword_score": 3.117412672086945
+          },
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "LIST OF ENCLOSURES FOR SUBMISSION OF CLAIM",
+            "text": "LIST OF ENCLOSURES FOR SUBMISSION OF CLAIM\nSignature and seal of the Hospital Authority\nWe hereby declare that the information furnished in this Claim Form is true & correct to the best of our knowledge and belief. If we have made any false or untrue statement, suppression or\nconcealment of any material fact, our right to claim under this claim shall be forfeited.\nDate: D MD M Y YY Y\nPlace:\nNote:\n1. When original bills, receipts, prescriptions, reports and other documents are submitted to the other insurer or to the reimbursement provider, verified photocopies attested by such other\norganization/provider have to be submitted.\n2. If original bills, receipts, prescriptions, reports and other documents are submitted to Us and Insured Person requires same for claiming from other organization/provider, then on request\nfrom the Insured Person We will provide attested copies of the bills and other documents submitted by the Insured Person.\n3. If below mentioned documents are not provided in full or are insufficient for Us to consider the claim, then We may request additional information or documentation.",
+            "id": "section-007.1",
+            "strategy": "section",
+            "word_count": 178,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-007",
+            "tokens": 225,
+            "score": 2.5793821811676025,
+            "dense_score": 0.7187101244926453,
+            "keyword_score": 2.0718797046836737
+          },
+          {
+            "source_id": "M1",
+            "pages": [
+              1,
+              2
+            ],
+            "section": "1.6. List of documents required for a Claim",
+            "text": "s. Any other relevant document required by Company for assessment of the claim. Note: t. The Company shall only accept bills/invoices/medical treatment related documents only in the Insured Person’s name for whom the claim is submitted. u. In the event of a claim lodged under the Policy and the original documents having been submitted to any other insurer, the Company shall accept the copy of the documents and claim settlement advice, duly certified by the other insurer subject to satisfaction of the Company. v. If requested by the Company, at the Company’s cost, the Insured Person must submit to medical examination by Medical Practitioner appointed by the Company as often as it is considered reasonable and necessary and Company’s representatives must be permitted to inspect the medical and Hospitalization records pertaining to the Insured Person’s treatment, and to investigate the circumstances pertaining to the claim. Any delay in notification or submission may be condoned on merit where delay is proved to be for reasons beyond the control of the Insured Person",
+            "id": "section-006.2",
+            "strategy": "section",
+            "word_count": 492,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-006",
+            "tokens": 209,
+            "score": 1.634596347808838,
+            "dense_score": 0.7208721041679382,
+            "keyword_score": 1.2937499866193618
+          },
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "Pre and Post-hospitalization/Vaccination",
+            "text": "Pre and Post-hospitalization/Vaccination\nDuly filled and signed Claim Form.\nPhotocopy of ID card / Photocopy of current year policy.\nOriginal Medicine bills, original payment receipt with prescriptions.\nOriginal Investigations bills, original payment receipt with prescriptions and report.\nOriginal Consultation documents and bills, original payment receipt with prescription.\nCopy of the Discharge Summary of the main claim. (except for out patient dental claim)",
+            "id": "section-011.1",
+            "strategy": "section",
+            "word_count": 62,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-011",
+            "tokens": 88,
+            "score": 0.6253202557563782,
+            "dense_score": 0.7471336126327515,
+            "keyword_score": 1.1095808708770762
+          }
+        ],
+        "error": "APITimeoutError"
+      },
+      "error": null,
+      "human_review": {
+        "supported_claims": null,
+        "total_factual_claims": null,
+        "relevant_evidence": null,
+        "expected_behavior_pass": null,
+        "notes": "Pending review"
+      }
+    },
+    {
+      "case": "02",
+      "question": "I have my discharge summary and hospital bill. What else do I need?",
+      "expectation": "No false readiness certification; payment receipts and other evidence checked.",
+      "seconds": 46.53152910002973,
+      "result": {
+        "question": "I have my discharge summary and hospital bill. What else do I need?",
+        "uin": "HDFHLIP25041V062425",
+        "claim_type": "reimbursement",
+        "documents_reported": [
+          "Discharge summary",
+          "Hospital bill"
+        ],
+        "checklist": {
+          "items": [
+            {
+              "id": "form",
+              "requirement": "Completed claim form",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                1
+              ],
+              "section": "1.6(a)",
+              "source_text": "a. Duly Completed claim form,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "identity",
+              "requirement": "Photo ID and age proof",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(b)",
+              "source_text": "b. Photo ID and Age Proof,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "hospital_registration",
+              "requirement": "Non-network hospital registration/facility evidence",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(c)",
+              "source_text": "c. Copy of the Hospital’s Registration Certificate/Hospital Registration number in case of Hospitalization in any non- Network Provider of the Company or certificate from Hospital authorities providing facilities available including number of beds,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "discharge",
+              "requirement": "Discharge/day-care/transfer summary",
+              "applicability": "required",
+              "possession": "reported_present",
+              "reported_names": [
+                "Discharge summary"
+              ],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(d)",
+              "source_text": "d. Discharge Card / Day Care Summary / Transfer Summary,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "bill",
+              "requirement": "Final hospital bill",
+              "applicability": "required",
+              "possession": "reported_present",
+              "reported_names": [
+                "Hospital bill"
+              ],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(e)",
+              "source_text": "e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "receipt",
+              "requirement": "Hospital deposit/final payment receipts",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(e)",
+              "source_text": "e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "implant",
+              "requirement": "Implant invoice, payment receipt and sticker",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(f)",
+              "source_text": "f. Invoice with payment receipt and implant stickers for all implants used during Surgeries e.g. lens sticker and invoice in cataract Surgery, stent invoice and sticker in Angioplasty Surgery,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "consultation",
+              "requirement": "Consultation and treatment history papers",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(g)",
+              "source_text": "g. All previous consultation papers indicating history and treatment details for current Illness and advice for current Hospitalization,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "diagnostics",
+              "requirement": "Diagnostic reports, prescription, bill and receipt",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(h)",
+              "source_text": "h. All diagnostic reports (including imaging and laboratory) along with prescription by Medical Practitioner and invoice / bill with receipt from diagnostic centre,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "pharmacy",
+              "requirement": "Pharmacy bills and prescriptions",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(i)",
+              "source_text": "i. All medicine / pharmacy bills along with prescription by Medical Practitioner,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "accident",
+              "requirement": "Accident MLC/FIR evidence",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(j)",
+              "source_text": "j. MLC / FIR Copy – in Accident cases only,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "accident_history",
+              "requirement": "Treating-doctor intoxication history certification",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(k)",
+              "source_text": "k. History of alcohol consumption or any intoxication certified by first treating doctor in case of Accident cases,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "death",
+              "requirement": "Death summary and certificate",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(l)",
+              "source_text": "l. Copy of Death Summary and copy of Death Certificate (in death claims only),",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "indoor",
+              "requirement": "Indoor case papers and nursing sheet, if requested",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(m)",
+              "source_text": "m. Copy of indoor case papers with nursing sheet detailing medical history of the Insured Person, treatment details, and patient’s progress (to be submitted wherever required by the Company).",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "vaccination",
+              "requirement": "Vaccination invoice and receipt",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(n)",
+              "source_text": "n. Invoice for vaccination and payment receipt,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "ambulance",
+              "requirement": "Ambulance invoice and prescribed loss details",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(o)",
+              "source_text": "o. Original invoices for the expenses incurred towards ambulance facility along with details of loss in the Company’s prescribed format,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "kyc",
+              "requirement": "KYC documentation",
+              "applicability": "confirm_with_insurer",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(p)",
+              "source_text": "p. KYC documents (in all claims above Rs 1 lakh) of the Policyholderas per AML guidelines,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "bank",
+              "requirement": "NEFT form and cancelled cheque",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(q)",
+              "source_text": "q. Duly filled NEFT form with cancelled blank cheque (with IFSC code, A/C number, and name mentioned on cheque leaf),",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "legal_heir",
+              "requirement": "Legal heir/succession certificate where applicable",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(r)",
+              "source_text": "r. Legal heir/succession certificate, wherever applicable,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            }
+          ],
+          "questions": [
+            "Confirm whether this applies: Non-network hospital registration/facility evidence.",
+            "Confirm whether this applies: Implant invoice, payment receipt and sticker.",
+            "Confirm whether this applies: Accident MLC/FIR evidence.",
+            "Confirm whether this applies: Treating-doctor intoxication history certification.",
+            "Confirm whether this applies: Death summary and certificate.",
+            "Confirm whether this applies: Indoor case papers and nursing sheet, if requested.",
+            "Confirm whether this applies: Vaccination invoice and receipt.",
+            "Confirm whether this applies: Ambulance invoice and prescribed loss details.",
+            "Confirm whether this applies: Legal heir/succession certificate where applicable.",
+            "Confirm KYC requirements with the insurer if the amount is not above INR 100,000; no exemption is inferred."
+          ],
+          "unmatched_reported": [],
+          "readiness": "not_assessed",
+          "note": "Not reported does not mean absent. Reported present does not verify completeness, authenticity, or readiness. Additional insurer requests may apply."
+        },
+        "generate": true,
+        "status": "generation_failed",
+        "questions": [],
+        "evidence": [
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "In-patient Treatment /Day Care Procedures",
+            "text": "In-patient Treatment /Day Care Procedures\nDuly filled and signed Claim Form.\nPhotocopy of ID card / Photocopy of current year policy.\nOriginal Detailed Discharge Summary with date of admission & discharge, clinical history, past history / procedure details/ Day care summary from the hospital.\nOriginal consolidated hospital bill with break up of each Item, duly signed by the insured.\nOriginal payment Receipt of the hospital bill.\nFirst Consultation letter and subsequent Prescriptions.\nOriginal bills, original payment receipts and Reports for investigation.\nOriginal medicine bills and receipts with corresponding Prescriptions.\nOriginal invoice/Sticker of implants/bills for Implants (viz. Stent /PHS Mesh/ IOL etc.) with original payment receipts.",
+            "id": "section-008.1",
+            "strategy": "section",
+            "word_count": 105,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-008",
+            "tokens": 149,
+            "score": 0.6223495006561279,
+            "dense_score": 0.7538864612579346,
+            "keyword_score": 5.266591855779528
+          },
+          {
+            "source_id": "M1",
+            "pages": [
+              1,
+              2
+            ],
+            "section": "1.6. List of documents required for a Claim",
+            "text": "1.6. List of documents required for a Claim The reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. a. Duly Completed claim form, b. Photo ID and Age Proof, c. Copy of the Hospital’s Registration Certificate/Hospital Registration number in case of Hospitalization in any non- Network Provider of the Company or certificate from Hospital authorities providing facilities available including number of beds, d. Discharge Card / Day Care Summary / Transfer Summary, e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded, f. Invoice with payment receipt and implant stickers for all implants used during Surgeries e.g. lens sticker and invoice in cataract Surgery, stent invoice and sticker in Angioplasty Surgery, g. All previous consultation papers indicating history and treatment details for current Illness and advice for current Hospitalization, h. All diagnostic reports (including imaging and laboratory) along with prescription by Medical Practitioner and invoice / bill with receipt from diagnostic centre, i. All medicine / pharmacy bills along with prescription by Medical Practitioner, j. MLC / FIR Copy – in Accident cases only, k. History of alcohol consumption or any intoxication certified by first treating doctor in case of Accident cases, l. Copy of Death Summary and copy of Death Certificate (in death claims only), m. Copy of indoor case papers with nursing sheet detailing medical history of the Insured Person, treatment details, and patient’s progress (to be submitted wherever required by the Company). n. Invoice for vaccination and payment receipt, o. Original invoices for the expenses incurred towards ambulance facility along with details of loss in the Company’s prescribed format, p. KYC documents (in all claims above Rs 1 lakh) of the Policyholderas per AML guidelines, q. Duly filled NEFT form with cancelled blank cheque (with IFSC code, A/C number, and name mentioned on cheque leaf), r. Legal heir/succession certificate, wherever applicable,",
+            "id": "section-006.1",
+            "strategy": "section",
+            "word_count": 492,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-006",
+            "tokens": 446,
+            "score": -1.8539223670959473,
+            "dense_score": 0.7443661093711853,
+            "keyword_score": 6.081884491809383
+          },
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "Pre and Post-hospitalization/Vaccination",
+            "text": "Pre and Post-hospitalization/Vaccination\nDuly filled and signed Claim Form.\nPhotocopy of ID card / Photocopy of current year policy.\nOriginal Medicine bills, original payment receipt with prescriptions.\nOriginal Investigations bills, original payment receipt with prescriptions and report.\nOriginal Consultation documents and bills, original payment receipt with prescription.\nCopy of the Discharge Summary of the main claim. (except for out patient dental claim)",
+            "id": "section-011.1",
+            "strategy": "section",
+            "word_count": 62,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-011",
+            "tokens": 88,
+            "score": -2.7858123779296875,
+            "dense_score": 0.7413115501403809,
+            "keyword_score": 2.5010746996266966
+          },
+          {
+            "source_id": "M1",
+            "pages": [
+              1
+            ],
+            "section": "1.1. Notification of claim:",
+            "text": "1.1. Notification of claim: Notice with full particulars shall be sent to the Company as under: a. Within 24 hours from the date of emergency Hospitalization required or before the Insured Person’s discharge from Hospital, whichever is earlier. b. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization or decision to avail treatment under Section 3.2 (Home Health Care).",
+            "id": "section-001.1",
+            "strategy": "section",
+            "word_count": 65,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-001",
+            "tokens": 87,
+            "score": -5.781959533691406,
+            "dense_score": 0.7152988314628601,
+            "keyword_score": 1.182243179381726
+          },
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "For Death Cases",
+            "text": "For Death Cases\nIn addition to the In-patient Treatment documents:\nOriginal Death Summary from the hospital.\nCopy of the Death certificate from treating doctor or the hospital authority.\nCopy of the Legal heir certificate, if the claim is for the death of the principle insured.",
+            "id": "section-010.1",
+            "strategy": "section",
+            "word_count": 45,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-010",
+            "tokens": 55,
+            "score": -6.420989036560059,
+            "dense_score": 0.6793535947799683,
+            "keyword_score": 2.0449750356436134
+          }
+        ],
+        "error": "APITimeoutError"
+      },
+      "error": null,
+      "human_review": {
+        "supported_claims": null,
+        "total_factual_claims": null,
+        "relevant_evidence": null,
+        "expected_behavior_pass": null,
+        "notes": "Pending review"
+      }
+    },
+    {
+      "case": "03",
+      "question": "Is my hospital bill enough without payment receipts?",
+      "expectation": "Bill and payment evidence distinguished.",
+      "seconds": 46.45587900001556,
+      "result": {
+        "question": "Is my hospital bill enough without payment receipts?",
+        "uin": "HDFHLIP25041V062425",
+        "claim_type": "reimbursement",
+        "documents_reported": [],
+        "checklist": {
+          "items": [
+            {
+              "id": "form",
+              "requirement": "Completed claim form",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                1
+              ],
+              "section": "1.6(a)",
+              "source_text": "a. Duly Completed claim form,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "identity",
+              "requirement": "Photo ID and age proof",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(b)",
+              "source_text": "b. Photo ID and Age Proof,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "hospital_registration",
+              "requirement": "Non-network hospital registration/facility evidence",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(c)",
+              "source_text": "c. Copy of the Hospital’s Registration Certificate/Hospital Registration number in case of Hospitalization in any non- Network Provider of the Company or certificate from Hospital authorities providing facilities available including number of beds,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "discharge",
+              "requirement": "Discharge/day-care/transfer summary",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(d)",
+              "source_text": "d. Discharge Card / Day Care Summary / Transfer Summary,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "bill",
+              "requirement": "Final hospital bill",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(e)",
+              "source_text": "e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "receipt",
+              "requirement": "Hospital deposit/final payment receipts",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(e)",
+              "source_text": "e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "implant",
+              "requirement": "Implant invoice, payment receipt and sticker",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(f)",
+              "source_text": "f. Invoice with payment receipt and implant stickers for all implants used during Surgeries e.g. lens sticker and invoice in cataract Surgery, stent invoice and sticker in Angioplasty Surgery,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "consultation",
+              "requirement": "Consultation and treatment history papers",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(g)",
+              "source_text": "g. All previous consultation papers indicating history and treatment details for current Illness and advice for current Hospitalization,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "diagnostics",
+              "requirement": "Diagnostic reports, prescription, bill and receipt",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(h)",
+              "source_text": "h. All diagnostic reports (including imaging and laboratory) along with prescription by Medical Practitioner and invoice / bill with receipt from diagnostic centre,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "pharmacy",
+              "requirement": "Pharmacy bills and prescriptions",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(i)",
+              "source_text": "i. All medicine / pharmacy bills along with prescription by Medical Practitioner,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "accident",
+              "requirement": "Accident MLC/FIR evidence",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(j)",
+              "source_text": "j. MLC / FIR Copy – in Accident cases only,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "accident_history",
+              "requirement": "Treating-doctor intoxication history certification",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(k)",
+              "source_text": "k. History of alcohol consumption or any intoxication certified by first treating doctor in case of Accident cases,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "death",
+              "requirement": "Death summary and certificate",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(l)",
+              "source_text": "l. Copy of Death Summary and copy of Death Certificate (in death claims only),",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "indoor",
+              "requirement": "Indoor case papers and nursing sheet, if requested",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(m)",
+              "source_text": "m. Copy of indoor case papers with nursing sheet detailing medical history of the Insured Person, treatment details, and patient’s progress (to be submitted wherever required by the Company).",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "vaccination",
+              "requirement": "Vaccination invoice and receipt",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(n)",
+              "source_text": "n. Invoice for vaccination and payment receipt,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "ambulance",
+              "requirement": "Ambulance invoice and prescribed loss details",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(o)",
+              "source_text": "o. Original invoices for the expenses incurred towards ambulance facility along with details of loss in the Company’s prescribed format,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "kyc",
+              "requirement": "KYC documentation",
+              "applicability": "confirm_with_insurer",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(p)",
+              "source_text": "p. KYC documents (in all claims above Rs 1 lakh) of the Policyholderas per AML guidelines,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "bank",
+              "requirement": "NEFT form and cancelled cheque",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(q)",
+              "source_text": "q. Duly filled NEFT form with cancelled blank cheque (with IFSC code, A/C number, and name mentioned on cheque leaf),",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "legal_heir",
+              "requirement": "Legal heir/succession certificate where applicable",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(r)",
+              "source_text": "r. Legal heir/succession certificate, wherever applicable,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            }
+          ],
+          "questions": [
+            "Confirm whether this applies: Non-network hospital registration/facility evidence.",
+            "Confirm whether this applies: Implant invoice, payment receipt and sticker.",
+            "Confirm whether this applies: Accident MLC/FIR evidence.",
+            "Confirm whether this applies: Treating-doctor intoxication history certification.",
+            "Confirm whether this applies: Death summary and certificate.",
+            "Confirm whether this applies: Indoor case papers and nursing sheet, if requested.",
+            "Confirm whether this applies: Vaccination invoice and receipt.",
+            "Confirm whether this applies: Ambulance invoice and prescribed loss details.",
+            "Confirm whether this applies: Legal heir/succession certificate where applicable.",
+            "Confirm KYC requirements with the insurer if the amount is not above INR 100,000; no exemption is inferred."
+          ],
+          "unmatched_reported": [],
+          "readiness": "not_assessed",
+          "note": "Not reported does not mean absent. Reported present does not verify completeness, authenticity, or readiness. Additional insurer requests may apply."
+        },
+        "generate": true,
+        "status": "generation_failed",
+        "questions": [],
+        "evidence": [
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "In-patient Treatment /Day Care Procedures",
+            "text": "In-patient Treatment /Day Care Procedures\nDuly filled and signed Claim Form.\nPhotocopy of ID card / Photocopy of current year policy.\nOriginal Detailed Discharge Summary with date of admission & discharge, clinical history, past history / procedure details/ Day care summary from the hospital.\nOriginal consolidated hospital bill with break up of each Item, duly signed by the insured.\nOriginal payment Receipt of the hospital bill.\nFirst Consultation letter and subsequent Prescriptions.\nOriginal bills, original payment receipts and Reports for investigation.\nOriginal medicine bills and receipts with corresponding Prescriptions.\nOriginal invoice/Sticker of implants/bills for Implants (viz. Stent /PHS Mesh/ IOL etc.) with original payment receipts.",
+            "id": "section-008.1",
+            "strategy": "section",
+            "word_count": 105,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-008",
+            "tokens": 149,
+            "score": -0.17042988538742065,
+            "dense_score": 0.7063584327697754,
+            "keyword_score": 6.919932841068152
+          },
+          {
+            "source_id": "M1",
+            "pages": [
+              1,
+              2
+            ],
+            "section": "1.6. List of documents required for a Claim",
+            "text": "1.6. List of documents required for a Claim The reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. a. Duly Completed claim form, b. Photo ID and Age Proof, c. Copy of the Hospital’s Registration Certificate/Hospital Registration number in case of Hospitalization in any non- Network Provider of the Company or certificate from Hospital authorities providing facilities available including number of beds, d. Discharge Card / Day Care Summary / Transfer Summary, e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded, f. Invoice with payment receipt and implant stickers for all implants used during Surgeries e.g. lens sticker and invoice in cataract Surgery, stent invoice and sticker in Angioplasty Surgery, g. All previous consultation papers indicating history and treatment details for current Illness and advice for current Hospitalization, h. All diagnostic reports (including imaging and laboratory) along with prescription by Medical Practitioner and invoice / bill with receipt from diagnostic centre, i. All medicine / pharmacy bills along with prescription by Medical Practitioner, j. MLC / FIR Copy – in Accident cases only, k. History of alcohol consumption or any intoxication certified by first treating doctor in case of Accident cases, l. Copy of Death Summary and copy of Death Certificate (in death claims only), m. Copy of indoor case papers with nursing sheet detailing medical history of the Insured Person, treatment details, and patient’s progress (to be submitted wherever required by the Company). n. Invoice for vaccination and payment receipt, o. Original invoices for the expenses incurred towards ambulance facility along with details of loss in the Company’s prescribed format, p. KYC documents (in all claims above Rs 1 lakh) of the Policyholderas per AML guidelines, q. Duly filled NEFT form with cancelled blank cheque (with IFSC code, A/C number, and name mentioned on cheque leaf), r. Legal heir/succession certificate, wherever applicable,",
+            "id": "section-006.1",
+            "strategy": "section",
+            "word_count": 492,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-006",
+            "tokens": 446,
+            "score": -1.342041254043579,
+            "dense_score": 0.7485659122467041,
+            "keyword_score": 2.7362842636527898
+          },
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "Pre and Post-hospitalization/Vaccination",
+            "text": "Pre and Post-hospitalization/Vaccination\nDuly filled and signed Claim Form.\nPhotocopy of ID card / Photocopy of current year policy.\nOriginal Medicine bills, original payment receipt with prescriptions.\nOriginal Investigations bills, original payment receipt with prescriptions and report.\nOriginal Consultation documents and bills, original payment receipt with prescription.\nCopy of the Discharge Summary of the main claim. (except for out patient dental claim)",
+            "id": "section-011.1",
+            "strategy": "section",
+            "word_count": 62,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-011",
+            "tokens": 88,
+            "score": -3.0146408081054688,
+            "dense_score": 0.6942715644836426,
+            "keyword_score": 1.7319314117396383
+          },
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "LIST OF ENCLOSURES FOR SUBMISSION OF CLAIM",
+            "text": "LIST OF ENCLOSURES FOR SUBMISSION OF CLAIM\nSignature and seal of the Hospital Authority\nWe hereby declare that the information furnished in this Claim Form is true & correct to the best of our knowledge and belief. If we have made any false or untrue statement, suppression or\nconcealment of any material fact, our right to claim under this claim shall be forfeited.\nDate: D MD M Y YY Y\nPlace:\nNote:\n1. When original bills, receipts, prescriptions, reports and other documents are submitted to the other insurer or to the reimbursement provider, verified photocopies attested by such other\norganization/provider have to be submitted.\n2. If original bills, receipts, prescriptions, reports and other documents are submitted to Us and Insured Person requires same for claiming from other organization/provider, then on request\nfrom the Insured Person We will provide attested copies of the bills and other documents submitted by the Insured Person.\n3. If below mentioned documents are not provided in full or are insufficient for Us to consider the claim, then We may request additional information or documentation.",
+            "id": "section-007.1",
+            "strategy": "section",
+            "word_count": 178,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-007",
+            "tokens": 225,
+            "score": -4.110631942749023,
+            "dense_score": 0.6938512325286865,
+            "keyword_score": 2.3849740997048814
+          },
+          {
+            "source_id": "M1",
+            "pages": [
+              1,
+              2
+            ],
+            "section": "1.6. List of documents required for a Claim",
+            "text": "s. Any other relevant document required by Company for assessment of the claim. Note: t. The Company shall only accept bills/invoices/medical treatment related documents only in the Insured Person’s name for whom the claim is submitted. u. In the event of a claim lodged under the Policy and the original documents having been submitted to any other insurer, the Company shall accept the copy of the documents and claim settlement advice, duly certified by the other insurer subject to satisfaction of the Company. v. If requested by the Company, at the Company’s cost, the Insured Person must submit to medical examination by Medical Practitioner appointed by the Company as often as it is considered reasonable and necessary and Company’s representatives must be permitted to inspect the medical and Hospitalization records pertaining to the Insured Person’s treatment, and to investigate the circumstances pertaining to the claim. Any delay in notification or submission may be condoned on merit where delay is proved to be for reasons beyond the control of the Insured Person",
+            "id": "section-006.2",
+            "strategy": "section",
+            "word_count": 492,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-006",
+            "tokens": 209,
+            "score": -7.923344612121582,
+            "dense_score": 0.6837395429611206,
+            "keyword_score": 0.17684230074434334
+          }
+        ],
+        "error": "APITimeoutError"
+      },
+      "error": null,
+      "human_review": {
+        "supported_claims": null,
+        "total_factual_claims": null,
+        "relevant_evidence": null,
+        "expected_behavior_pass": null,
+        "notes": "Pending review"
+      }
+    },
+    {
+      "case": "04",
+      "question": "I had an implanted lens. What documents are listed?",
+      "expectation": "Implant invoice/payment evidence/sticker; applicable condition retained.",
+      "seconds": 46.47353080002358,
+      "result": {
+        "question": "I had an implanted lens. What documents are listed?",
+        "uin": "HDFHLIP25041V062425",
+        "claim_type": "reimbursement",
+        "documents_reported": [],
+        "checklist": {
+          "items": [
+            {
+              "id": "form",
+              "requirement": "Completed claim form",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                1
+              ],
+              "section": "1.6(a)",
+              "source_text": "a. Duly Completed claim form,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "identity",
+              "requirement": "Photo ID and age proof",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(b)",
+              "source_text": "b. Photo ID and Age Proof,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "hospital_registration",
+              "requirement": "Non-network hospital registration/facility evidence",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(c)",
+              "source_text": "c. Copy of the Hospital’s Registration Certificate/Hospital Registration number in case of Hospitalization in any non- Network Provider of the Company or certificate from Hospital authorities providing facilities available including number of beds,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "discharge",
+              "requirement": "Discharge/day-care/transfer summary",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(d)",
+              "source_text": "d. Discharge Card / Day Care Summary / Transfer Summary,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "bill",
+              "requirement": "Final hospital bill",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(e)",
+              "source_text": "e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "receipt",
+              "requirement": "Hospital deposit/final payment receipts",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(e)",
+              "source_text": "e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "implant",
+              "requirement": "Implant invoice, payment receipt and sticker",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(f)",
+              "source_text": "f. Invoice with payment receipt and implant stickers for all implants used during Surgeries e.g. lens sticker and invoice in cataract Surgery, stent invoice and sticker in Angioplasty Surgery,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "consultation",
+              "requirement": "Consultation and treatment history papers",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(g)",
+              "source_text": "g. All previous consultation papers indicating history and treatment details for current Illness and advice for current Hospitalization,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "diagnostics",
+              "requirement": "Diagnostic reports, prescription, bill and receipt",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(h)",
+              "source_text": "h. All diagnostic reports (including imaging and laboratory) along with prescription by Medical Practitioner and invoice / bill with receipt from diagnostic centre,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "pharmacy",
+              "requirement": "Pharmacy bills and prescriptions",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(i)",
+              "source_text": "i. All medicine / pharmacy bills along with prescription by Medical Practitioner,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "accident",
+              "requirement": "Accident MLC/FIR evidence",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(j)",
+              "source_text": "j. MLC / FIR Copy – in Accident cases only,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "accident_history",
+              "requirement": "Treating-doctor intoxication history certification",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(k)",
+              "source_text": "k. History of alcohol consumption or any intoxication certified by first treating doctor in case of Accident cases,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "death",
+              "requirement": "Death summary and certificate",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(l)",
+              "source_text": "l. Copy of Death Summary and copy of Death Certificate (in death claims only),",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "indoor",
+              "requirement": "Indoor case papers and nursing sheet, if requested",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(m)",
+              "source_text": "m. Copy of indoor case papers with nursing sheet detailing medical history of the Insured Person, treatment details, and patient’s progress (to be submitted wherever required by the Company).",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "vaccination",
+              "requirement": "Vaccination invoice and receipt",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(n)",
+              "source_text": "n. Invoice for vaccination and payment receipt,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "ambulance",
+              "requirement": "Ambulance invoice and prescribed loss details",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(o)",
+              "source_text": "o. Original invoices for the expenses incurred towards ambulance facility along with details of loss in the Company’s prescribed format,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "kyc",
+              "requirement": "KYC documentation",
+              "applicability": "confirm_with_insurer",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(p)",
+              "source_text": "p. KYC documents (in all claims above Rs 1 lakh) of the Policyholderas per AML guidelines,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "bank",
+              "requirement": "NEFT form and cancelled cheque",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(q)",
+              "source_text": "q. Duly filled NEFT form with cancelled blank cheque (with IFSC code, A/C number, and name mentioned on cheque leaf),",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "legal_heir",
+              "requirement": "Legal heir/succession certificate where applicable",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(r)",
+              "source_text": "r. Legal heir/succession certificate, wherever applicable,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            }
+          ],
+          "questions": [
+            "Confirm whether this applies: Non-network hospital registration/facility evidence.",
+            "Confirm whether this applies: Implant invoice, payment receipt and sticker.",
+            "Confirm whether this applies: Accident MLC/FIR evidence.",
+            "Confirm whether this applies: Treating-doctor intoxication history certification.",
+            "Confirm whether this applies: Death summary and certificate.",
+            "Confirm whether this applies: Indoor case papers and nursing sheet, if requested.",
+            "Confirm whether this applies: Vaccination invoice and receipt.",
+            "Confirm whether this applies: Ambulance invoice and prescribed loss details.",
+            "Confirm whether this applies: Legal heir/succession certificate where applicable.",
+            "Confirm KYC requirements with the insurer if the amount is not above INR 100,000; no exemption is inferred."
+          ],
+          "unmatched_reported": [],
+          "readiness": "not_assessed",
+          "note": "Not reported does not mean absent. Reported present does not verify completeness, authenticity, or readiness. Additional insurer requests may apply."
+        },
+        "generate": true,
+        "status": "generation_failed",
+        "questions": [],
+        "evidence": [
+          {
+            "source_id": "M1",
+            "pages": [
+              1,
+              2
+            ],
+            "section": "1.6. List of documents required for a Claim",
+            "text": "1.6. List of documents required for a Claim The reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. a. Duly Completed claim form, b. Photo ID and Age Proof, c. Copy of the Hospital’s Registration Certificate/Hospital Registration number in case of Hospitalization in any non- Network Provider of the Company or certificate from Hospital authorities providing facilities available including number of beds, d. Discharge Card / Day Care Summary / Transfer Summary, e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded, f. Invoice with payment receipt and implant stickers for all implants used during Surgeries e.g. lens sticker and invoice in cataract Surgery, stent invoice and sticker in Angioplasty Surgery, g. All previous consultation papers indicating history and treatment details for current Illness and advice for current Hospitalization, h. All diagnostic reports (including imaging and laboratory) along with prescription by Medical Practitioner and invoice / bill with receipt from diagnostic centre, i. All medicine / pharmacy bills along with prescription by Medical Practitioner, j. MLC / FIR Copy – in Accident cases only, k. History of alcohol consumption or any intoxication certified by first treating doctor in case of Accident cases, l. Copy of Death Summary and copy of Death Certificate (in death claims only), m. Copy of indoor case papers with nursing sheet detailing medical history of the Insured Person, treatment details, and patient’s progress (to be submitted wherever required by the Company). n. Invoice for vaccination and payment receipt, o. Original invoices for the expenses incurred towards ambulance facility along with details of loss in the Company’s prescribed format, p. KYC documents (in all claims above Rs 1 lakh) of the Policyholderas per AML guidelines, q. Duly filled NEFT form with cancelled blank cheque (with IFSC code, A/C number, and name mentioned on cheque leaf), r. Legal heir/succession certificate, wherever applicable,",
+            "id": "section-006.1",
+            "strategy": "section",
+            "word_count": 492,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-006",
+            "tokens": 446,
+            "score": -2.0322604179382324,
+            "dense_score": 0.6811665892601013,
+            "keyword_score": 2.8051181855217258
+          },
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "Organ Donation/Transplantation",
+            "text": "Organ Donation/Transplantation\nIn addition to the documents of general hospitalization\nOrgan Function test / blood test proving organ failure.\nTreatment Certificate issued by the Transplant Surgeon of the hospital concerned.",
+            "id": "section-012.1",
+            "strategy": "section",
+            "word_count": 30,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-012",
+            "tokens": 38,
+            "score": -10.124786376953125,
+            "dense_score": 0.6184383034706116,
+            "keyword_score": 0.672233599604786
+          },
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "In-patient Treatment /Day Care Procedures",
+            "text": "In-patient Treatment /Day Care Procedures\nDuly filled and signed Claim Form.\nPhotocopy of ID card / Photocopy of current year policy.\nOriginal Detailed Discharge Summary with date of admission & discharge, clinical history, past history / procedure details/ Day care summary from the hospital.\nOriginal consolidated hospital bill with break up of each Item, duly signed by the insured.\nOriginal payment Receipt of the hospital bill.\nFirst Consultation letter and subsequent Prescriptions.\nOriginal bills, original payment receipts and Reports for investigation.\nOriginal medicine bills and receipts with corresponding Prescriptions.\nOriginal invoice/Sticker of implants/bills for Implants (viz. Stent /PHS Mesh/ IOL etc.) with original payment receipts.",
+            "id": "section-008.1",
+            "strategy": "section",
+            "word_count": 105,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-008",
+            "tokens": 149,
+            "score": -10.27039623260498,
+            "dense_score": 0.6857529282569885,
+            "keyword_score": 0.0
+          },
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "For Death Cases",
+            "text": "For Death Cases\nIn addition to the In-patient Treatment documents:\nOriginal Death Summary from the hospital.\nCopy of the Death certificate from treating doctor or the hospital authority.\nCopy of the Legal heir certificate, if the claim is for the death of the principle insured.",
+            "id": "section-010.1",
+            "strategy": "section",
+            "word_count": 45,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-010",
+            "tokens": 55,
+            "score": -10.445846557617188,
+            "dense_score": 0.5926156044006348,
+            "keyword_score": 0.6096598191632286
+          },
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "Road Traffic Accident",
+            "text": "Road Traffic Accident\nIn addition to the In-patient Treatment documents:\nCopy of the First Information Report from Police Department / Copy of the Medico-Legal Certificate.\nIn Non Medico legal cases\nTreating Doctor’s Certificate giving details of injuries (How, when and where injury sustained)\nIn Accidental Death cases\nCopy of Post Mortem Report & Death Certificate (If conducted)",
+            "id": "section-009.1",
+            "strategy": "section",
+            "word_count": 57,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-009",
+            "tokens": 75,
+            "score": -10.654328346252441,
+            "dense_score": 0.5967086553573608,
+            "keyword_score": 0.5698753717495558
+          }
+        ],
+        "error": "APITimeoutError"
+      },
+      "error": null,
+      "human_review": {
+        "supported_claims": null,
+        "total_factual_claims": null,
+        "relevant_evidence": null,
+        "expected_behavior_pass": null,
+        "notes": "Pending review"
+      }
+    },
+    {
+      "case": "05",
+      "question": "Does everyone need to provide an FIR?",
+      "expectation": "Accident condition retained; no universal FIR requirement.",
+      "seconds": 46.42697180004325,
+      "result": {
+        "question": "Does everyone need to provide an FIR?",
+        "uin": "HDFHLIP25041V062425",
+        "claim_type": "reimbursement",
+        "documents_reported": [],
+        "checklist": {
+          "items": [
+            {
+              "id": "form",
+              "requirement": "Completed claim form",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                1
+              ],
+              "section": "1.6(a)",
+              "source_text": "a. Duly Completed claim form,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "identity",
+              "requirement": "Photo ID and age proof",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(b)",
+              "source_text": "b. Photo ID and Age Proof,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "hospital_registration",
+              "requirement": "Non-network hospital registration/facility evidence",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(c)",
+              "source_text": "c. Copy of the Hospital’s Registration Certificate/Hospital Registration number in case of Hospitalization in any non- Network Provider of the Company or certificate from Hospital authorities providing facilities available including number of beds,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "discharge",
+              "requirement": "Discharge/day-care/transfer summary",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(d)",
+              "source_text": "d. Discharge Card / Day Care Summary / Transfer Summary,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "bill",
+              "requirement": "Final hospital bill",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(e)",
+              "source_text": "e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "receipt",
+              "requirement": "Hospital deposit/final payment receipts",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(e)",
+              "source_text": "e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "implant",
+              "requirement": "Implant invoice, payment receipt and sticker",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(f)",
+              "source_text": "f. Invoice with payment receipt and implant stickers for all implants used during Surgeries e.g. lens sticker and invoice in cataract Surgery, stent invoice and sticker in Angioplasty Surgery,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "consultation",
+              "requirement": "Consultation and treatment history papers",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(g)",
+              "source_text": "g. All previous consultation papers indicating history and treatment details for current Illness and advice for current Hospitalization,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "diagnostics",
+              "requirement": "Diagnostic reports, prescription, bill and receipt",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(h)",
+              "source_text": "h. All diagnostic reports (including imaging and laboratory) along with prescription by Medical Practitioner and invoice / bill with receipt from diagnostic centre,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "pharmacy",
+              "requirement": "Pharmacy bills and prescriptions",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(i)",
+              "source_text": "i. All medicine / pharmacy bills along with prescription by Medical Practitioner,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "accident",
+              "requirement": "Accident MLC/FIR evidence",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(j)",
+              "source_text": "j. MLC / FIR Copy – in Accident cases only,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "accident_history",
+              "requirement": "Treating-doctor intoxication history certification",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(k)",
+              "source_text": "k. History of alcohol consumption or any intoxication certified by first treating doctor in case of Accident cases,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "death",
+              "requirement": "Death summary and certificate",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(l)",
+              "source_text": "l. Copy of Death Summary and copy of Death Certificate (in death claims only),",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "indoor",
+              "requirement": "Indoor case papers and nursing sheet, if requested",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(m)",
+              "source_text": "m. Copy of indoor case papers with nursing sheet detailing medical history of the Insured Person, treatment details, and patient’s progress (to be submitted wherever required by the Company).",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "vaccination",
+              "requirement": "Vaccination invoice and receipt",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(n)",
+              "source_text": "n. Invoice for vaccination and payment receipt,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "ambulance",
+              "requirement": "Ambulance invoice and prescribed loss details",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(o)",
+              "source_text": "o. Original invoices for the expenses incurred towards ambulance facility along with details of loss in the Company’s prescribed format,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "kyc",
+              "requirement": "KYC documentation",
+              "applicability": "confirm_with_insurer",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(p)",
+              "source_text": "p. KYC documents (in all claims above Rs 1 lakh) of the Policyholderas per AML guidelines,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "bank",
+              "requirement": "NEFT form and cancelled cheque",
+              "applicability": "required",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(q)",
+              "source_text": "q. Duly filled NEFT form with cancelled blank cheque (with IFSC code, A/C number, and name mentioned on cheque leaf),",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            },
+            {
+              "id": "legal_heir",
+              "requirement": "Legal heir/succession certificate where applicable",
+              "applicability": "context_needed",
+              "possession": "not_reported",
+              "reported_names": [],
+              "source_id": "M1",
+              "pages": [
+                2
+              ],
+              "section": "1.6(r)",
+              "source_text": "r. Legal heir/succession certificate, wherever applicable,",
+              "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf"
+            }
+          ],
+          "questions": [
+            "Confirm whether this applies: Non-network hospital registration/facility evidence.",
+            "Confirm whether this applies: Implant invoice, payment receipt and sticker.",
+            "Confirm whether this applies: Accident MLC/FIR evidence.",
+            "Confirm whether this applies: Treating-doctor intoxication history certification.",
+            "Confirm whether this applies: Death summary and certificate.",
+            "Confirm whether this applies: Indoor case papers and nursing sheet, if requested.",
+            "Confirm whether this applies: Vaccination invoice and receipt.",
+            "Confirm whether this applies: Ambulance invoice and prescribed loss details.",
+            "Confirm whether this applies: Legal heir/succession certificate where applicable.",
+            "Confirm KYC requirements with the insurer if the amount is not above INR 100,000; no exemption is inferred."
+          ],
+          "unmatched_reported": [],
+          "readiness": "not_assessed",
+          "note": "Not reported does not mean absent. Reported present does not verify completeness, authenticity, or readiness. Additional insurer requests may apply."
+        },
+        "generate": true,
+        "status": "generation_failed",
+        "questions": [],
+        "evidence": [
+          {
+            "source_id": "M1",
+            "pages": [
+              1,
+              2
+            ],
+            "section": "1.6. List of documents required for a Claim",
+            "text": "1.6. List of documents required for a Claim The reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. a. Duly Completed claim form, b. Photo ID and Age Proof, c. Copy of the Hospital’s Registration Certificate/Hospital Registration number in case of Hospitalization in any non- Network Provider of the Company or certificate from Hospital authorities providing facilities available including number of beds, d. Discharge Card / Day Care Summary / Transfer Summary, e. Final Hospital bill with all original deposit and final payment receipt and refund receipt(s), if advance amount refunded, f. Invoice with payment receipt and implant stickers for all implants used during Surgeries e.g. lens sticker and invoice in cataract Surgery, stent invoice and sticker in Angioplasty Surgery, g. All previous consultation papers indicating history and treatment details for current Illness and advice for current Hospitalization, h. All diagnostic reports (including imaging and laboratory) along with prescription by Medical Practitioner and invoice / bill with receipt from diagnostic centre, i. All medicine / pharmacy bills along with prescription by Medical Practitioner, j. MLC / FIR Copy – in Accident cases only, k. History of alcohol consumption or any intoxication certified by first treating doctor in case of Accident cases, l. Copy of Death Summary and copy of Death Certificate (in death claims only), m. Copy of indoor case papers with nursing sheet detailing medical history of the Insured Person, treatment details, and patient’s progress (to be submitted wherever required by the Company). n. Invoice for vaccination and payment receipt, o. Original invoices for the expenses incurred towards ambulance facility along with details of loss in the Company’s prescribed format, p. KYC documents (in all claims above Rs 1 lakh) of the Policyholderas per AML guidelines, q. Duly filled NEFT form with cancelled blank cheque (with IFSC code, A/C number, and name mentioned on cheque leaf), r. Legal heir/succession certificate, wherever applicable,",
+            "id": "section-006.1",
+            "strategy": "section",
+            "word_count": 492,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-006",
+            "tokens": 446,
+            "score": -9.098989486694336,
+            "dense_score": 0.5785789489746094,
+            "keyword_score": 1.5413222447350967
+          },
+          {
+            "source_id": "F1",
+            "pages": [
+              4
+            ],
+            "section": "LIST OF ENCLOSURES FOR SUBMISSION OF CLAIM",
+            "text": "LIST OF ENCLOSURES FOR SUBMISSION OF CLAIM\nSignature and seal of the Hospital Authority\nWe hereby declare that the information furnished in this Claim Form is true & correct to the best of our knowledge and belief. If we have made any false or untrue statement, suppression or\nconcealment of any material fact, our right to claim under this claim shall be forfeited.\nDate: D MD M Y YY Y\nPlace:\nNote:\n1. When original bills, receipts, prescriptions, reports and other documents are submitted to the other insurer or to the reimbursement provider, verified photocopies attested by such other\norganization/provider have to be submitted.\n2. If original bills, receipts, prescriptions, reports and other documents are submitted to Us and Insured Person requires same for claiming from other organization/provider, then on request\nfrom the Insured Person We will provide attested copies of the bills and other documents submitted by the Insured Person.\n3. If below mentioned documents are not provided in full or are insufficient for Us to consider the claim, then We may request additional information or documentation.",
+            "id": "section-007.1",
+            "strategy": "section",
+            "word_count": 178,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-007",
+            "tokens": 225,
+            "score": -10.334901809692383,
+            "dense_score": 0.5920451879501343,
+            "keyword_score": 2.1247700679087624
+          },
+          {
+            "source_id": "M1",
+            "pages": [
+              1,
+              2
+            ],
+            "section": "1.6. List of documents required for a Claim",
+            "text": "s. Any other relevant document required by Company for assessment of the claim. Note: t. The Company shall only accept bills/invoices/medical treatment related documents only in the Insured Person’s name for whom the claim is submitted. u. In the event of a claim lodged under the Policy and the original documents having been submitted to any other insurer, the Company shall accept the copy of the documents and claim settlement advice, duly certified by the other insurer subject to satisfaction of the Company. v. If requested by the Company, at the Company’s cost, the Insured Person must submit to medical examination by Medical Practitioner appointed by the Company as often as it is considered reasonable and necessary and Company’s representatives must be permitted to inspect the medical and Hospitalization records pertaining to the Insured Person’s treatment, and to investigate the circumstances pertaining to the claim. Any delay in notification or submission may be condoned on merit where delay is proved to be for reasons beyond the control of the Insured Person",
+            "id": "section-006.2",
+            "strategy": "section",
+            "word_count": 492,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-006",
+            "tokens": 209,
+            "score": -10.4227294921875,
+            "dense_score": 0.6211031079292297,
+            "keyword_score": 0.8882917261554176
+          },
+          {
+            "source_id": "M1",
+            "pages": [
+              1
+            ],
+            "section": "1.2. Procedure for Cashless Claims",
+            "text": "1.2. Procedure for Cashless Claims a. Treatment may be taken in a Network Provider and is subject to pre authorization by the Company. b. Cashless request form is available with the Network Provider. c. The Network Provider shall obtain the relevant information from the Insured Person / Policyholder and send a Cashless Facility request to the Company for authorization. d. The Company upon getting cashless request form and related medical information from the Insured Person/ Network Provider shall issue pre-authorization letter to the Network Provider after verification. e. At the time of discharge, the Insured Person shall verify and sign the discharge papers along with final bill, pay for non-medical and inadmissible expenses. f. The Company reserves the right to deny pre-authorization in case the Insured Person is unable to provide the relevant medical details. g. In case of denial of cashless access, the Insured Person may obtain the treatment as per treating doctor’s advice and submit the claim documents to the Company for reimbursement.",
+            "id": "section-002.1",
+            "strategy": "section",
+            "word_count": 165,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-002",
+            "tokens": 213,
+            "score": -10.895560264587402,
+            "dense_score": 0.574006974697113,
+            "keyword_score": 2.144340507430674
+          },
+          {
+            "source_id": "M1",
+            "pages": [
+              1
+            ],
+            "section": "1.1. Notification of claim:",
+            "text": "1.1. Notification of claim: Notice with full particulars shall be sent to the Company as under: a. Within 24 hours from the date of emergency Hospitalization required or before the Insured Person’s discharge from Hospital, whichever is earlier. b. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization or decision to avail treatment under Section 3.2 (Home Health Care).",
+            "id": "section-001.1",
+            "strategy": "section",
+            "word_count": 65,
+            "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+            "uin": "HDFHLIP25041V062425",
+            "parent_id": "section-001",
+            "tokens": 87,
+            "score": -11.129950523376465,
+            "dense_score": 0.5679858922958374,
+            "keyword_score": 0.833902511269244
+          }
+        ],
+        "error": "APITimeoutError"
+      },
+      "error": null,
+      "human_review": {
+        "supported_claims": null,
+        "total_factual_claims": null,
+        "relevant_evidence": null,
+        "expected_behavior_pass": null,
+        "notes": "Pending review"
+      }
+    }
+  ],
+  "expected_cases": 15,
+  "completed_cases": 5,
+  "elapsed_seconds": 232.52830070001073
+}

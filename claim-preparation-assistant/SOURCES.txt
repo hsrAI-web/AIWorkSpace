@@ -1,0 +1,31 @@
+INITIAL SOURCE REGISTER
+Accessed: 19 October 2026
+Publisher: HDFC ERGO
+Status: Live official HTML pages inspected; links recorded, not downloaded snapshots.
+
+S1 - General health claim document checklist
+https://www.hdfcergo.com/claim/register-health-insurance-claim/document-check-list
+Purpose: Seed document requirements and conditional questions.
+Research summary: Lists a signed form with policy number, discharge summary,
+itemised final bill and payment evidence, pharmacy invoices with prescriptions,
+investigation reports, and bank payment details. Additional requirements depend
+on implants, prior treatment, accidents, or proposer death. Mentions eKYC linkage.
+Notification timing is addressed separately from document submission.
+Applicability: General insurer guidance; confirm against selected product/form.
+
+S2 - General health reimbursement process
+https://www.hdfcergo.com/claim/register-health-insurance-claim/reimbursement
+Purpose: Verify submission channels, sequence, forms, and follow-up instructions.
+Applicability: General guidance; verify product applicability before ingestion.
+
+S3 - Official health claim form directory
+https://www.hdfcergo.com/download/claim-form/health
+Purpose: Identify the matching retail product form; avoid substituting a group form.
+Status: Directory inspected. Individual form content and version not yet validated.
+
+RESEARCH GAPS
+- Select one product and verify its current policy wording and matching form.
+- Resolve differences between general checklist, form, and policy instructions.
+- Capture version/UIN where available, source section/page, access date and hash.
+- Download source originals and extract relevant content before building the index.
+- Never merge group, retail, or unrelated product requirements without attribution.

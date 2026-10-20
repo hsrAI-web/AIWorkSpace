@@ -1,0 +1,3968 @@
+{
+  "metric": "All reference text markers found across top 3 passages",
+  "corpus_chunk_hashes": {
+    "fixed": "51030a4d415b726c984c75332be485152226d481d11b3521dae6d9823ea3bdea",
+    "recursive": "240311c9b783316af7dfc279573ac9adc95fecf82a563a9e02e1e3bf39e7e3a3",
+    "section": "b7540a5c922c2bf5bda1f9af95532682307ec9bb0ca85a0d12ec3bcb47fb8266",
+    "semantic": "bb6577368559a2e92734977c825c4356a00fbbbf2f14286793e62cf57f386127"
+  },
+  "limitations": [
+    "Small manual plus reviewed form-page-4 corpus; long sections can inflate coverage.",
+    "Measures text-marker presence, not semantic sufficiency or answer faithfulness.",
+    "Case 15 (approval/live status) is an answer-level abstention test; case 14 checks threshold retrieval only.",
+    "This benchmark does not score the generated answers or the separate deterministic checklist."
+  ],
+  "summary": [
+    {
+      "strategy": "fixed",
+      "mode": "dense",
+      "passed": 9,
+      "total": 14
+    },
+    {
+      "strategy": "fixed",
+      "mode": "keyword",
+      "passed": 12,
+      "total": 14
+    },
+    {
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "passed": 12,
+      "total": 14
+    },
+    {
+      "strategy": "fixed",
+      "mode": "reranked",
+      "passed": 11,
+      "total": 14
+    },
+    {
+      "strategy": "recursive",
+      "mode": "dense",
+      "passed": 10,
+      "total": 14
+    },
+    {
+      "strategy": "recursive",
+      "mode": "keyword",
+      "passed": 12,
+      "total": 14
+    },
+    {
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "passed": 11,
+      "total": 14
+    },
+    {
+      "strategy": "recursive",
+      "mode": "reranked",
+      "passed": 13,
+      "total": 14
+    },
+    {
+      "strategy": "section",
+      "mode": "dense",
+      "passed": 12,
+      "total": 14
+    },
+    {
+      "strategy": "section",
+      "mode": "keyword",
+      "passed": 13,
+      "total": 14
+    },
+    {
+      "strategy": "section",
+      "mode": "hybrid",
+      "passed": 12,
+      "total": 14
+    },
+    {
+      "strategy": "section",
+      "mode": "reranked",
+      "passed": 12,
+      "total": 14
+    },
+    {
+      "strategy": "semantic",
+      "mode": "dense",
+      "passed": 10,
+      "total": 14
+    },
+    {
+      "strategy": "semantic",
+      "mode": "keyword",
+      "passed": 11,
+      "total": 14
+    },
+    {
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "passed": 10,
+      "total": 14
+    },
+    {
+      "strategy": "semantic",
+      "mode": "reranked",
+      "passed": 12,
+      "total": 14
+    }
+  ],
+  "results": [
+    {
+      "case": "01",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.019248600001446903,
+      "ids": [
+        "fixed-006.1",
+        "fixed-005.1",
+        "fixed-013.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01921030000085011,
+      "ids": [
+        "fixed-013.1",
+        "fixed-006.1",
+        "fixed-015.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.016936599975451827,
+      "ids": [
+        "fixed-006.1",
+        "fixed-011.1",
+        "fixed-013.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.018646900018211454,
+      "ids": [
+        "fixed-013.1",
+        "fixed-006.1",
+        "fixed-015.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [
+        "Accident cases only"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.013210200006142259,
+      "ids": [
+        "fixed-010.1",
+        "fixed-005.1",
+        "fixed-009.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01997650001430884,
+      "ids": [
+        "fixed-006.1",
+        "fixed-002.1",
+        "fixed-011.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01448280003387481,
+      "ids": [
+        "fixed-013.1",
+        "fixed-015.1",
+        "fixed-007.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01811280002584681,
+      "ids": [
+        "fixed-010.1",
+        "fixed-011.1",
+        "fixed-012.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.014557699963916093,
+      "ids": [
+        "fixed-013.1",
+        "fixed-005.1",
+        "fixed-006.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.016468700021505356,
+      "ids": [
+        "fixed-009.1",
+        "fixed-001.1",
+        "fixed-011.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.013820400054100901,
+      "ids": [
+        "fixed-011.1",
+        "fixed-005.1",
+        "fixed-004.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.014126199996098876,
+      "ids": [
+        "fixed-010.1",
+        "fixed-004.1",
+        "fixed-005.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.0213588000042364,
+      "ids": [
+        "fixed-010.1",
+        "fixed-012.1",
+        "fixed-013.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "fixed",
+      "mode": "dense",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [
+        "above Rs 1 lakh"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.01762519998010248,
+      "ids": [
+        "fixed-012.1",
+        "fixed-008.1",
+        "fixed-004.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.020029300008900464,
+      "ids": [
+        "fixed-004.1",
+        "fixed-005.1",
+        "fixed-007.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.015003399981651455,
+      "ids": [
+        "fixed-006.1",
+        "fixed-012.1",
+        "fixed-007.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.018961000023409724,
+      "ids": [
+        "fixed-006.1",
+        "fixed-007.1",
+        "fixed-013.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01867700001457706,
+      "ids": [
+        "fixed-006.1",
+        "fixed-004.1",
+        "fixed-005.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01746390003245324,
+      "ids": [
+        "fixed-007.1",
+        "fixed-012.1",
+        "fixed-002.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.018937099957838655,
+      "ids": [
+        "fixed-006.1",
+        "fixed-001.1",
+        "fixed-003.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.014157099998556077,
+      "ids": [
+        "fixed-015.1",
+        "fixed-006.1",
+        "fixed-007.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.018114700040314347,
+      "ids": [
+        "fixed-011.1",
+        "fixed-010.1",
+        "fixed-003.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.015170599974226207,
+      "ids": [
+        "fixed-007.1",
+        "fixed-006.1",
+        "fixed-015.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.012152500043157488,
+      "ids": [
+        "fixed-001.1",
+        "fixed-013.1",
+        "fixed-006.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.018795299984049052,
+      "ids": [
+        "fixed-004.1",
+        "fixed-014.1",
+        "fixed-002.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.017234700033441186,
+      "ids": [
+        "fixed-003.1",
+        "fixed-005.1",
+        "fixed-008.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.0212032999843359,
+      "ids": [
+        "fixed-012.1",
+        "fixed-008.1",
+        "fixed-013.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "fixed",
+      "mode": "keyword",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01473609998356551,
+      "ids": [
+        "fixed-007.1",
+        "fixed-005.1",
+        "fixed-009.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.017716400034260005,
+      "ids": [
+        "fixed-005.1",
+        "fixed-006.1",
+        "fixed-004.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.016774000017903745,
+      "ids": [
+        "fixed-006.1",
+        "fixed-013.1",
+        "fixed-012.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.016809499997179955,
+      "ids": [
+        "fixed-006.1",
+        "fixed-013.1",
+        "fixed-001.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.011108300008345395,
+      "ids": [
+        "fixed-006.1",
+        "fixed-005.1",
+        "fixed-014.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [
+        "Accident cases only"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.011090299987699836,
+      "ids": [
+        "fixed-012.1",
+        "fixed-009.1",
+        "fixed-010.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.012972500000614673,
+      "ids": [
+        "fixed-006.1",
+        "fixed-001.1",
+        "fixed-002.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.010326499992515892,
+      "ids": [
+        "fixed-015.1",
+        "fixed-013.1",
+        "fixed-006.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.013980899995658547,
+      "ids": [
+        "fixed-010.1",
+        "fixed-011.1",
+        "fixed-008.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.018488700035959482,
+      "ids": [
+        "fixed-013.1",
+        "fixed-006.1",
+        "fixed-007.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.019527899974491447,
+      "ids": [
+        "fixed-001.1",
+        "fixed-006.1",
+        "fixed-013.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.02065329998731613,
+      "ids": [
+        "fixed-004.1",
+        "fixed-002.1",
+        "fixed-006.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.017934000003151596,
+      "ids": [
+        "fixed-005.1",
+        "fixed-004.1",
+        "fixed-010.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.023772799992002547,
+      "ids": [
+        "fixed-012.1",
+        "fixed-008.1",
+        "fixed-013.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "fixed",
+      "mode": "hybrid",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.022598100011236966,
+      "ids": [
+        "fixed-007.1",
+        "fixed-008.1",
+        "fixed-004.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 1.1095281000016257,
+      "ids": [
+        "fixed-005.1",
+        "fixed-004.1",
+        "fixed-012.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.0420687000150792,
+      "ids": [
+        "fixed-013.1",
+        "fixed-006.1",
+        "fixed-015.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.7349929999909364,
+      "ids": [
+        "fixed-013.1",
+        "fixed-006.1",
+        "fixed-012.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.7015364000108093,
+      "ids": [
+        "fixed-006.1",
+        "fixed-014.1",
+        "fixed-013.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.6740156000014395,
+      "ids": [
+        "fixed-007.1",
+        "fixed-012.1",
+        "fixed-002.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.6219170999829657,
+      "ids": [
+        "fixed-006.1",
+        "fixed-002.1",
+        "fixed-001.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.5643102999893017,
+      "ids": [
+        "fixed-007.1",
+        "fixed-015.1",
+        "fixed-006.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.4885306000360288,
+      "ids": [
+        "fixed-011.1",
+        "fixed-010.1",
+        "fixed-015.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.48710990004474297,
+      "ids": [
+        "fixed-013.1",
+        "fixed-014.1",
+        "fixed-004.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.5950561999925412,
+      "ids": [
+        "fixed-001.1",
+        "fixed-013.1",
+        "fixed-009.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.6220013999845833,
+      "ids": [
+        "fixed-004.1",
+        "fixed-001.1",
+        "fixed-002.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.5797251999611035,
+      "ids": [
+        "fixed-003.1",
+        "fixed-005.1",
+        "fixed-004.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.7342951000318862,
+      "ids": [
+        "fixed-012.1",
+        "fixed-008.1",
+        "fixed-013.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "fixed",
+      "mode": "reranked",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.6796638999949209,
+      "ids": [
+        "fixed-007.1",
+        "fixed-012.1",
+        "fixed-010.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [
+        "Duly Completed claim form"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.011397100053727627,
+      "ids": [
+        "recursive-005.1",
+        "recursive-015.1",
+        "recursive-010.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008171900000888854,
+      "ids": [
+        "recursive-012.1",
+        "recursive-013.1",
+        "recursive-015.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008536000037565827,
+      "ids": [
+        "recursive-005.1",
+        "recursive-010.1",
+        "recursive-013.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008238400041591376,
+      "ids": [
+        "recursive-005.1",
+        "recursive-015.1",
+        "recursive-013.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [
+        "Accident cases only"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.009360199968796223,
+      "ids": [
+        "recursive-012.1",
+        "recursive-008.1",
+        "recursive-009.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.012420999992173165,
+      "ids": [
+        "recursive-005.1",
+        "recursive-002.1",
+        "recursive-010.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01140979997580871,
+      "ids": [
+        "recursive-015.1",
+        "recursive-012.1",
+        "recursive-006.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.007692400016821921,
+      "ids": [
+        "recursive-009.1",
+        "recursive-010.1",
+        "recursive-011.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.006507700018119067,
+      "ids": [
+        "recursive-012.1",
+        "recursive-007.1",
+        "recursive-002.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.013769700017292053,
+      "ids": [
+        "recursive-008.1",
+        "recursive-001.1",
+        "recursive-010.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.010191000008489937,
+      "ids": [
+        "recursive-010.1",
+        "recursive-001.1",
+        "recursive-005.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.009589300025254488,
+      "ids": [
+        "recursive-004.1",
+        "recursive-009.1",
+        "recursive-008.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.013762699963990599,
+      "ids": [
+        "recursive-009.1",
+        "recursive-012.1",
+        "recursive-011.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "recursive",
+      "mode": "dense",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.015502399997785687,
+      "ids": [
+        "recursive-007.1",
+        "recursive-011.1",
+        "recursive-012.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.010883999988436699,
+      "ids": [
+        "recursive-004.1",
+        "recursive-006.1",
+        "recursive-011.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01415679999627173,
+      "ids": [
+        "recursive-011.1",
+        "recursive-006.1",
+        "recursive-013.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.016102799971122295,
+      "ids": [
+        "recursive-006.1",
+        "recursive-002.1",
+        "recursive-005.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.011376000009477139,
+      "ids": [
+        "recursive-005.1",
+        "recursive-004.1",
+        "recursive-001.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008600300003308803,
+      "ids": [
+        "recursive-006.1",
+        "recursive-012.1",
+        "recursive-011.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.011040200013667345,
+      "ids": [
+        "recursive-001.1",
+        "recursive-005.1",
+        "recursive-006.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.00898149999557063,
+      "ids": [
+        "recursive-015.1",
+        "recursive-013.1",
+        "recursive-006.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.010148100031074136,
+      "ids": [
+        "recursive-010.1",
+        "recursive-009.1",
+        "recursive-003.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.009724400006234646,
+      "ids": [
+        "recursive-006.1",
+        "recursive-015.1",
+        "recursive-004.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008016300038434565,
+      "ids": [
+        "recursive-001.1",
+        "recursive-006.1",
+        "recursive-014.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.010567000019364059,
+      "ids": [
+        "recursive-004.1",
+        "recursive-008.1",
+        "recursive-002.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.014588399964850396,
+      "ids": [
+        "recursive-003.1",
+        "recursive-004.1",
+        "recursive-007.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.010899699991568923,
+      "ids": [
+        "recursive-011.1",
+        "recursive-007.1",
+        "recursive-012.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "recursive",
+      "mode": "keyword",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008924000023398548,
+      "ids": [
+        "recursive-007.1",
+        "recursive-006.1",
+        "recursive-004.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.010164400038775057,
+      "ids": [
+        "recursive-006.1",
+        "recursive-011.1",
+        "recursive-004.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01367369998479262,
+      "ids": [
+        "recursive-013.1",
+        "recursive-011.1",
+        "recursive-005.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.009158200002275407,
+      "ids": [
+        "recursive-005.1",
+        "recursive-013.1",
+        "recursive-002.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.009357300004921854,
+      "ids": [
+        "recursive-005.1",
+        "recursive-011.1",
+        "recursive-013.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [
+        "Accident cases only"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.00876960001187399,
+      "ids": [
+        "recursive-012.1",
+        "recursive-008.1",
+        "recursive-011.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.014564800017978996,
+      "ids": [
+        "recursive-005.1",
+        "recursive-001.1",
+        "recursive-002.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.007078900001943111,
+      "ids": [
+        "recursive-015.1",
+        "recursive-013.1",
+        "recursive-006.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.006508199963718653,
+      "ids": [
+        "recursive-009.1",
+        "recursive-010.1",
+        "recursive-015.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.007409099955111742,
+      "ids": [
+        "recursive-015.1",
+        "recursive-012.1",
+        "recursive-006.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008500900003127754,
+      "ids": [
+        "recursive-001.1",
+        "recursive-014.1",
+        "recursive-013.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.010539399983827025,
+      "ids": [
+        "recursive-004.1",
+        "recursive-001.1",
+        "recursive-008.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.01174749998608604,
+      "ids": [
+        "recursive-004.1",
+        "recursive-009.1",
+        "recursive-011.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.011079300020355731,
+      "ids": [
+        "recursive-011.1",
+        "recursive-012.1",
+        "recursive-007.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "recursive",
+      "mode": "hybrid",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.012279000016860664,
+      "ids": [
+        "recursive-007.1",
+        "recursive-006.1",
+        "recursive-004.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.6215749999973923,
+      "ids": [
+        "recursive-004.1",
+        "recursive-011.1",
+        "recursive-005.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.5955709000118077,
+      "ids": [
+        "recursive-013.1",
+        "recursive-005.1",
+        "recursive-015.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.6406897999695502,
+      "ids": [
+        "recursive-013.1",
+        "recursive-005.1",
+        "recursive-015.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.8783124000183307,
+      "ids": [
+        "recursive-005.1",
+        "recursive-013.1",
+        "recursive-015.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.6638301000348292,
+      "ids": [
+        "recursive-012.1",
+        "recursive-006.1",
+        "recursive-008.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.6441935000475496,
+      "ids": [
+        "recursive-005.1",
+        "recursive-002.1",
+        "recursive-001.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.5162667999975383,
+      "ids": [
+        "recursive-006.1",
+        "recursive-015.1",
+        "recursive-013.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.5805117999552749,
+      "ids": [
+        "recursive-010.1",
+        "recursive-009.1",
+        "recursive-015.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.5785024999640882,
+      "ids": [
+        "recursive-012.1",
+        "recursive-007.1",
+        "recursive-004.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.521308199968189,
+      "ids": [
+        "recursive-001.1",
+        "recursive-008.1",
+        "recursive-013.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.5467180999694392,
+      "ids": [
+        "recursive-004.1",
+        "recursive-008.1",
+        "recursive-001.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.545428899989929,
+      "ids": [
+        "recursive-003.1",
+        "recursive-004.1",
+        "recursive-001.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.5514948000200093,
+      "ids": [
+        "recursive-011.1",
+        "recursive-007.1",
+        "recursive-012.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "recursive",
+      "mode": "reranked",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.5159639999619685,
+      "ids": [
+        "recursive-007.1",
+        "recursive-006.1",
+        "recursive-011.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008052899967879057,
+      "ids": [
+        "section-006.1",
+        "section-014.1",
+        "section-008.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008250400016549975,
+      "ids": [
+        "section-011.1",
+        "section-008.1",
+        "section-006.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.007918599992990494,
+      "ids": [
+        "section-014.1",
+        "section-006.1",
+        "section-008.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01007329998537898,
+      "ids": [
+        "section-006.1",
+        "section-011.1",
+        "section-008.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [
+        "Accident cases only"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.00834439997561276,
+      "ids": [
+        "section-013.1",
+        "section-006.2",
+        "section-014.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.009366900019813329,
+      "ids": [
+        "section-014.1",
+        "section-006.1",
+        "section-002.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.007683900010306388,
+      "ids": [
+        "section-011.1",
+        "section-008.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.00851479999255389,
+      "ids": [
+        "section-013.1",
+        "section-014.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008961400017142296,
+      "ids": [
+        "section-006.1",
+        "section-011.1",
+        "section-006.2"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.009584299987182021,
+      "ids": [
+        "section-001.1",
+        "section-014.1",
+        "section-006.2"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008611899975221604,
+      "ids": [
+        "section-005.1",
+        "section-014.1",
+        "section-006.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008233299944549799,
+      "ids": [
+        "section-013.1",
+        "section-006.2",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.010442600003443658,
+      "ids": [
+        "section-006.2",
+        "section-013.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "section",
+      "mode": "dense",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.011832999996840954,
+      "ids": [
+        "section-007.1",
+        "section-006.1",
+        "section-013.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.009557600016705692,
+      "ids": [
+        "section-005.1",
+        "section-006.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.010368799965362996,
+      "ids": [
+        "section-006.1",
+        "section-008.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.007547799963504076,
+      "ids": [
+        "section-006.1",
+        "section-008.1",
+        "section-002.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.007893800036981702,
+      "ids": [
+        "section-006.1",
+        "section-004.1",
+        "section-010.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.007374299981165677,
+      "ids": [
+        "section-002.1",
+        "section-007.1",
+        "section-006.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.007650099985767156,
+      "ids": [
+        "section-006.1",
+        "section-002.1",
+        "section-004.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.006444500002544373,
+      "ids": [
+        "section-011.1",
+        "section-008.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.006518899986986071,
+      "ids": [
+        "section-014.1",
+        "section-013.1",
+        "section-003.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008535799977835268,
+      "ids": [
+        "section-006.1",
+        "section-011.1",
+        "section-008.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.007008399988990277,
+      "ids": [
+        "section-001.1",
+        "section-009.1",
+        "section-008.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.007939000031910837,
+      "ids": [
+        "section-005.1",
+        "section-002.1",
+        "section-009.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.006607500021345913,
+      "ids": [
+        "section-003.1",
+        "section-006.2",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008751199988182634,
+      "ids": [
+        "section-007.1",
+        "section-006.2",
+        "section-004.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "section",
+      "mode": "keyword",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01070300000719726,
+      "ids": [
+        "section-006.1",
+        "section-006.2",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.00978579994989559,
+      "ids": [
+        "section-006.1",
+        "section-005.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.009692299994640052,
+      "ids": [
+        "section-006.1",
+        "section-008.1",
+        "section-011.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.007518600032199174,
+      "ids": [
+        "section-006.1",
+        "section-008.1",
+        "section-014.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008908800024073571,
+      "ids": [
+        "section-006.1",
+        "section-006.2",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [
+        "Accident cases only"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.00714429997606203,
+      "ids": [
+        "section-006.2",
+        "section-013.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.008371700008865446,
+      "ids": [
+        "section-006.1",
+        "section-002.1",
+        "section-003.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.009977499954402447,
+      "ids": [
+        "section-011.1",
+        "section-008.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.009264699998311698,
+      "ids": [
+        "section-013.1",
+        "section-014.1",
+        "section-011.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.006536600005347282,
+      "ids": [
+        "section-006.1",
+        "section-011.1",
+        "section-008.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.011517200036905706,
+      "ids": [
+        "section-001.1",
+        "section-009.1",
+        "section-008.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.011528000002726912,
+      "ids": [
+        "section-005.1",
+        "section-006.1",
+        "section-006.2"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.010324700037017465,
+      "ids": [
+        "section-006.2",
+        "section-007.1",
+        "section-013.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.010410100047010928,
+      "ids": [
+        "section-006.2",
+        "section-007.1",
+        "section-011.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "section",
+      "mode": "hybrid",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.014064000046346337,
+      "ids": [
+        "section-006.1",
+        "section-007.1",
+        "section-006.2"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.3886634999653324,
+      "ids": [
+        "section-006.1",
+        "section-005.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.2329897999879904,
+      "ids": [
+        "section-008.1",
+        "section-011.1",
+        "section-006.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.326564299990423,
+      "ids": [
+        "section-008.1",
+        "section-006.1",
+        "section-011.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.8697764999815263,
+      "ids": [
+        "section-006.1",
+        "section-008.1",
+        "section-013.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.376773800002411,
+      "ids": [
+        "section-006.1",
+        "section-007.1",
+        "section-006.2"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.1854639999801293,
+      "ids": [
+        "section-006.1",
+        "section-002.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 1.2628560999874026,
+      "ids": [
+        "section-011.1",
+        "section-008.1",
+        "section-007.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.2761341999867,
+      "ids": [
+        "section-014.1",
+        "section-013.1",
+        "section-003.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.7664381000213325,
+      "ids": [
+        "section-006.1",
+        "section-011.1",
+        "section-006.2"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 2.0003141000051983,
+      "ids": [
+        "section-001.1",
+        "section-006.1",
+        "section-008.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.3814380999538116,
+      "ids": [
+        "section-005.1",
+        "section-001.1",
+        "section-006.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.7379314000136219,
+      "ids": [
+        "section-003.1",
+        "section-001.1",
+        "section-005.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.2994566999841481,
+      "ids": [
+        "section-006.2",
+        "section-007.1",
+        "section-006.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "section",
+      "mode": "reranked",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 2.126881100004539,
+      "ids": [
+        "section-006.1",
+        "section-007.1",
+        "section-006.2"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.02018370002042502,
+      "ids": [
+        "semantic-008.1",
+        "semantic-007.1",
+        "semantic-009.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [
+        "claim form"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.02378869999665767,
+      "ids": [
+        "semantic-019.1",
+        "semantic-016.1",
+        "semantic-008.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.024341000011190772,
+      "ids": [
+        "semantic-008.1",
+        "semantic-019.1",
+        "semantic-016.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.02055450004991144,
+      "ids": [
+        "semantic-008.1",
+        "semantic-016.1",
+        "semantic-020.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [
+        "Accident cases only"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.0196148999966681,
+      "ids": [
+        "semantic-013.1",
+        "semantic-016.1",
+        "semantic-003.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.021866599970962852,
+      "ids": [
+        "semantic-008.1",
+        "semantic-004.1",
+        "semantic-014.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.019620200037024915,
+      "ids": [
+        "semantic-016.1",
+        "semantic-009.1",
+        "semantic-020.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.025080999999772757,
+      "ids": [
+        "semantic-003.1",
+        "semantic-014.1",
+        "semantic-001.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.017144499986898154,
+      "ids": [
+        "semantic-016.1",
+        "semantic-003.1",
+        "semantic-018.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.02060340001480654,
+      "ids": [
+        "semantic-002.1",
+        "semantic-001.1",
+        "semantic-009.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.024610299966298044,
+      "ids": [
+        "semantic-007.1",
+        "semantic-008.1",
+        "semantic-002.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.023246099997777492,
+      "ids": [
+        "semantic-001.1",
+        "semantic-003.1",
+        "semantic-013.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.024619300034828484,
+      "ids": [
+        "semantic-016.1",
+        "semantic-013.1",
+        "semantic-020.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "semantic",
+      "mode": "dense",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.02436179999494925,
+      "ids": [
+        "semantic-003.1",
+        "semantic-016.1",
+        "semantic-011.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.024521099985577166,
+      "ids": [
+        "semantic-007.1",
+        "semantic-009.1",
+        "semantic-016.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [
+        "claim form"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.025602900015655905,
+      "ids": [
+        "semantic-019.1",
+        "semantic-009.1",
+        "semantic-008.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.024287600012030452,
+      "ids": [
+        "semantic-009.1",
+        "semantic-019.1",
+        "semantic-008.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.016822700039483607,
+      "ids": [
+        "semantic-008.1",
+        "semantic-005.1",
+        "semantic-004.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.015420900017488748,
+      "ids": [
+        "semantic-010.1",
+        "semantic-016.1",
+        "semantic-004.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.019084000028669834,
+      "ids": [
+        "semantic-008.1",
+        "semantic-004.1",
+        "semantic-009.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.016349199984688312,
+      "ids": [
+        "semantic-009.1",
+        "semantic-016.1",
+        "semantic-020.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.020482800027821213,
+      "ids": [
+        "semantic-020.1",
+        "semantic-004.1",
+        "semantic-007.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.01997210003901273,
+      "ids": [
+        "semantic-009.1",
+        "semantic-020.1",
+        "semantic-011.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.016018600028473884,
+      "ids": [
+        "semantic-002.1",
+        "semantic-009.1",
+        "semantic-019.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.019507699995301664,
+      "ids": [
+        "semantic-007.1",
+        "semantic-013.1",
+        "semantic-009.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.020001299970317632,
+      "ids": [
+        "semantic-004.1",
+        "semantic-013.1",
+        "semantic-020.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.02298250002786517,
+      "ids": [
+        "semantic-016.1",
+        "semantic-013.1",
+        "semantic-009.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "semantic",
+      "mode": "keyword",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.023823500028811395,
+      "ids": [
+        "semantic-011.1",
+        "semantic-013.1",
+        "semantic-014.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.027229600003920496,
+      "ids": [
+        "semantic-007.1",
+        "semantic-009.1",
+        "semantic-016.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [
+        "claim form"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.027583400020375848,
+      "ids": [
+        "semantic-019.1",
+        "semantic-008.1",
+        "semantic-009.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.02328939997823909,
+      "ids": [
+        "semantic-008.1",
+        "semantic-019.1",
+        "semantic-009.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.021794700005557388,
+      "ids": [
+        "semantic-008.1",
+        "semantic-013.1",
+        "semantic-004.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [
+        "Accident cases only"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.01754210004583001,
+      "ids": [
+        "semantic-016.1",
+        "semantic-013.1",
+        "semantic-004.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.0239086999790743,
+      "ids": [
+        "semantic-008.1",
+        "semantic-004.1",
+        "semantic-009.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01875570003176108,
+      "ids": [
+        "semantic-009.1",
+        "semantic-016.1",
+        "semantic-020.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.016560799966100603,
+      "ids": [
+        "semantic-020.1",
+        "semantic-017.1",
+        "semantic-014.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 0.019587099959608167,
+      "ids": [
+        "semantic-016.1",
+        "semantic-011.1",
+        "semantic-020.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.01824429997941479,
+      "ids": [
+        "semantic-002.1",
+        "semantic-009.1",
+        "semantic-019.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.021467700018547475,
+      "ids": [
+        "semantic-007.1",
+        "semantic-013.1",
+        "semantic-009.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.020571200002450496,
+      "ids": [
+        "semantic-013.1",
+        "semantic-007.1",
+        "semantic-004.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.02185789996292442,
+      "ids": [
+        "semantic-016.1",
+        "semantic-013.1",
+        "semantic-020.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "semantic",
+      "mode": "hybrid",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 0.018803299986757338,
+      "ids": [
+        "semantic-011.1",
+        "semantic-013.1",
+        "semantic-014.1"
+      ]
+    },
+    {
+      "case": "01",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "Duly Completed claim form",
+        "Discharge Card",
+        "Final Hospital bill"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.3027824999880977,
+      "ids": [
+        "semantic-007.1",
+        "semantic-008.1",
+        "semantic-013.1"
+      ]
+    },
+    {
+      "case": "02",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "payment receipt",
+        "claim form"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.672764900024049,
+      "ids": [
+        "semantic-019.1",
+        "semantic-008.1",
+        "semantic-020.1"
+      ]
+    },
+    {
+      "case": "03",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "payment receipt"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.819875100045465,
+      "ids": [
+        "semantic-019.1",
+        "semantic-008.1",
+        "semantic-020.1"
+      ]
+    },
+    {
+      "case": "04",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "implant stickers",
+        "Invoice"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.3976188999949954,
+      "ids": [
+        "semantic-008.1",
+        "semantic-020.1",
+        "semantic-004.1"
+      ]
+    },
+    {
+      "case": "05",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "Accident cases only"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.0393961999798194,
+      "ids": [
+        "semantic-010.1",
+        "semantic-016.1",
+        "semantic-013.1"
+      ]
+    },
+    {
+      "case": "06",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "Registration Certificate"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.1298527999897487,
+      "ids": [
+        "semantic-008.1",
+        "semantic-004.1",
+        "semantic-014.1"
+      ]
+    },
+    {
+      "case": "07",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "prescription by Medical Practitioner"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.022294399968814,
+      "ids": [
+        "semantic-009.1",
+        "semantic-016.1",
+        "semantic-020.1"
+      ]
+    },
+    {
+      "case": "08",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "TO BE FILLED IN BY THE INSURED",
+        "TO BE FILLED IN BY THE HOSPITAL"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.5982485999702476,
+      "ids": [
+        "semantic-020.1",
+        "semantic-017.1",
+        "semantic-014.1"
+      ]
+    },
+    {
+      "case": "09",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "missing_markers": [
+        "NEFT form",
+        "cancelled blank cheque"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 1.2739820000133477,
+      "ids": [
+        "semantic-020.1",
+        "semantic-016.1",
+        "semantic-011.1"
+      ]
+    },
+    {
+      "case": "10",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "Within 24 hours",
+        "whichever is earlier"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.2596321000019088,
+      "ids": [
+        "semantic-002.1",
+        "semantic-001.1",
+        "semantic-019.1"
+      ]
+    },
+    {
+      "case": "11",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "Within 15 days",
+        "completion of post"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.422920899989549,
+      "ids": [
+        "semantic-007.1",
+        "semantic-002.1",
+        "semantic-013.1"
+      ]
+    },
+    {
+      "case": "12",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "missing_markers": [
+        "delay",
+        "beyond the control"
+      ],
+      "marker_coverage_at_3": false,
+      "seconds": 1.1151027999585494,
+      "ids": [
+        "semantic-004.1",
+        "semantic-001.1",
+        "semantic-007.1"
+      ]
+    },
+    {
+      "case": "13",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "claim settlement advice",
+        "certified by the other insurer"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.3886782999616116,
+      "ids": [
+        "semantic-016.1",
+        "semantic-013.1",
+        "semantic-011.1"
+      ]
+    },
+    {
+      "case": "14",
+      "strategy": "semantic",
+      "mode": "reranked",
+      "reference_markers": [
+        "above Rs 1 lakh"
+      ],
+      "missing_markers": [],
+      "marker_coverage_at_3": true,
+      "seconds": 1.2366468000109307,
+      "ids": [
+        "semantic-011.1",
+        "semantic-014.1",
+        "semantic-013.1"
+      ]
+    }
+  ]
+}

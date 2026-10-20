@@ -1,0 +1,34 @@
+{
+  "indexed_sources": [
+    "M1",
+    "F1 page 4 reviewed enclosures"
+  ],
+  "deferred_sources": [
+    "Other F1 pages, tables, and cross-page ambulance checklist"
+  ],
+  "reason": "Only visually reviewed form passages enter retrieval.",
+  "checks": "Six manual sections; cross-page checklist; key conditions; both deadline rows preserved.",
+  "baseline": {
+    "implementation": "langchain_text_splitters.RecursiveCharacterTextSplitter",
+    "chunk_size_characters": 1000,
+    "chunk_overlap_characters": 150,
+    "page_bounded": true
+  },
+  "strategies": {
+    "fixed": {
+      "chunks": 15,
+      "min_words": 12,
+      "max_words": 161
+    },
+    "recursive": {
+      "chunks": 15,
+      "min_words": 12,
+      "max_words": 153
+    },
+    "section": {
+      "chunks": 14,
+      "min_words": 12,
+      "max_words": 492
+    }
+  }
+}

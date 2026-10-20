@@ -1,0 +1,9 @@
+{
+  "model": "BAAI/bge-small-en-v1.5",
+  "method": "Adjacent atomic-block embedding cosine distance; 75th percentile break threshold",
+  "threshold": 0.4160565733909607,
+  "atoms": 74,
+  "chunks": 20,
+  "max_tokens": 331,
+  "note": "Requirement-item atoms preserve local conditions; page references conservatively include parent section pages."
+}

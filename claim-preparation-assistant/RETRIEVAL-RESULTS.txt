@@ -1,0 +1,30 @@
+RETRIEVAL COMPARISON
+Metric: expected source text markers across top 3 retrieved passages.
+Not generated-answer accuracy or semantic sufficiency. All strategies use the same admitted corpus.
+
+fixed / dense: 9/14; median 0.02s; p95 0.02s
+fixed / keyword: 12/14; median 0.02s; p95 0.02s
+fixed / hybrid: 12/14; median 0.02s; p95 0.02s
+fixed / reranked: 11/14; median 0.65s; p95 1.11s
+recursive / dense: 10/14; median 0.01s; p95 0.02s
+recursive / keyword: 12/14; median 0.01s; p95 0.02s
+recursive / hybrid: 11/14; median 0.01s; p95 0.01s
+recursive / reranked: 13/14; median 0.58s; p95 0.88s
+section / dense: 12/14; median 0.01s; p95 0.01s
+section / keyword: 13/14; median 0.01s; p95 0.01s
+section / hybrid: 12/14; median 0.01s; p95 0.01s
+section / reranked: 12/14; median 1.35s; p95 2.13s
+semantic / dense: 10/14; median 0.02s; p95 0.03s
+semantic / keyword: 11/14; median 0.02s; p95 0.03s
+semantic / hybrid: 10/14; median 0.02s; p95 0.03s
+semantic / reranked: 12/14; median 1.29s; p95 1.82s
+
+Limitations:
+Small manual plus reviewed form-page-4 corpus; long sections can inflate coverage.
+Measures text-marker presence, not semantic sufficiency or answer faithfulness.
+Case 15 (approval/live status) is an answer-level abstention test; case 14 checks threshold retrieval only.
+This benchmark does not score the generated answers or the separate deterministic checklist.
+
+Do not infer that semantic chunking or reranking always improves retrieval.
+Fixed/recursive windows, whole sections and semantic units differ in size, which affects marker coverage.
+Reported retrieval timings exclude model loading, downloads and initial indexing.

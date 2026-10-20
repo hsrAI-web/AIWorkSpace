@@ -17,3 +17,9 @@ python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements.txt
 .\.venv\Scripts\python -m streamlit run app.py
 ```
+
+## Health claim preparation assistant
+
+[Open the project and setup instructions](claim-preparation-assistant/README.txt).
+
+Insurance reimbursement paperwork prototype with LangGraph, local hybrid retrieval, four chunking comparisons, cited draft answers, and a 15-question evaluation. Includes documented failures and limitations; it does not determine coverage or claim approval.

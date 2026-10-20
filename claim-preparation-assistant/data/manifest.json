@@ -1,0 +1,24 @@
+[
+  {
+    "source_id": "M1",
+    "file": "optima-secure-claim-manual.pdf",
+    "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/my-optima-secure---cm-783226902747.pdf",
+    "accessed": "2026-10-19",
+    "pages": 2,
+    "sha256": "055e34368494e8206b957bacde792a0c894d0cc80295cb645f89e50d9e091461",
+    "product": "my: Optima Secure",
+    "uin": "HDFHLIP25041V062425",
+    "applicability": "Verify against the issued policy version"
+  },
+  {
+    "source_id": "F1",
+    "file": "optima-secure-claim-form.pdf",
+    "url": "https://customer-portal-assets.hdfcergo.com/assets/v2/docs/default-source/downloads/claim-forms/myoptima-secure---cf-58675432702.pdf",
+    "accessed": "2026-10-19",
+    "pages": 11,
+    "sha256": "59ea31d360652b468c0a06cfdc86902c64398cf0c58aad7828c6625cbba13cef",
+    "product": "my: Optima Secure",
+    "uin": "HDFHLIP25041V062425",
+    "applicability": "Verify against the issued policy version"
+  }
+]

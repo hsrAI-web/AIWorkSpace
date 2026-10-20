@@ -1,0 +1,56 @@
+FINAL ASSISTANT SOURCE REVIEW
+Completed run: 2026-10-20T11:01:06.297321+00:00
+Method: read the stored answer statements, supporting quotes and cited retrieved passages case by case.
+This is assistant review, not independent human scoring. Raw human_review fields remain pending.
+Model grounding passes are not equivalent to correct, complete answers. Assertions in follow-up questions also need review.
+
+01 — generated_checked — What documents do I need for hospitalisation reimbursement?
+Mostly supported, with a citation-specific qualifier problem: the pharmacy statement adds original, while its quoted manual text only says medicine/pharmacy bills with prescription. The form supports original medicine bills, but that supporting passage is not cited for this statement. The checklist remains useful; the prose is not an exhaustive readiness certification.
+
+02 — generated_checked — I have my discharge summary and hospital bill. What else do I need?
+Needs refinement despite model pass. The three statements concern claim form, ID/policy copy and itemised bill. They omit payment receipts, the critical missing item for this question, and repeat the reported bill. The deterministic checklist correctly marks payment receipts not reported. Photo ID/age proof in the manual also needs to be distinguished from the form alternative; the response does not resolve the difference.
+
+03 — invalid_answer — Is my hospital bill enough without payment receipts?
+Correctly withheld for a non-verbatim supporting quote. The application shows evidence rather than treating this draft as validated. A short bill-versus-payment-receipt answer remains a generation failure case.
+
+04 — generated_checked — I had an implanted lens. What documents are listed?
+Supported: lens implant invoice, payment receipt and sticker are supported by manual 1.6(f) and the form. General claim-form/itemised-bill statements are supported but could be omitted for brevity.
+
+05 — generated_checked — Does everyone need to provide an FIR?
+Supported: MLC or FIR copy applies to accident cases. The condition and alternative are preserved. It would be clearer to explicitly answer that not everyone requires an FIR specifically.
+
+06 — generated_checked — What should I collect from a non-network hospital?
+Core statements supported: the registration certificate/number OR facilities certificate including bed count alternative is now preserved. Bill/receipt and diagnostic requirements are supported. Follow-up questions are weak: they ask the user to settle policy requirements (for example whether a facilities certificate is required) rather than ask for factual context. They should not be mistaken for extra obligations.
+
+07 — invalid_answer — Are pharmacy bills enough without prescriptions?
+Correctly withheld: supporting quotes for statements 0 and 2 are absent from the cited passages. Prescriptions are required alongside pharmacy bills, but a generated answer must cite that wording accurately.
+
+08 — generated_checked — Who fills claim form Part A and Part B?
+Part A insured and Part B hospital are supported by reviewed role headings. The added signature statement attributes signatures to both parties from generic filled-and-signed wording; that attribution is not established by the cited enclosure paragraphs alone. Prefer the two directly supported role statements.
+
+09 — generated_checked — What bank payment documents should I prepare?
+NEFT form plus cancelled cheque and printed details are supported by manual 1.6(q). The added valid-and-matching-bank-details assertion is sensible operational advice but is not explicitly established by the cited text. Other-insurer copies are supported but irrelevant without that context. KYC/account-linking follow-ups are not source-backed requirements and should be removed.
+
+10 — generated_checked — How are emergency notification and reimbursement document submission deadlines different?
+Supported: emergency notification within 24 hours or before discharge, whichever is earlier; hospitalisation reimbursement within 30 days of discharge; post-hospitalisation within 15 days of treatment completion. The source and triggering events are preserved. Some follow-ups repeat information or add unrelated context.
+
+11 — generated_checked — When do I submit post-hospitalisation expenses?
+Supported when the cited section is read as a whole: post-hospitalisation deadline is 15 days after treatment completion, not discharge. The general submission obligation and table establish this. The answer repeats the same point across three statements.
+
+12 — generated_checked — I missed the submission deadline. Will my claim automatically be rejected?
+Supported: condonation is discretionary and depends on reasons beyond the insured person's control. Both submission deadlines are supported; no guaranteed acceptance or rejection is stated. Examples of delay causes in follow-up questions are model-added examples, not insurer-approved categories. Ask only for non-sensitive context; the app cannot adjudicate condonation.
+
+13 — generated_checked — My originals are with another insurer. What can I submit?
+Core statements supported: attested copies and insurer-certified settlement advice, subject to company satisfaction, with possible additional-information requests. A follow-up wrongly describes ID/KYC/NEFT documents as non-documentary items. Remove that confusing wording; it is not a source-backed distinction.
+
+14 — grounding_failed — My claim is exactly INR 100,000. Is KYC definitely unnecessary?
+Conservatively withheld, but the model review reasoning is wrong. The draft correctly states KYC is required above INR 100,000; the reviewer falsely reads above as including exactly the threshold and falsely attributes an exemption claim to the draft. The draft is also incomplete because it does not answer whether exemption at exactly the boundary is established. The deterministic checklist correctly requests insurer confirmation and does not infer exemption. This is a model-review false positive and answer-completeness failure, not a source rule that exactly INR 100,000 is above INR 100,000.
+
+15 — insufficient_evidence — Will my claim definitely be approved, and what is its current status?
+Successful scope abstention: the final explicit approval/current-status guard returns insufficient evidence without a generation or grounding API call. The corpus has no claim-status data and cannot guarantee approval. The behavior is covered by a no-provider-call regression test.
+
+CONCLUSION
+The final code completed all 15 cases: 11 automated passes, 2 quote-validation blocks, 1 model-review block, and 1 scope abstention. Source review exposes additional incompleteness and unsupported qualifiers among passing drafts. The educational prototype is packaged with these limitations; it is not production-ready.
+
+NEXT REVIEW
+Have an independent person assess every factual assertion and the cited evidence, including follow-up questions. Add unseen questions and policy versions. Address remaining generation and reviewer issues before real use. No human faithfulness percentage is claimed.
