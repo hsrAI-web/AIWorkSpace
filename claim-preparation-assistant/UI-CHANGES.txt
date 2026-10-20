@@ -23,3 +23,5 @@ missing-connection fallback and removal of the checkbox/mode controls.
 
 The existing narrated walkthrough shows the earlier interface and should be
 re-recorded if a submission video must match the current layout exactly.
+
+EXCERPT-ID UPDATE: Broad paperwork questions now return the source-backed checklist directly, without an API call or embedding model load. Focused answers use excerpt IDs resolved to exact source text by Python. Read SPEED-RELIABILITY-RESULTS.txt for the current evaluation and remaining limitations. The architecture diagram and speaker notes reflect this flow. Older video/evaluation material is historical.

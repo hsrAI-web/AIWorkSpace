@@ -1,0 +1,83 @@
+EXCERPT IDS AND CHECKLIST-FIRST EVALUATION
+Run timestamp: 2026-10-20T17:16:23.065183+00:00
+Same source snapshot, retrieval method and Nebius model as the preserved baseline. Prompts/protocol and broad-question routing changed.
+Original 15 cases plus five additional cases. The extra cases are additional regression checks, not a statistically representative held-out benchmark.
+Timing excludes model loading/initial indexing in the suite; per-stage timings and provider-call counts are retained for every case.
+
+MATCHING ORIGINAL 15 QUESTIONS
+Before: median 9.92s; p95 19.57s; summed question time 175.22s.
+After: median 4.61s; p95 9.48s; summed question time 74.76s.
+The previous baseline had 11 model passes, 3 withheld drafts and 1 scope abstention. New outcomes use a distinct deterministic checklist path and must not be relabelled as model passes.
+
+ALL 20 QUESTIONS
+{'generated': 13, 'checklist_answers': 4, 'generation_calls': 18, 'review_calls': 13, 'grounding_passed': 13, 'grounding_blocked': 0, 'safe_abstentions': 2, 'total': 20}
+Questions with a generation call: median 5.90s; p95 9.48s, including retrieval, correction and review.
+Four broad questions used no model calls. The user's exact broad question completed in 0.03s in the real UI, versus the observed prior 91.81s attempt that failed validation.
+No quotation-mismatch failure occurred. Attached quotations come from code, not the model. This mechanically prevents model rewriting of displayed source text; it does not prove paraphrase support.
+One model response (case 13) was withheld for invalid structure or an unknown excerpt ID after the bounded correction attempt.
+Case 14 returned insufficient evidence: this avoids a fabricated KYC exemption, but is less informative than a supported threshold explanation.
+The provider responded in this run; this does not establish a provider uptime guarantee. Sequential runs are not a controlled latency experiment.
+
+PER-QUESTION RESULTS
+01: checklist_answer — 0.0058s — What documents do I need for hospitalisation reimbursement?
+  stages={'checklist': 0.0002738999901339412, 'retrieval': 8.87999776750803e-05}; provider_calls={}
+02: checklist_answer — 0.0046s — I have my discharge summary and hospital bill. What else do I need?
+  stages={'checklist': 0.0002447000006213784, 'retrieval': 7.989996811375022e-05}; provider_calls={}
+03: generated_checked — 7.5110s — Is my hospital bill enough without payment receipts?
+  stages={'checklist': 0.00023179996060207486, 'retrieval': 3.649256200005766, 'generation': 2.705518500006292, 'review': 1.1494957999675535}; provider_calls={'generation': 1, 'review': 1}
+04: generated_checked — 7.3865s — I had an implanted lens. What documents are listed?
+  stages={'checklist': 0.00021279999054968357, 'retrieval': 3.5176746000070125, 'generation': 2.7308199999970384, 'review': 1.1306897000176832}; provider_calls={'generation': 1, 'review': 1}
+05: generated_checked — 9.4817s — Does everyone need to provide an FIR?
+  stages={'checklist': 0.00022559997159987688, 'retrieval': 3.407717499998398, 'generation': 4.986314999987371, 'review': 1.079410599952098}; provider_calls={'generation': 2, 'review': 1}
+06: generated_checked — 5.9736s — What should I collect from a non-network hospital?
+  stages={'checklist': 0.0001832999987527728, 'retrieval': 1.165045999980066, 'generation': 3.8034125000122003, 'review': 0.9995726000051945}; provider_calls={'generation': 1, 'review': 1}
+07: generated_checked — 4.6065s — Are pharmacy bills enough without prescriptions?
+  stages={'checklist': 0.00018390000332146883, 'retrieval': 0.9638556999852881, 'generation': 2.6042863000184298, 'review': 1.0332610000041313}; provider_calls={'generation': 1, 'review': 1}
+08: generated_checked — 3.8983s — Who fills claim form Part A and Part B?
+  stages={'checklist': 9.940000018104911e-05, 'retrieval': 0.9639835000270978, 'generation': 1.8096681000315584, 'review': 1.1169627999770455}; provider_calls={'generation': 1, 'review': 1}
+09: generated_checked — 4.3172s — What bank payment documents should I prepare?
+  stages={'checklist': 0.00010720000136643648, 'retrieval': 0.8979813999612816, 'generation': 2.474659100000281, 'review': 0.9408325999975204}; provider_calls={'generation': 1, 'review': 1}
+10: generated_checked — 5.6321s — How are emergency notification and reimbursement document submission deadlines different?
+  stages={'checklist': 0.0001227000029757619, 'retrieval': 0.9779067999916151, 'generation': 3.50754700001562, 'review': 1.142447100020945}; provider_calls={'generation': 1, 'review': 1}
+11: generated_checked — 3.5727s — When do I submit post-hospitalisation expenses?
+  stages={'checklist': 0.00014130002819001675, 'retrieval': 0.9349770999979228, 'generation': 1.6915178999770433, 'review': 0.9415949999820441}; provider_calls={'generation': 1, 'review': 1}
+12: generated_checked — 3.9976s — I missed the submission deadline. Will my claim automatically be rejected?
+  stages={'checklist': 8.359999628737569e-05, 'retrieval': 1.4235577000072226, 'generation': 1.5978691999916919, 'review': 0.9716002999921329}; provider_calls={'generation': 1, 'review': 1}
+13: invalid_answer — 9.3450s — My originals are with another insurer. What can I submit?
+  stages={'checklist': 0.00019320001592859626, 'retrieval': 3.0210945999715477, 'generation': 6.317992499971297}; provider_calls={'generation': 2}
+  Model returned invalid answer structure or unknown excerpt IDs.
+14: insufficient_evidence — 5.9034s — My claim is exactly INR 100,000. Is KYC definitely unnecessary?
+  stages={'checklist': 0.0002565000322647393, 'retrieval': 3.0477395999478176, 'generation': 2.8505643000244163}; provider_calls={'generation': 2}
+15: insufficient_evidence — 3.1190s — Will my claim definitely be approved, and what is its current status?
+  stages={'checklist': 0.00021080003352835774, 'retrieval': 3.1141736999852583, 'generation': 2.700003096833825e-05}; provider_calls={'generation': 0}
+16: checklist_answer — 0.0037s — what documents are required for a claim
+  stages={'checklist': 0.0002194000408053398, 'retrieval': 6.880000000819564e-05}; provider_calls={}
+17: generated_checked — 5.9733s — Which receipts are listed alongside the final hospital bill?
+  stages={'checklist': 0.0002405999694019556, 'retrieval': 2.9904269999824464, 'generation': 1.821170200011693, 'review': 1.1554361999733374}; provider_calls={'generation': 1, 'review': 1}
+18: generated_checked — 5.8734s — Can a non-network hospital provide a facilities certificate instead of its registration certificate?
+  stages={'checklist': 0.00025069998810067773, 'retrieval': 3.1376538000185974, 'generation': 1.691552500007674, 'review': 1.0373829000163823}; provider_calls={'generation': 1, 'review': 1}
+19: checklist_answer — 0.0043s — I already have a hospital bill and discharge card. Which paperwork is still not reported?
+  stages={'checklist': 0.0002623000182211399, 'retrieval': 6.059999577701092e-05}; provider_calls={}
+20: generated_checked — 6.3858s — For post-hospitalisation, does the submission deadline start at discharge or when treatment is completed?
+  stages={'checklist': 0.0001800000318326056, 'retrieval': 3.620896599953994, 'generation': 1.7132439999841154, 'review': 1.0444557999726385}; provider_calls={'generation': 1, 'review': 1}
+
+ASSISTANT SOURCE REVIEW
+This is assistant inspection, not independent human faithfulness scoring. Human review fields remain pending.
+Cases 01,02,16,19: all 19 checklist rows come from manual clauses. Reported possession stays unverified; conditional and unknown applicability are preserved. A bill does not count as a receipt.
+Case 03: original payment receipts and the conditional certified-copy discussion are supported, but the other-insurer exception is unnecessary for the narrow question.
+Case 04: implant invoice, receipt and sticker are supported; inspect the attached source for the full condition.
+Case 05: MLC/FIR alternative and accident-only condition are retained; three repeated statements could be shorter.
+Case 06: registration OR facilities certificate is retained; diagnostic/pharmacy requirements are supported. The implant phrase omits payment receipts, so the summary is not exhaustive.
+Case 07: bills-with-prescriptions is supported. The third statement broadens this into all claims, beyond the cited pharmacy/diagnostics clauses. A model grounding pass missed that overgeneralisation.
+Case 08: Part A insured and Part B hospital are supported. The added insured-submission responsibility is weakly supported by generic enclosure wording and is unnecessary.
+Case 09: NEFT/cheque details and above-threshold KYC are supported. The third statement applies an insured-name rule for medical bills to all bank-payment documents, which the cited passage does not establish. This is an unsupported generalisation despite the model pass.
+Cases 10,11,12: inspect source triggers and discretionary delay wording; no guarantee of automatic rejection or acceptance is allowed.
+Case 13: no answer displayed; malformed/unknown-ID response safely withheld.
+Case 14: evidence abstention avoids an unsupported threshold exemption but does not provide a full explanation.
+Case 15: explicit approval/live-status scope abstention with no provider call.
+Case 17: the answer lists payment/refund receipts but omits original deposit receipts explicitly present in the cited manual. This is a completeness failure despite a model pass.
+Case 18: facilities-certificate alternative including bed count is supported.
+Case 20: treatment-completion rather than discharge is the correct post-hospitalisation trigger. The answer could also state the 15-day interval.
+
+CONCLUSION
+Measured speed and quotation reliability improved in this run. Broader factual faithfulness and completeness remain imperfect, and the same provider model can miss unsupported generalisations during its audit. Do not describe these results as 95% accuracy, 100% reliability or independent human validation.

@@ -1,9 +1,13 @@
 HEALTH CLAIM PREPARATION ASSISTANT
-20 October 2026 submission snapshot
+Latest revision: excerpt IDs and checklist-first answers
 
-Start with README.txt for installation and running. PROJECT-REPORT.docx explains the design and evaluation; SUBMISSION-NOTES.txt contains the Google Doc and repository links.
+LATEST VALIDATION — EXCERPT IDS AND CHECKLIST-FIRST
 
-Latest validation: 26 unit tests and four interface checks pass. The full 15-case provider run has 11 automated grounding passes, 3 withheld drafts and 1 scope abstention. These are not human accuracy scores.
-Read SOURCE-REVIEW.txt for case-level limitations, including issues in passing drafts. Independent human review and further answer-quality work remain before real use.
+27 unit tests and updated interface checks pass.
+Latest run: 2026-10-20T17:16:23.065183+00:00
+20 cases: 4 deterministic checklist responses, 13 model grounding passes, 2 insufficient-evidence responses, 1 invalid model response withheld.
+Matching original 15 median 9.92s -> 4.61s; p95 19.57s -> 9.48s.
+The user's broad question: real UI 0.03s, no API call. No quote-mismatch failures in this run. Provider timing varies.
+Read SPEED-RELIABILITY-RESULTS.txt for stage timings, call counts, limitations and assistant source review. Model passes are not human accuracy scores. Earlier reports remain historical snapshots.
 
-Purpose: help prepare reimbursement paperwork for fictional examples matching HDFC ERGO my:Optima Secure UIN HDFHLIP25041V062425. No coverage, approval, payout or live-status decisions.
+Read README.txt for setup, SPEED-RELIABILITY-RESULTS.txt for the new run, and RELIABILITY-ADDENDUM.txt for the report update.

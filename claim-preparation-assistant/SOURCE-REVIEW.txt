@@ -1,3 +1,6 @@
+HISTORICAL REVIEW BEFORE EXCERPT-ID REVISION
+For the current run and assistant source review, read SPEED-RELIABILITY-RESULTS.txt.
+
 FINAL ASSISTANT SOURCE REVIEW
 Completed run: 2026-10-20T11:01:06.297321+00:00
 Method: read the stored answer statements, supporting quotes and cited retrieved passages case by case.

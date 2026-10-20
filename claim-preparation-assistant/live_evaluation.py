@@ -24,15 +24,24 @@ CASES=[
  ('15','Will my claim definitely be approved, and what is its current status?',[],'No fabricated approval or live status; acknowledge missing evidence.'),
 ]
 
+ADDITIONAL_CASES=[
+ ('16','what documents are required for a claim',[],'Checklist-first; no generation or embedding call.'),
+ ('17','Which receipts are listed alongside the final hospital bill?',[],'Original deposit and final payment receipts; refund receipts if advance refunded.'),
+ ('18','Can a non-network hospital provide a facilities certificate instead of its registration certificate?',[],'Preserve registration OR facilities certificate including bed count.'),
+ ('19','I already have a hospital bill and discharge card. Which paperwork is still not reported?',['Hospital bill','Discharge card'],'Checklist-first; reported items separate from missing receipts; no readiness certification.'),
+ ('20','For post-hospitalisation, does the submission deadline start at discharge or when treatment is completed?',[],'15 days from completion of post-hospitalisation treatment.'),
+]
+
 def run_suite(engine,generator,model,on_progress=None,verifier=None,case_ids=None,checkpoint_path=None):
     rows=[]
     # Load local resources before per-question timing; record total wall time too.
     suite_start=perf_counter()
     engine.index('section')
     graph=build_graph(engine,generator,verifier)
-    selected=[c for c in CASES if case_ids is None or c[0] in case_ids]
+    selected=[c for c in CASES+ADDITIONAL_CASES if (c in CASES if case_ids is None else c[0] in case_ids)]
     signature=hashlib.sha256(json.dumps([model,PROMPT,GROUNDING_PROMPT,selected,
         hashlib.sha256((ROOT/'claim_workflow.py').read_bytes()).hexdigest(),
+        hashlib.sha256((ROOT/'excerpts.py').read_bytes()).hexdigest(),
         hashlib.sha256((ROOT/'data/chunks-section.json').read_bytes()).hexdigest()],sort_keys=True).encode()).hexdigest()
     cached={}; previous_seconds=0
     if checkpoint_path and checkpoint_path.exists():
@@ -75,10 +84,14 @@ def run_suite(engine,generator,model,on_progress=None,verifier=None,case_ids=Non
     manifest=json.loads((ROOT/'data/manifest.json').read_text(encoding='utf-8'))
     checkpoint('complete')
     return dict(created_utc=datetime.now(timezone.utc).isoformat(),model=model,
+                suite_kind='speed_reliability' if any(c[0]>'15' for c in selected) else 'standard',
                 suite_seconds=previous_seconds+perf_counter()-suite_start,cases=rows,
                 resumed_cached_cases=len(cached),
                 source_fingerprint=hashlib.sha256(json.dumps(manifest,sort_keys=True).encode()).hexdigest(),
                 automatic_summary={'generated':sum(r['result']['status'] in ('generated_unverified','generated_checked','grounding_failed') for r in rows),
+                                   'checklist_answers':sum(r['result']['status']=='checklist_answer' for r in rows),
+                                   'generation_calls':sum(r['result'].get('api_calls',{}).get('generation',0) for r in rows),
+                                   'review_calls':sum(r['result'].get('api_calls',{}).get('review',0) for r in rows),
                                    'grounding_passed':sum(r['result']['status']=='generated_checked' for r in rows),
                                    'grounding_blocked':sum(r['result']['status']=='grounding_failed' for r in rows),
                                    'safe_abstentions':sum(r['result']['status']=='insufficient_evidence' for r in rows),

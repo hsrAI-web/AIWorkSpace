@@ -19,7 +19,7 @@ at.text_area(key='have').set_value('Discharge summary\nHospital bill')
 at.form_submit_button[0].click().run()
 assert not at.exception
 state=at.session_state['result']['state']
-assert state['status']=='evidence_only' and len(state['evidence'])==5
+assert state['status']=='checklist_answer' and len(state['checklist']['items'])==19
 assert 'api_key' not in state
 assert [t.label for t in at.tabs]==['Answer','Document checklist','Sources']
 assert state['uin']=='HDFHLIP25041V062425'
@@ -27,6 +27,11 @@ assert state['uin']=='HDFHLIP25041V062425'
 at.text_input(key='api_key').set_value('test-only-key')
 at.text_input(key='endpoint').set_value('https://example.invalid/v1')
 at.text_input(key='model').set_value('mock-model')
+with patch('openai.OpenAI') as provider:
+    at.form_submit_button[0].click().run()
+    assert not provider.called
+    assert at.session_state['result']['state']['status']=='checklist_answer'
+at.text_area(key='question').set_value('Are payment receipts needed?')
 with patch('openai.OpenAI') as provider:
     raw=json.dumps(dict(statements=[],clarification_questions=[],insufficient_evidence=True))
     provider.return_value.chat.completions.create.return_value=SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content=raw))])

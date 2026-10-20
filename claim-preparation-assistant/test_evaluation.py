@@ -15,7 +15,8 @@ class EvaluationTests(unittest.TestCase):
         generator=lambda _:json.dumps(dict(statements=[],clarification_questions=[],insufficient_evidence=True))
         verifier=lambda _:json.dumps(dict(supported=True,unsupported_statement_indexes=[],notes='No factual statements'))
         report=run_suite(Engine(),generator,'mock-model',lambda n,total:progress.append(n),verifier)
-        self.assertEqual(report['automatic_summary']['safe_abstentions'],15)
+        self.assertEqual(report['automatic_summary']['safe_abstentions'],13)
+        self.assertEqual(report['automatic_summary']['checklist_answers'],2)
         self.assertEqual(progress,list(range(1,16)))
         self.assertTrue(all(c['human_review']['expected_behavior_pass'] is None for c in report['cases']))
         self.assertNotIn('api_key',json.dumps(report))
@@ -24,7 +25,7 @@ class EvaluationTests(unittest.TestCase):
         report=run_suite(Engine(),generator,'mock-model')
         self.assertEqual(len(report['cases']),15)
         self.assertEqual(report['automatic_summary']['generated'],0)
-        self.assertEqual(sum(c['result']['status']=='generation_failed' for c in report['cases']),14)
+        self.assertEqual(sum(c['result']['status']=='generation_failed' for c in report['cases']),12)
         self.assertEqual(report['cases'][-1]['result']['status'],'insufficient_evidence')
     def test_interrupted_suite_resumes_saved_cases_without_recalling_provider(self):
         with tempfile.TemporaryDirectory() as directory:

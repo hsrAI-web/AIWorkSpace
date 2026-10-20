@@ -1,0 +1,11 @@
+Excerpt IDs and checklist-first update
+
+The excerpt-ID and checklist-first revision was tested on the original 15 questions plus five additional cases. The same corpus, local retrieval models and Nebius generation model were used. The additional questions are regression checks, not a statistically representative held-out benchmark.
+
+Across 20 cases, four broad requests returned deterministic source-backed checklists, 13 AI answers passed model grounding, two returned insufficient evidence, and one invalid model response was withheld. No quotation-mismatch failure occurred. The model selects excerpt IDs; code supplies the original text. An unknown ID or invalid response structure still blocks the draft.
+
+For the matching original 15 cases, median question time fell from 9.92 to 4.61 seconds and p95 from 19.57 to 9.48 seconds. Across cases that called generation in the new run, the median was 5.90 seconds. The user's exact broad question completed in 0.03 seconds in the UI with no API call, compared with the observed previous 91.81-second failed attempt. These sequential observations do not isolate provider variability or guarantee future latency.
+
+Per-stage timings and recorded provider-call counts are saved in data/speed-reliability-evaluation.json. The run resumed three completed checkpoint cases without recalling their providers. The completed-case records contain 18 generation/correction calls and 13 review calls; interrupted work is not a billing ledger.
+
+Source review still found issues among some model passes: overgeneralised prescription and bank-document rules, unnecessary extra statements, and omitted deposit receipts in a narrow answer. One other-insurer question was withheld for invalid structure or an unknown excerpt ID; the KYC-boundary question abstained instead of giving a full explanation. Thus source copying and observed latency improved, while factual completeness and model-review reliability remain limited. Independent human faithfulness is unmeasured. See SPEED-RELIABILITY-RESULTS.txt for the full comparison and case-level assistant review.

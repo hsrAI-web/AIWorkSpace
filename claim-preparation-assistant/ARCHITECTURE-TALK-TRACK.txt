@@ -1,0 +1,86 @@
+ARCHITECTURE WALKTHROUGH FOR YOUR OWN RECORDING
+
+Use ARCHITECTURE-OVERVIEW.png full-screen. It is a 2560 x 1440 image in a 16:9
+aspect ratio. The SVG version stays sharp when enlarged and can be edited.
+The diagram describes the implemented application, not an intended future system.
+
+SPOKEN WALKTHROUGH — APPROXIMATELY 2 TO 3 MINUTES
+
+Start at the title
+"I built a health claim preparation assistant. It helps a policyholder understand
+reimbursement paperwork, identify documents they have not reported having, and
+check the source requirements. It does not approve a claim or predict a payout.
+The architecture has two parts: preparing the documents and answering a question."
+
+Point across the top row
+"First, I use the official claim manual and reviewed passages from the claim
+form. I extract the PDFs page by page, clean repeated text, and keep the page
+references and document version. I split the text into chunks while preserving
+clauses and conditions, because words such as 'or' and 'if applicable' matter.
+
+"I compared fixed, LangChain recursive, section-aware and semantic chunking.
+The interactive app currently uses section-aware chunks. A local BGE embedding
+model converts the chunks into numerical vectors. The chunks and vectors are
+stored locally; BM25 provides the keyword-search index. I did not use a hosted
+vector database or a paid embedding API."
+
+Point across the bottom row
+"The user enters a question, document names and optional claim details in
+Streamlit. LangGraph controls the workflow. It checks the request's scope and
+builds a rules-based checklist, keeping document applicability separate from
+whether the user says they have the document.
+
+"Broad document questions return the rules-based source checklist directly,
+without embeddings or API calls. For focused questions, hybrid search combines
+semantic vector matches with BM25 keyword
+matches. Reciprocal-rank fusion combines the rankings, and a cross-encoder
+reranks ten candidates to select five passages. This helps with both exact
+document terms and differently worded questions.
+
+"When AI is configured, the question and retrieved evidence go to Nebius.
+The model writes a structured draft selecting excerpt IDs. Python attaches
+the original supporting source text; the model does not copy quotations.
+One correction attempt is allowed for schema, excerpt-ID or known-rule
+errors. Final checks validate the structure, citations and quotes, apply narrow
+rules, and use a model audit to assess support. A failing draft is withheld.
+
+"The interface separates Answer, Document checklist and Sources. If AI is not
+configured, the checklist and source passages still work. Questions about definite
+approval or current claim status explicitly return insufficient evidence."
+
+Close with the limit
+"The checks reduce errors but do not prove correctness. I tested fifteen
+fictional questions and documented both failures and successful results.
+Independent human review and more answer-quality work are still needed."
+
+SUGGESTED RECORDING ORDER — UNDER FIVE MINUTES
+
+0:00–0:20  Explain the user problem and the narrow paperwork scope.
+0:20–1:10  Walk through document preparation along the top row.
+1:10–2:20  Explain retrieval, generation and validation along the bottom row.
+2:20–3:30  Show the actual app: question, checklist, cited answer and source tab.
+3:30–4:15  Explain chunking comparisons and the 15-question evaluation.
+4:15–4:40  Explain limitations, what Codex helped build, and what you learned.
+
+FACTS TO KEEP ACCURATE
+
+- LangChain RecursiveCharacterTextSplitter is a comparison baseline. The app
+  currently retrieves section-aware chunks; semantic chunking was evaluated too.
+- The embedding model is BAAI/bge-small-en-v1.5, 384 dimensions, via FastEmbed.
+- The cross-encoder is Xenova/ms-marco-MiniLM-L-6-v2 and runs locally.
+- The tested generation model is Qwen/Qwen3-30B-A3B-Instruct-2507 on Nebius.
+- JSON files and NumPy vector caches provide local storage. There is no Pinecone,
+  Chroma or other hosted vector database in this implementation.
+- The same provider model performs the model grounding audit. It is not an
+  independent expert review, and it can make mistakes.
+- The latest 20-case run recorded 4 checklist answers, 13 model grounding passes,
+  2 insufficient-evidence responses and 1 invalid response withheld. The matching
+  original 15 median was 4.61s versus 9.92s previously. These are not human accuracy scores. Assistant source
+  review found additional problems in some passing drafts.
+- The 95% faithfulness figure is a target, not a measured result.
+- Sources are a dated snapshot. The app does not fetch fresh policy documents
+  automatically, verify an issued policy, or connect to a live claims system.
+- API credentials currently come from the visitor's session. Deployment-secret
+  support was discussed but has not been implemented.
+- Local means the computer/server running Streamlit, not necessarily the
+  visitor's browser. In Community Cloud, these components run on its server.

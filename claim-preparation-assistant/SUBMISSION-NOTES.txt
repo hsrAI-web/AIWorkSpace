@@ -49,3 +49,5 @@ arrangements; the files currently retain private access. Submit the reviewed
 materials through the course form. No real insurance claim is being submitted.
 
 UI UPDATE: The narrated walkthrough shows the earlier interface. UI-CHANGES.txt and INTERFACE-GUIDE.txt describe the current one-button flow and result tabs.
+
+EXCERPT-ID UPDATE: Broad paperwork questions now return the source-backed checklist directly, without an API call or embedding model load. Focused answers use excerpt IDs resolved to exact source text by Python. Read SPEED-RELIABILITY-RESULTS.txt for the current evaluation and remaining limitations. The architecture diagram and speaker notes reflect this flow. Older video/evaluation material is historical.

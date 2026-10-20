@@ -18,3 +18,5 @@ Use fictional examples and enter document names only, without IDs or bank number
 Drafts that fail validation are withheld. The checklist and sources can still be
 inspected. Model validation does not guarantee factual correctness or readiness.
 Developer tools contain the paid evaluation controls and saved historical results.
+
+EXCERPT-ID UPDATE: Broad paperwork questions now return the source-backed checklist directly, without an API call or embedding model load. Focused answers use excerpt IDs resolved to exact source text by Python. Read SPEED-RELIABILITY-RESULTS.txt for the current evaluation and remaining limitations. The architecture diagram and speaker notes reflect this flow. Older video/evaluation material is historical.

@@ -11,12 +11,15 @@ import streamlit as st
 # server or clearing the session-only provider settings.
 import claim_workflow as _workflow
 import live_evaluation as _evaluation
+import excerpts as _excerpts
+importlib.reload(_excerpts)
 importlib.reload(_workflow)
 importlib.reload(_evaluation)
 from claim_workflow import UIN, build_graph, provider_generator, GROUNDING_PROMPT
 from retrieval import Retriever
 from live_evaluation import run_suite
 from retrieval import ROOT
+from excerpts import checklist_first
 
 st.set_page_config(page_title='Claim preparation assistant',page_icon=':material/checklist:',layout='centered')
 st.session_state.setdefault('result',None)
@@ -95,7 +98,7 @@ with st.form('claim_question'):
         amount=st.selectbox('Claim amount band',['Not sure','Above INR 100,000','INR 100,000 or below'],key='amount_band')
         context['amount_band']='above_100000' if amount=='Above INR 100,000' else 'unknown_or_below'
     submitted=st.form_submit_button('Ask assistant',type='primary',icon=':material/arrow_forward:',width='stretch')
-    st.caption('You will get a document checklist and sources. AI adds a cited draft answer when connected.')
+    st.caption('Broad document questions get a source-backed checklist immediately. Focused questions add a cited AI draft when connected.')
 
 if submitted:
     st.session_state.result=None
@@ -111,7 +114,7 @@ if submitted:
         with st.spinner('Finding relevant requirements…'):
             start=perf_counter()
             if state['uin'] and state['claim_type'] and state['question']:
-                engine,lock=retrieval_resource(current_index_version())
+                engine,lock=(None,threading.Lock()) if checklist_first(state['question'],state['checklist_scope']) else retrieval_resource(current_index_version())
                 callback=provider_generator(api_key,model.strip(),endpoint.strip()) if generate else None
                 verifier=provider_generator(api_key,model.strip(),endpoint.strip(),GROUNDING_PROMPT) if generate else None
                 with lock:
@@ -150,6 +153,14 @@ if st.session_state.result:
             with st.expander(details_label):
                 st.text(result['error'])
         answer=result.get('answer')
+        if result.get('status')=='checklist_answer':
+            st.success('Your source-backed checklist is ready. No AI request was needed.')
+            st.caption('Document names you entered are unverified. Required, conditional and unknown items stay separate; this does not certify submission readiness.')
+            st.dataframe([{'Document':i['requirement'],'Applicability':i['applicability'].replace('_',' '),
+                           'Your report':i['possession'].replace('_',' '),'Source':i['section']}
+                          for i in result['checklist']['items']],hide_index=True,key='answer_checklist',
+                         alt='Source-backed checklist with applicability and reported possession')
+            st.caption('Open Document checklist for contextual questions and exact requirements, or Sources to inspect the clauses.')
         if answer:
             if result['status']=='generated_checked':
                 st.warning('Draft answer: citation IDs and a model-based grounding check passed. Review against the sources; these checks do not guarantee correctness.')
@@ -161,9 +172,9 @@ if st.session_state.result:
                 st.text(statement['text'])
                 st.caption('Sources: '+', '.join(statement['citations']))
                 if statement.get('evidence_quotes'):
-                    with st.expander(f'Supporting excerpts for statement {number}'):
+                    with st.expander(f'View supporting source for statement {number}'):
                         for quote in statement['evidence_quotes']:
-                            st.caption(quote['citation'])
+                            st.caption((quote.get('excerpt_id') or '')+' · '+quote['citation'])
                             st.text(quote['quote'])
             for followup in answer['clarification_questions']:
                 st.info(followup)
@@ -205,6 +216,7 @@ with st.expander('Developer tools · project evaluation'):
     st.caption('Uses the provider settings above. Up to 30 generation calls (one correction per question) plus 15 grounding-review calls; consumes credits. Fictional results are saved locally without credentials. Independent human review is needed to measure faithfulness.')
     run_evaluation=st.button('Run 15-question evaluation',key='run_evaluation')
     run_regression=st.button('Retest revised answer checks (9 questions)',key='run_regression')
+    run_speed=st.button('Test speed and reliability (20 questions)',key='run_speed')
     if st.button('Show last completed evaluation'):
         saved=ROOT/'data/live-evaluation.json'
         if saved.exists():
@@ -212,7 +224,7 @@ with st.expander('Developer tools · project evaluation'):
             st.session_state.regression=None
         else:
             st.info('No completed evaluation has been saved yet.')
-    if run_evaluation or run_regression:
+    if run_evaluation or run_regression or run_speed:
         key=st.session_state.get('api_key','').strip()
         if not key or not model.strip() or urlparse(endpoint.strip()).scheme!='https' or not urlparse(endpoint.strip()).hostname:
             st.error('Enter valid provider settings in the sidebar first.')
@@ -230,8 +242,8 @@ with st.expander('Developer tools · project evaluation'):
                 with lock:
                     report=run_suite(engine,callback,model.strip(),
                         lambda n,total:progress.progress(n/total,text=f'Completed {n} of {total} questions'),
-                        verifier=verifier,case_ids=['01','02','03','05','06','08','13','14','15'] if run_regression else None,
-                        checkpoint_path=ROOT/('data/live-progress-focused.json' if run_regression else 'data/live-progress-full.json'))
+                        verifier=verifier,case_ids=[f'{i:02}' for i in range(1,21)] if run_speed else ['01','02','03','05','06','08','13','14','15'] if run_regression else None,
+                        checkpoint_path=ROOT/('data/live-progress-speed.json' if run_speed else 'data/live-progress-focused.json' if run_regression else 'data/live-progress-full.json'))
                 if run_regression:
                     st.session_state.regression=report
                 else:
@@ -245,10 +257,11 @@ with st.expander('Developer tools · project evaluation'):
         st.caption('Latest focused retest: '+', '.join(f"{c['case']}: {c['result']['status']}" for c in regression['cases']))
     if report:
         # Persist the explicitly requested fictional test results, never credentials.
-        (ROOT/'data/live-evaluation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+        target='data/speed-reliability-evaluation.json' if report.get('suite_kind')=='speed_reliability' else 'data/live-evaluation.json'
+        (ROOT/target).write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
         summary=report['automatic_summary']
         if 'grounding_passed' in summary:
-            st.info(f"{summary['generated']}/{summary['total']} questions produced answer drafts; {summary['grounding_passed']} passed the model grounding check. This is not an accuracy score.")
+            st.info(f"{summary['total']} questions: {summary.get('checklist_answers',0)} source-backed checklists; {summary['grounding_passed']} model grounding passes; {summary.get('safe_abstentions',0)} insufficient-evidence responses. Other results may be withheld or failed. This is not an accuracy score.")
         else:
             st.info(f"{summary['generated']}/{summary['total']} questions produced drafts. Grounding was not run for this earlier report.")
         st.download_button('Download evaluation for review',json.dumps(report,ensure_ascii=False,indent=2),

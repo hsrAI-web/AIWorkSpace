@@ -26,7 +26,7 @@ The pipeline reads the local PDFs; it does not automatically download updates.
 
 VERIFY
 ./.venv/Scripts/python.exe -m unittest discover -p 'test_*.py'
-This includes 26 unit tests and interface checks with real local retrieval.
+This includes 27 unit tests and interface checks with real local retrieval.
 Run the separate 15-question live evaluation in the app only when you want
 paid provider calls. It allows one structural correction per answer, then
 checks citations, quotes, observed logic errors and model-grounded support.
@@ -64,3 +64,6 @@ Historical runs are retained to explain failures and iterations. Treat the final
 report as a dated snapshot, not a guarantee that stochastic outputs will repeat.
 Official source documents belong to their respective owner; this project is
 not affiliated with or endorsed by the insurer.
+
+CURRENT ANSWER FLOW
+Broad document questions use a source-backed checklist without embeddings or API calls. Focused AI questions use excerpt IDs; source quotes are attached by Python. Read SPEED-RELIABILITY-RESULTS.txt and data/speed-reliability-evaluation.json for the latest 20-case comparison. Earlier 15-case reports are historical.
