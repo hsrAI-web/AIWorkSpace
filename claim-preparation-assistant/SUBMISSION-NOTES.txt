@@ -47,3 +47,5 @@ review if you want to claim a measured faithfulness score. Ensure course
 reviewers can open the document, video and code using your chosen sharing
 arrangements; the files currently retain private access. Submit the reviewed
 materials through the course form. No real insurance claim is being submitted.
+
+UI UPDATE: The narrated walkthrough shows the earlier interface. UI-CHANGES.txt and INTERFACE-GUIDE.txt describe the current one-button flow and result tabs.

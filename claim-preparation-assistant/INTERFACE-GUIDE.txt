@@ -1,0 +1,20 @@
+USING THE CLAIM PREPARATION ASSISTANT
+
+1. Enter your question and, optionally, names of documents you already have.
+2. Optional details let you change claim type or add context such as an accident,
+   implants or a non-network hospital. Reimbursement is the default scope.
+3. Click Ask assistant.
+4. Read Answer, Document checklist and Sources in their separate tabs.
+
+AI connection in the sidebar holds the key, base URL and model ID. With these
+configured, Ask assistant automatically generates a cited draft. Without them,
+the checklist and source evidence remain available; no provider call is made.
+An AI-enabled badge indicates configuration, not a continuously monitored service.
+
+About this assistant and its document scope explains the indexed product/version.
+There is no policy-confirmation checkbox. The app does not verify an issued policy.
+Use fictional examples and enter document names only, without IDs or bank numbers.
+
+Drafts that fail validation are withheld. The checklist and sources can still be
+inspected. Model validation does not guarantee factual correctness or readiness.
+Developer tools contain the paid evaluation controls and saved historical results.

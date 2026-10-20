@@ -5,10 +5,10 @@ START
 1. Install Python 3.11 or newer on Windows.
 2. In PowerShell, open the extracted project directory and run ./setup.ps1.
 3. Run ./start.ps1 and open http://127.0.0.1:8511.
-4. In View evidence mode, confirm the fictional product version, select
-   Reimbursement, enter a question and click Find requirements.
-5. For generated answers, choose Generate answer and enter your own Nebius
-   API key, HTTPS base URL and model ID in the sidebar. No key is included.
+4. Enter a question and optional document names, then click Ask assistant.
+5. Open AI connection in the sidebar to enter your own Nebius settings.
+   With a complete configuration the app adds a cited draft automatically;
+   otherwise the checklist and source passages work without generation.
    Tested endpoint: https://api.tokenfactory.nebius.com/v1/
    Tested model: Qwen/Qwen3-30B-A3B-Instruct-2507
 

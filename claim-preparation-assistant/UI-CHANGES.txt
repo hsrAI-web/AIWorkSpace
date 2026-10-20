@@ -1,0 +1,25 @@
+INTERFACE UPDATE — 20 OCTOBER 2026
+
+The app now has one Ask assistant action. When a valid provider configuration
+is present, it requests a cited AI draft automatically. Without a complete
+configuration, it still provides the document checklist and source passages.
+There is no View evidence / Generate answer mode switch.
+
+The fictional-policy checkbox has been removed. The app explicitly operates
+on the selected my:Optima Secure document snapshot. A visible product label
+and expandable scope explanation identify the version and limitations; the
+application does not certify that a user's actual issued policy matches it.
+
+Question and document names are the primary inputs. Claim type and other
+context are in Optional details, defaulting to reimbursement hospitalisation.
+Answer, Document checklist and Sources are separate result tabs. AI credentials
+are tucked into an AI connection expander. Developer evaluations stay collapsed.
+The theme is light with teal accents and a softer sidebar.
+
+Retrieval, claim requirements, generation prompts and validation logic are
+unchanged. Existing live evaluation results therefore remain historical evidence
+of the same answer pipeline. Interface tests now cover automatic AI routing,
+missing-connection fallback and removal of the checkbox/mode controls.
+
+The existing narrated walkthrough shows the earlier interface and should be
+re-recorded if a submission video must match the current layout exactly.
