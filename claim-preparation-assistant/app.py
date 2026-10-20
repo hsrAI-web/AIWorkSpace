@@ -133,8 +133,21 @@ if st.session_state.result:
         for question_to_ask in result.get('questions',[]):
             st.info(question_to_ask)
         if result.get('error'):
-            st.warning('We could not verify a reliable answer. You can still inspect the checklist and source passages.')
-            with st.expander('Why was the answer withheld?'):
+            error=result['error']
+            if result.get('status')=='generation_failed':
+                if 'Timeout' in error:
+                    st.error('The AI service did not respond in time. Click Ask assistant to try again. Your document checklist and sources are still available.')
+                elif 'AuthenticationError' in error:
+                    st.error('The AI provider could not authenticate this request. Check your API key in AI connection. Your checklist and sources are still available.')
+                elif 'RateLimitError' in error:
+                    st.error('The AI provider is limiting requests or usage. Check your provider quota, then try again. Your checklist and sources are still available.')
+                else:
+                    st.error('The AI request failed before an answer was available. Check AI connection and try again. Your checklist and sources are still available.')
+                details_label='AI request details'
+            else:
+                st.warning('A draft answer did not pass the source checks, so it has been withheld. Your checklist and sources are still available.')
+                details_label='Why was the answer withheld?'
+            with st.expander(details_label):
                 st.text(result['error'])
         answer=result.get('answer')
         if answer:

@@ -36,6 +36,16 @@ with patch('openai.OpenAI') as provider:
     state=at.session_state['result']['state']
     assert state['generate'] and state['status']=='insufficient_evidence'
     assert 'test-only-key' not in json.dumps(state)
+# A provider timeout must not be described as an unsupported answer.
+from openai import APITimeoutError
+import httpx
+with patch('openai.OpenAI') as provider:
+    provider.return_value.chat.completions.create.side_effect=APITimeoutError(request=httpx.Request('POST','https://example.invalid/v1'))
+    at.form_submit_button[0].click().run()
+    assert not at.exception
+    assert at.session_state['result']['state']['status']=='generation_failed'
+    assert any('did not respond in time' in e.value for e in at.error)
+    assert not any('did not pass the source checks' in w.value for w in at.warning)
 # An incomplete connection preserves checklist and source access.
 at.text_input(key='endpoint').set_value('http://example.invalid/v1')
 at.form_submit_button[0].click().run()
