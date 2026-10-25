@@ -204,7 +204,7 @@ def search_partner_knowledge(
     query: str,
     partner_id: Annotated[str, InjectedState("partner_id")],
 ) -> str:
-    """Semantically search curated public partner, security, enablement, and release-note references."""
+    """Semantically search curated public co-sell, registration-policy, security, and enablement references."""
     _ = partner_id  # The curated public library is shared; it contains no partner-specific records.
     result = search_public_knowledge(query)
     result["kind"] = "public_knowledge"

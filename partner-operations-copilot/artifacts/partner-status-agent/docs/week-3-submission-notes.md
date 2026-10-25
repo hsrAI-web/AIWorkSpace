@@ -80,6 +80,8 @@ The local JSON dataset supplies synthetic records for the UI and Python tools: f
 
 Dates on local examples are generated for demonstration. Salesforce registration timestamps come from the connected demo org. These are development-org sample records, not production customer/partner data; native Salesforce Quotes are not enabled.
 
+Public knowledge comes from five curated snapshots in `src/partner_agent_graph/knowledge-base.json`: CISA, NIST, Channeltivity, Training Industry, and PartnerStack. Nebius embeddings rank relevant excerpts; publisher links and review timestamps accompany the answer. These are public industry references, not company policy, internal assets, product claims, or live web search.
+
 ## AI provider and credits
 
 The answer/tool-selection model is `Qwen/Qwen3-30B-A3B-Instruct-2507` through Nebius Token Factory's OpenAI-compatible endpoint, invoked with LangChain ChatOpenAI. Public knowledge retrieval also uses `Qwen/Qwen3-Embedding-8B`: five curated documents are embedded and cached in process, and each knowledge query is embedded for semantic ranking. The Nebius key is configured server-side and never sent to the browser. Salesforce uses the separate managed Connected App/API integration; it is not an AI connection.

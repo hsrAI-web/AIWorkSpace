@@ -16,7 +16,7 @@ const CONTACTS = [
   { id: 8,  name: 'Hannah Whitfield', role: 'Asst. Superintendent',    org: 'Cedar Falls CSD',       segment: 'K-12',       seats: 1875, plan: 'District',  renewal: 'Mar 11', engagement: 58, status: 'Due soon', initials: 'HW', last: '4d ago' },
   { id: 9,  name: 'Kenji Watanabe',   role: 'Director, Student Success',org: 'Pacific Crest College',segment: 'Higher Ed',  seats: 2900, plan: 'Campus',    renewal: 'Jun 17', engagement: 95, status: 'Engaged',  initials: 'KW', last: '1h ago' },
   { id: 10, name: 'Leah Strickland',  role: 'Program Manager',         org: 'Open Door Adult Ed',    segment: 'Tutoring',   seats: 220,  plan: 'School',    renewal: 'Mar 05', engagement: 49, status: 'Due soon', initials: 'LS', last: '7d ago' },
-];
+] as const;
 
 const TABS = ['All', 'Due soon', 'Engaged', 'At risk'];
 
@@ -26,7 +26,7 @@ const STATUS_STYLE = {
   'At risk':  { dot: '#1A1816', bg: 'rgba(26,24,22,0.06)',   text: '#1A1816' },
 };
 
-function SegmentBar({ label, value, total, accent }) {
+function SegmentBar({ label, value, total, accent }: { label: string; value: number; total: number; accent: string }) {
   const pct = Math.round((value / total) * 100);
   return (
     <div className="group">
@@ -61,7 +61,7 @@ export default function App() {
     });
   }, [tab, query]);
 
-  const toggle = (id) =>
+  const toggle = (id: number) =>
     setSelected(s => (s.includes(id) ? s.filter(x => x !== id) : [...s, id]));
 
   const allChecked = filtered.length > 0 && filtered.every(c => selected.includes(c.id));

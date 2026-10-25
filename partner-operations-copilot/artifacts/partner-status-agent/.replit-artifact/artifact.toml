@@ -1,7 +1,7 @@
 kind = "web"
 previewPath = "/"
 title = "Partner Status Agent"
-description = "An AI-assisted workspace that turns project, code, and release updates into consistent partner status briefs, flags risks, remembers trends, and keeps outbound messages in human review."
+description = "A partner operations demo with read-only Salesforce sample registrations, synthetic quote status, cited public guidance, and human-controlled support requests."
 version = "1.0.0"
 id = "artifacts/partner-status-agent"
 router = "path"

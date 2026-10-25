@@ -1,5 +1,7 @@
 # Partner Operations Copilot — explained
 
+> **Historical script — not the final demo.** This film predates the read-only Salesforce demo connection and the fourth public-knowledge tool. Its old source labels and narration describe that earlier build. For the current implementation, use `../../docs/partner-copilot-explainer/README.md` and `../partner-status-agent/docs/demo-script.md`. The retained film and audio have not been regenerated.
+
 ## Director's treatment
 
 - **Promise:** I can show both audiences where a partner question travels, what the agent is allowed to use, and where the implementation stops.

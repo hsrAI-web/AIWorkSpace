@@ -25,6 +25,8 @@ Prerequisites: Node.js 24, pnpm, Python 3.13, uv, and PostgreSQL.
 
 In Replit, the existing API artifact workflow starts FastAPI on loopback port 8000 and Express on port 8080. The web artifact is at `/` and API routes are at `/api`.
 
+Salesforce-backed demo partners additionally require the Replit-managed Salesforce connection to the approved Developer Edition org. The integration is intentionally pinned to fixed sample records, not any arbitrary Salesforce org. Outside that configured environment, select a local synthetic partner; do not substitute local results for a failed Salesforce lookup. See [Salesforce setup and access boundaries](salesforce/README.md).
+
 ## Checks
 
 ```sh
@@ -91,7 +93,11 @@ Upload the code to GitHub without secrets, record the live demo, import the docu
 ## Architecture and visual walkthrough
 
 - [Current implementation, workflow, security boundaries, and annotated screenshots](docs/partner-copilot-explainer/README.md)
-- The folder contains portable SVG diagrams and synthetic-data screenshots; it is ready to include in a GitHub repository.
-- Replit Library exports: self-contained HTML report, printable PDF, and a ZIP of the GitHub documentation bundle.
+- The folder contains portable SVG diagrams and current screenshots of demo-only Salesforce registrations and local synthetic examples.
+- Generated HTML/DOCX, PDFs, Library downloads, and previously downloaded ZIPs are snapshots, not automatically refreshed copies. Regenerate them from current sources before using them in a submission.
 
 Regenerate the GitHub-ready SVGs and self-contained HTML with `uv run python scripts/export-architecture-report.py`. The PDF includes screenshots of the current demo UI; recapture those screens and regenerate the PDF after a material visual or feature change. These generated exports are convenience downloads; include `docs/partner-copilot-explainer/` in the application repository.
+
+### Historical video — not the final demo
+
+The earlier [`partner-copilot-walkthrough`](artifacts/partner-copilot-walkthrough/README.md) film and its media/source files are retained as a historical snapshot. They predate Salesforce connectivity and public-knowledge retrieval and are **not** the current architecture or final submission recording. Use the current explainer, submission notes, and live demo script linked above.
