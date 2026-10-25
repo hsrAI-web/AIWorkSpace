@@ -4,12 +4,14 @@ A Week 3 bring-your-own-use-case project using **Python LangChain + LangGraph**,
 
 ## What works
 
-- Agent-selected, partner-scoped deal, quote, and registration-guide tools.
+- Four agent tools: partner-scoped deal status, demo quote status, registration-guide search, and semantic search over cited public partner knowledge.
+- Read-only Salesforce Connected App access for demo Deal_Registration__c records; the AI interprets questions and summarizes the records returned by the API.
+- Public knowledge retrieval with Nebius Qwen3 embeddings and source-grounded answers from a curated local snapshot.
 - Multi-step agent/tool control flow, conversation memory, citations, and visible execution traces.
 - Sensitive-question safety routing and explicit human submission/review of browser-local support requests.
 - Timeouts, bounded tool rounds, not-found handling, and labeled deterministic fallbacks.
 
-All records are synthetic. Salesforce is **not connected**. The role switch is **not authentication**, and support requests are not shared across browsers.
+Red Valley and Bluewater demo registrations are read from Salesforce. Other partner records and all quote examples are synthetic; native Salesforce Quotes are not connected. The public knowledge library contains curated snapshots from CISA, NIST, Channeltivity, Training Industry, and PartnerStack. These references are not company policy, an internal asset library, or live release information. The role switch is **not authentication**, and support requests are not shared across browsers.
 
 ## Setup
 
@@ -47,10 +49,17 @@ flowchart TD
   API --> Python[Loopback FastAPI service]
   Python --> Gate[LangGraph safety + source-scope gates]
   Gate -->|Routine| Planner[Exact-ID lookup planner]
-  Planner -->|Known IDs| Tools[Scoped deal / quote / guide tools]
+  Planner -->|Known IDs| Tools[Read-only agent tools]
   Planner -->|Other questions| Agent[Nebius tool-calling model]
   Agent -->|Select tool| Tools
-  Tools --> Agent
+  Tools -->|Scoped registration lookup| SF[Salesforce Connected App API]
+  Tools -->|Quote lookup| DemoQuotes[Local synthetic quotes]
+  Tools -->|Registration steps| Guide[Local demo guide]
+  Tools -->|Knowledge question| RAG[Nebius Qwen3 embeddings + curated public snapshots]
+  SF --> Agent
+  DemoQuotes --> Agent
+  Guide --> Agent
+  RAG --> Agent
   Agent --> Ground[Requested-record and source coverage check]
   Ground -->|All requested sources| Answer[Cited answer and run trace]
   Ground -->|Missing / uncited evidence| Fallback[Withhold partial answer and offer human support]
@@ -63,10 +72,12 @@ flowchart TD
 ## Important limits
 
 - This is a working public portfolio demo, not a production partner portal.
-- Synthetic data lives in one JSON file shared by the UI and tools.
+- Salesforce access is read-only and limited to demo records; the Connected App/API integration itself is conventional authentication and data retrieval, not AI.
+- Knowledge documents are curated snapshots; retrieval is not live web search. The answer model must cite retrieved material and cannot treat it as company policy.
+- Local synthetic data lives in JSON files shared by the UI and tools; native Salesforce Quotes are not enabled.
 - Checkpoint messages persist in PostgreSQL; no automatic retention policy is implemented. Do not enter confidential information.
 - Usage limits are in memory (10 requests/IP/hour and 100/day) and reset on restart; they are not a billing guarantee.
-- Before a real pilot, add authentication, server-side tenant authorization, read-only Salesforce integration, approved knowledge content, a shared audited helpdesk queue, and retention controls.
+- Before a real pilot, add authentication and server-side tenant authorization, replace public demo references with approved company knowledge/assets, connect native Salesforce Quotes if needed, and add a shared audited helpdesk queue and retention controls.
 - Production startup does not create tables. Review the development-to-production schema migration when publishing; do not run the development setup script blindly against production.
 
 ## Submission assets
