@@ -9,4 +9,5 @@
 export interface PartnerAnswerSource {
   label: string;
   timestamp: string;
+  url?: string;
 }

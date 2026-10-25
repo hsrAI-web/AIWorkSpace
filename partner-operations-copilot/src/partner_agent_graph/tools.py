@@ -14,6 +14,7 @@ from partner_agent_graph.demo_data import (
     get_lookup_deals,
     is_salesforce_partner,
 )
+from partner_agent_graph.knowledge import search_public_knowledge
 
 
 def _normalized(value: str) -> str:
@@ -198,5 +199,17 @@ def search_registration_guide(
     )
 
 
-TOOLS = [lookup_deal_status, lookup_quote_status, search_registration_guide]
+@tool
+def search_partner_knowledge(
+    query: str,
+    partner_id: Annotated[str, InjectedState("partner_id")],
+) -> str:
+    """Semantically search curated public partner, security, enablement, and release-note references."""
+    _ = partner_id  # The curated public library is shared; it contains no partner-specific records.
+    result = search_public_knowledge(query)
+    result["kind"] = "public_knowledge"
+    return _serialize(result)
+
+
+TOOLS = [lookup_deal_status, lookup_quote_status, search_registration_guide, search_partner_knowledge]
 TOOL_NAMES = {tool.name for tool in TOOLS}

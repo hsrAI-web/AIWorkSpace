@@ -72,7 +72,8 @@ export const AnswerPartnerQuestionResponse = zod.object({
   "handoffCategory": zod.string(),
   "sources": zod.array(zod.object({
   "label": zod.string(),
-  "timestamp": zod.string()
+  "timestamp": zod.string(),
+  "url": zod.string().url().optional()
 })),
   "trace": zod.array(zod.string()),
   "toolCalls": zod.array(zod.string())

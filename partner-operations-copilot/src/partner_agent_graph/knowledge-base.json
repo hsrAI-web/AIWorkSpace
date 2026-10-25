@@ -1,0 +1,51 @@
+{
+  "reviewedAt": "2026-10-26",
+  "notice": "Curated public references for a vendor-neutral demo. These are not the company's policy, a product catalog, verified product claims, or live release data.",
+  "documents": [
+    {
+      "id": "cisa-secure-by-design",
+      "title": "Secure by Design Pledge",
+      "publisher": "U.S. Cybersecurity and Infrastructure Security Agency (CISA)",
+      "url": "https://www.cisa.gov/securebydesign/pledge",
+      "publishedAt": null,
+      "topics": ["product security", "secure by design", "security positioning"],
+      "content": "CISA describes Secure by Design as treating customer security outcomes as a core product requirement, not merely a technical feature. The pledge covers enterprise software, cloud services, and SaaS. It encourages secure defaults and making features such as multi-factor authentication, logging, and single sign-on available without extra cost. The pledge is voluntary and not legally binding; CISA says it does not verify adherence or endorse products. Use this as a set of questions for a product conversation, never as proof that a particular product implements or passes a control."
+    },
+    {
+      "id": "nist-csf-small-business",
+      "title": "NIST Cybersecurity Framework 2.0: Small Business Quick-Start Guide (SP 1300)",
+      "publisher": "National Institute of Standards and Technology (NIST)",
+      "url": "https://www.nist.gov/publications/nist-cybersecurity-framework-20-small-business-quick-start-guide",
+      "publishedAt": "2024-02-26",
+      "topics": ["SMB cybersecurity", "risk management", "customer discovery", "NIST CSF"],
+      "content": "NIST SP 1300 is a quick-start guide for small and medium-sized businesses with modest or no cybersecurity plans. It offers considerations for starting a cybersecurity risk-management strategy using the NIST Cybersecurity Framework (CSF) 2.0. NIST describes it as a supplement to the CSF, not a replacement. For a partner conversation, use it to ask about the organization's risk priorities and current practices. Do not imply that a product alone makes an organization compliant or that this guide is a product endorsement."
+    },
+    {
+      "id": "channeltivity-channel-conflict",
+      "title": "Channel Conflict: A Complete Guide",
+      "publisher": "Channeltivity",
+      "url": "https://www.channeltivity.com/blog/channel-conflict",
+      "publishedAt": "2025-02-18",
+      "topics": ["channel conflict", "deal registration", "partner program design"],
+      "content": "This public article from a partner-relationship-management vendor describes channel conflict, including overlap between partners and direct sales. It suggests that programs make qualification rules explicit; example questions include whether a registration must involve a new customer, a minimum deal size, a required sales stage, and an acknowledgement service level. These are examples to consider when designing a program, not universal requirements and not this demo's registration policy. Escalate an actual eligibility, pricing, credit, or ownership decision to the responsible human team."
+    },
+    {
+      "id": "training-industry-partner-enablement",
+      "title": "Partner Enablement: Using Training for Channel Success",
+      "publisher": "Training Industry",
+      "url": "https://trainingindustry.com/articles/learning-services-and-outsourcing/partner-enablement-using-training-for-channel-success/",
+      "publishedAt": null,
+      "topics": ["partner enablement", "training", "learning paths", "sales resources"],
+      "content": "This public industry article describes partner enablement as providing partners with the knowledge, tools, and skills needed to sell and support an offering. Examples include product and market training, sales and technical resources, onboarding, portals, CRM or learning-management systems, and communication. It recommends considering partner types and role-specific learning needs. This is general guidance, not a catalog of the demo's training assets or a statement of a company's certification requirements."
+    },
+    {
+      "id": "partnerstack-cosell-enablement",
+      "title": "What Great Partner Enablement Looks Like in Co-Sell",
+      "publisher": "PartnerStack",
+      "url": "https://partnerstack.com/articles/partner-enablement-co-sell",
+      "publishedAt": null,
+      "topics": ["co-selling", "deal readiness", "partner enablement", "partner resources"],
+      "content": "This public industry article from PartnerStack describes what co-sell partners need before pursuing an opportunity: a clear picture of the ideal customer, the problem a joint solution addresses, how the partnership works, and the next step after identifying a deal. It recommends resources that are concise, current, easy to find, and clear about their audience and value. These are general enablement ideas—not this company's approved messaging, product fit criteria, or actual asset links."
+    }
+  ]
+}

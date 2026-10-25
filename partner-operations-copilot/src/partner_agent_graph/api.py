@@ -41,6 +41,7 @@ class AgentRequest(BaseModel):
 class Source(BaseModel):
     label: str
     timestamp: str
+    url: str | None = None
 
 
 class AgentResponse(BaseModel):
@@ -128,7 +129,7 @@ def _fallback_response(request: AgentRequest, reason: str) -> AgentResponse:
     )
 
 
-@app.post("/agent/run", response_model=AgentResponse)
+@app.post("/agent/run", response_model=AgentResponse, response_model_exclude_none=True)
 async def run_agent(request: AgentRequest) -> AgentResponse:
     if not PARTNER_ID_PATTERN.fullmatch(request.partner_id) or not get_partner(request.partner_id):
         raise HTTPException(status_code=422, detail="Unknown demo partner.")

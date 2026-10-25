@@ -3,3 +3,5 @@
 - [Salesforce data model](salesforce-data-model.md) — use dedicated registrations and native Quotes; never present Opportunity stages as registration statuses.
 - [Salesforce field access](salesforce-field-access.md) — deployed optional fields can remain hidden from REST until explicit field permissions are assigned.
 - [GitHub publishing](github-publishing.md) — publish this project under partner-operations-copilot in AIWorkSpace; preserve its other projects and history.
+- [Public knowledge scope](public-knowledge-scope.md) — the user chose vendor-neutral public demo content, not internal policy or a vendor product catalog.
+- [Nebius model availability](nebius-model-availability.md) — check the live model catalog when documentation examples return model_not_found.

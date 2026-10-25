@@ -185,6 +185,9 @@ components:
           type: string
         timestamp:
           type: string
+        url:
+          type: string
+          format: uri
       required:
         - label
         - timestamp

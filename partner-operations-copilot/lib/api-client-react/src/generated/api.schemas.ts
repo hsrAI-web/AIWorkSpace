@@ -67,6 +67,7 @@ export const PartnerAnswerMode = {
 export interface PartnerAnswerSource {
   label: string;
   timestamp: string;
+  url?: string;
 }
 
 export interface PartnerAnswer {
