@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Partner Status Agent"
+description = "An AI-assisted workspace that turns project, code, and release updates into consistent partner status briefs, flags risks, remembers trends, and keeps outbound messages in human review."
+version = "1.0.0"
+id = "artifacts/partner-status-agent"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18739
+
+[services.development]
+run = "pnpm --filter @workspace/partner-status-agent run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/partner-status-agent", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/partner-status-agent/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18739"
+BASE_PATH = "/"

@@ -1,0 +1,58 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "L87iYkNt9mJsILaKxpVNW"
+uri = "file://generated-artifacts/week-3-partner-operations-documentation.docx"
+type = "word_document"
+title = "Week 3 project documentation and demo script"
+description = "Import into Google Docs. Includes the agent framework, architecture, synthetic datasets, prompts, learnings, verification, and a five-minute recording script."
+logical_id = "0f937aef-1e82-4639-bad0-5451da2e54ec"
+content_hash = "sha256:a08495ad56c65078980c01007cccf633d4466cbd5ed451d5990a3f25aef4d675"
+size = 7704
+mtime_ms = 1792916218902
+storage_uri = "gcs://replit-rams-assets-kirk/rams/assets/repl:63f6e250-5dcf-4ebd-ab23-b4994be6989e/0f937aef-1e82-4639-bad0-5451da2e54ec/fb590402-f085-4cb7-af8a-248eacf7889a"
+storage_version_token = "1792916252039939"
+content_type = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+
+[[outputs]]
+id = "sgpI9Rqk7B9cJ8Ysh6b0N"
+uri = "file://generated-artifacts/partner-explainer/partner-copilot-architecture-report.pdf"
+type = "pdf"
+title = "Partner Desk architecture report (updated)"
+description = "Updated architecture, agent flow, human handoff boundary, and implementation limits."
+logical_id = "45903945-9b11-464b-9854-e41b49bc5262"
+content_hash = "sha256:643a1383a913f7b2ed55c7aff1603cabce67630e2466b6cf43c4c1f8c3b8cffd"
+size = 515925
+mtime_ms = 1792920161190
+storage_uri = "gcs://replit-rams-assets-kirk/rams/assets/repl:63f6e250-5dcf-4ebd-ab23-b4994be6989e/45903945-9b11-464b-9854-e41b49bc5262/fa54b9df-a5f2-4787-b22d-80d3c775a0c3"
+storage_version_token = "1792920288415727"
+content_type = "application/pdf"
+
+[[outputs]]
+id = "h_-F_5BYE12iJ467jT_cB"
+uri = "file://generated-artifacts/partner-explainer/partner-copilot-architecture-report.html"
+type = "html"
+title = "Partner Desk architecture report (HTML)"
+description = "Self-contained, GitHub-ready report with refreshed system and agent workflow diagrams."
+logical_id = "abadfdb4-803a-4ea1-9d75-ba2ed584e00e"
+content_hash = "sha256:bccc910ffc3b8ede9fdeb32441087b4be152c226dea2672e255c3d5bce4f08e7"
+size = 449467
+mtime_ms = 1792920138130
+storage_uri = "gcs://replit-rams-assets-kirk/rams/assets/repl:63f6e250-5dcf-4ebd-ab23-b4994be6989e/abadfdb4-803a-4ea1-9d75-ba2ed584e00e/9c762613-e05d-440e-8e35-b929d47a572a"
+storage_version_token = "1792920289043073"
+content_type = "text/html"
+
+[[outputs]]
+id = "sKcKb2EUe1-MiRxVZASww"
+uri = "file://generated-artifacts/partner-explainer/partner-copilot-github-docs.zip"
+type = "unspecified"
+title = "Partner Desk GitHub documentation bundle"
+description = "Updated README, diagrams, and annotated synthetic UI screenshots."
+logical_id = "a97fe5b9-da1e-40d7-8370-88c3bbad14d7"
+content_hash = "sha256:7a86d3a957202fe921b0b82530543141de5d6c1f97f0aab6b143a9a04568d10e"
+size = 470057
+mtime_ms = 1792920203003
+storage_uri = "gcs://replit-rams-assets-kirk/rams/assets/repl:63f6e250-5dcf-4ebd-ab23-b4994be6989e/a97fe5b9-da1e-40d7-8370-88c3bbad14d7/4fc8e638-5fb6-486f-9377-7e91d9d12474"
+storage_version_token = "1792920289594674"
+content_type = "application/octet-stream"

@@ -1,0 +1,41 @@
+{
+  "partners": [
+    { "id": "p-red-valley", "name": "Partner Red Valley", "organization": "DEMO ONLY - Partner Red Valley", "owner": "Hidden in public demo", "dataSource": "salesforce" },
+    { "id": "p-bluewater", "name": "Partner Bluewater", "organization": "DEMO ONLY - Partner Bluewater", "owner": "Hidden in public demo", "dataSource": "salesforce" },
+    { "id": "p-northstar", "name": "Northstar Health", "organization": "Northstar Health Group", "owner": "Maya Chen" },
+    { "id": "p-meridian", "name": "Meridian Freight", "organization": "Meridian Logistics", "owner": "Leo Park" },
+    { "id": "p-verdant", "name": "Verdant Energy", "organization": "Verdant Energy Co.", "owner": "Amara Okafor" },
+    { "id": "p-luma", "name": "Luma Commerce", "organization": "Luma Retail", "owner": "Jonah Reed" }
+  ],
+  "deals": [
+    { "id": "DR-2841", "partnerId": "p-northstar", "title": "Northstar care navigation expansion", "status": "In review", "submittedDaysAgo": 3, "expectedCloseDaysFromNow": 20, "owner": "Maya Chen", "nextStep": "Channel operations is validating account and opportunity details.", "sourceLabel": "Demo deal registration record" },
+    { "id": "DR-2796", "partnerId": "p-northstar", "title": "Care Connect API renewal", "status": "Approved", "submittedDaysAgo": 18, "expectedCloseDaysFromNow": 12, "owner": "Maya Chen", "nextStep": "Registration is approved. Keep the opportunity details current.", "sourceLabel": "Demo deal registration record" },
+    { "id": "DR-2913", "partnerId": "p-meridian", "title": "Fleet visibility rollout", "status": "Submitted", "submittedDaysAgo": 1, "expectedCloseDaysFromNow": 14, "owner": "Leo Park", "nextStep": "A channel manager will review the registration.", "sourceLabel": "Demo deal registration record" },
+    { "id": "DR-2752", "partnerId": "p-meridian", "title": "Freight analytics renewal", "status": "Approved", "submittedDaysAgo": 22, "expectedCloseDaysFromNow": 10, "owner": "Leo Park", "nextStep": "Registration approved; coordinate the next customer milestone.", "sourceLabel": "Demo deal registration record" },
+    { "id": "DR-2888", "partnerId": "p-verdant", "title": "Grid insights pilot", "status": "Needs information", "submittedDaysAgo": 8, "expectedCloseDaysFromNow": 30, "owner": "Amara Okafor", "nextStep": "Please add the end-customer site list to complete review.", "sourceLabel": "Demo deal registration record" },
+    { "id": "DR-2932", "partnerId": "p-luma", "title": "Order sync platform extension", "status": "Submitted", "submittedDaysAgo": 1, "expectedCloseDaysFromNow": 45, "owner": "Jonah Reed", "nextStep": "Registration received and waiting for initial review.", "sourceLabel": "Demo deal registration record" }
+  ],
+  "quotes": [
+    { "id": "Q-73108", "partnerId": "p-northstar", "product": "Care Connect API · 1,200 seats", "status": "Pricing review", "requestedDaysAgo": 4, "lastUpdatedDaysAgo": 1, "owner": "Maya Chen", "nextStep": "A pricing specialist is reviewing this quote. Decisions remain human-owned.", "sourceLabel": "Demo quote record" },
+    { "id": "Q-72944", "partnerId": "p-northstar", "product": "Implementation services · 240 hours", "status": "Ready to share", "requestedDaysAgo": 10, "lastUpdatedDaysAgo": 8, "owner": "Maya Chen", "nextStep": "Quote details are ready for the partner team to review.", "sourceLabel": "Demo quote record" },
+    { "id": "Q-73421", "partnerId": "p-meridian", "product": "Fleet Events · annual subscription", "status": "Drafting", "requestedDaysAgo": 2, "lastUpdatedDaysAgo": 1, "owner": "Leo Park", "nextStep": "The quote owner is preparing the first version.", "sourceLabel": "Demo quote record" },
+    { "id": "Q-72650", "partnerId": "p-verdant", "product": "Usage Insights · pilot package", "status": "On hold", "requestedDaysAgo": 30, "lastUpdatedDaysAgo": 20, "owner": "Amara Okafor", "nextStep": "A credit hold is noted in this demo record. Contact support for case-specific details.", "sourceLabel": "Demo quote record" },
+    { "id": "Q-73590", "partnerId": "p-luma", "product": "Order Sync v2 · growth tier", "status": "Submitted", "requestedDaysAgo": 1, "lastUpdatedDaysAgo": 1, "owner": "Jonah Reed", "nextStep": "Quote request received and awaiting review.", "sourceLabel": "Demo quote record" }
+  ],
+  "articles": [
+    {
+      "id": "guide-registration",
+      "title": "Deal registration: what to expect",
+      "category": "Deal registration",
+      "summary": "A practical guide to submitting an opportunity and following its review without losing the important details.",
+      "steps": [
+        "Confirm the end customer, opportunity scope, expected close date, and your role in the sale before submitting.",
+        "Submit one registration for the opportunity. Include enough context for the channel team to distinguish it from existing records.",
+        "Use the registration ID to check progress. Needs information means an owner has asked for a specific detail before review can continue.",
+        "Approval and any pricing or eligibility decision are made by the appropriate human team. A status lookup cannot promise an outcome."
+      ],
+      "updatedDaysAgo": 10,
+      "sourceLabel": "Local demo partner guide"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+  <deploymentStatus>Deployed</deploymentStatus>
+  <description>Partner deal-registration tracking. Initial records are DEMO ONLY synthetic data.</description>
+  <fields>
+    <fullName>Partner_Account__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>Partner Account</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Deal Registrations</relationshipLabel>
+    <relationshipName>Partner_Deal_Registrations</relationshipName>
+    <required>true</required>
+    <type>Lookup</type>
+  </fields>
+  <fields>
+    <fullName>Opportunity__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>Opportunity</label>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Deal Registrations</relationshipLabel>
+    <relationshipName>Opportunity_Deal_Registrations</relationshipName>
+    <required>true</required>
+    <type>Lookup</type>
+  </fields>
+  <fields>
+    <fullName>Status__c</fullName>
+    <label>Registration Status</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+      <restricted>true</restricted>
+      <valueSetDefinition>
+        <sorted>false</sorted>
+        <value><fullName>Submitted</fullName><default>true</default><label>Submitted</label></value>
+        <value><fullName>In Review</fullName><default>false</default><label>In Review</label></value>
+        <value><fullName>Needs Information</fullName><default>false</default><label>Needs Information</label></value>
+        <value><fullName>Approved</fullName><default>false</default><label>Approved</label></value>
+      </valueSetDefinition>
+    </valueSet>
+  </fields>
+  <fields>
+    <fullName>Submitted_At__c</fullName>
+    <label>Submitted At</label>
+    <type>DateTime</type>
+  </fields>
+  <fields>
+    <fullName>Expected_Close_Date__c</fullName>
+    <label>Expected Close Date</label>
+    <type>Date</type>
+  </fields>
+  <fields>
+    <fullName>Next_Step__c</fullName>
+    <label>Next Step</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+  </fields>
+  <label>Deal Registration</label>
+  <nameField>
+    <displayFormat>DR-{0000}</displayFormat>
+    <label>Registration Number</label>
+    <startingNumber>1</startingNumber>
+    <type>AutoNumber</type>
+  </nameField>
+  <pluralLabel>Deal Registrations</pluralLabel>
+  <sharingModel>Private</sharingModel>
+</CustomObject>

@@ -1,0 +1,29 @@
+kind = "video"
+videoAspectRatio = "16:9"
+previewPath = "/partner-copilot-walkthrough/"
+title = "Partner Operations Copilot — Explained"
+description = "A short explanatory walkthrough of Partner Desk's synthetic-data architecture, agent workflow, and human-support boundary."
+version = "1.0.0"
+id = "artifacts/partner-copilot-walkthrough"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/partner-copilot-walkthrough/" ]
+localPort = 25526
+
+[services.development]
+run = "pnpm --filter @workspace/partner-copilot-walkthrough run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/partner-copilot-walkthrough", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/partner-copilot-walkthrough/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25526"
+BASE_PATH = "/partner-copilot-walkthrough/"

@@ -1,0 +1,191 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: partner-agent
+    description: Partner support agent
+paths:
+  /partner-agent/salesforce-data:
+    get:
+      operationId: getSalesforceDemoData
+      tags: [partner-agent]
+      summary: Read the allowlisted Salesforce demo registrations
+      description: Read-only access to the approved synthetic records in the selected Developer Edition org. No arbitrary Salesforce queries or writes are exposed.
+      responses:
+        "200":
+          description: Current Salesforce demo snapshot
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SalesforceDemoSnapshot"
+        "502":
+          description: Salesforce lookup unavailable; no synthetic substitution is returned
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /partner-agent/answer:
+    post:
+      operationId: answerPartnerQuestion
+      tags: [partner-agent]
+      summary: Run the partner support agent graph
+      description: Runs a stateful LangGraph workflow against partner-scoped local examples or allowlisted Salesforce demo records. It does not update CRM records or send messages.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PartnerAnswerInput"
+      responses:
+        "200":
+          description: Partner answer
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PartnerAnswer"
+        "400":
+          description: Invalid request
+        "422":
+          description: Unknown demo partner or mismatched thread
+        "429":
+          description: Demo usage limit reached
+        "502":
+          description: Agent graph or model provider unavailable
+components:
+  schemas:
+    SalesforceDemoSnapshot:
+      type: object
+      required: [fetchedAt, registrations, quoteAvailability]
+      properties:
+        fetchedAt:
+          type: string
+        quoteAvailability:
+          type: string
+          enum: [unavailable, available_not_configured]
+        registrations:
+          type: array
+          items:
+            $ref: "#/components/schemas/SalesforceRegistration"
+    SalesforceRegistration:
+      type: object
+      required: [id, salesforceId, partnerId, title, status, opportunityStage, submittedAt, expectedClose, lastModifiedAt, owner, nextStep, sourceLabel]
+      properties:
+        id:
+          type: string
+        salesforceId:
+          type: string
+        partnerId:
+          type: string
+        title:
+          type: string
+        status:
+          type: string
+        opportunityStage:
+          type: string
+        submittedAt:
+          type: string
+        expectedClose:
+          type: string
+        lastModifiedAt:
+          type: string
+        owner:
+          type: string
+        nextStep:
+          type: string
+        sourceLabel:
+          type: string
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    PartnerAnswerInput:
+      type: object
+      properties:
+        question:
+          type: string
+          minLength: 1
+          maxLength: 1000
+        partnerId:
+          type: string
+          pattern: "^p-[a-z0-9-]+$"
+          maxLength: 64
+        threadId:
+          type: string
+          minLength: 8
+          maxLength: 120
+      required:
+        - question
+        - partnerId
+        - threadId
+    PartnerAnswer:
+      type: object
+      properties:
+        answer:
+          type: string
+        mode:
+          type: string
+          enum: [ai, fallback]
+        provider:
+          type: string
+        threadId:
+          type: string
+        intent:
+          type: string
+        handoffRequired:
+          type: boolean
+        handoffCategory:
+          type: string
+        sources:
+          type: array
+          items:
+            $ref: "#/components/schemas/PartnerAnswerSource"
+        trace:
+          type: array
+          items:
+            type: string
+        toolCalls:
+          type: array
+          items:
+            type: string
+      required:
+        - answer
+        - mode
+        - provider
+        - threadId
+        - intent
+        - handoffRequired
+        - handoffCategory
+        - sources
+        - trace
+        - toolCalls
+    PartnerAnswerSource:
+      type: object
+      properties:
+        label:
+          type: string
+        timestamp:
+          type: string
+      required:
+        - label
+        - timestamp
+

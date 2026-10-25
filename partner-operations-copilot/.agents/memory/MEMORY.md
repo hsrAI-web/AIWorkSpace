@@ -1,0 +1,5 @@
+- [Generated browser API typing](orval-dom-iterable.md) — Orval-generated Headers.entries() requires DOM.Iterable in the API client TypeScript libs.
+- [Artifact command working directories](artifact-working-directories.md) — development commands start in the artifact directory; production commands start at the repository root.
+- [Salesforce data model](salesforce-data-model.md) — use dedicated registrations and native Quotes; never present Opportunity stages as registration statuses.
+- [Salesforce field access](salesforce-field-access.md) — deployed optional fields can remain hidden from REST until explicit field permissions are assigned.
+- [GitHub publishing](github-publishing.md) — publish this project under partner-operations-copilot in AIWorkSpace; preserve its other projects and history.
