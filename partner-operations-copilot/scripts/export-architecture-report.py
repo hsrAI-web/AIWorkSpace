@@ -49,19 +49,19 @@ def svg_start(h, title, subtitle):
 
 
 def architecture():
-    s = svg_start(1080, "How Partner Desk is connected", "Current synthetic-data demo · browser interface → public API → internal agent runtime")
+    s = svg_start(1080, "How Partner Desk is connected", "Read-only Salesforce demo records · synthetic quotes · cited public knowledge")
     for x, w, label, num in [(55,450,"BROWSER", "01"), (560,450,"API STACK","02"), (1065,560,"AGENT RUNTIME","03")]:
         s += f'<rect x="{x}" y="180" width="{w}" height="690" rx="24" fill="#ebece4"/>'
         s += text(x+25,220,f"{num}  {label}",19,GREEN,700)
     s += box(75,260,410,145,"React + Vite",["Partner / staff demo pages","Wouter navigation","Answer, citations, execution trace"])
     s += box(75,460,410,130,"Typed request hook",["Orval + React Query","OpenAPI-generated request/response"])
     s += box(75,665,410,165,"Browser localStorage",["View preference + thread ID","Support requests + staff responses","Queue is not shared across devices"])
-    s += box(580,260,410,145,"Express · public /api",["Zod input validation","In-memory demo request caps","POST /partner-agent/answer"])
-    s += box(580,460,410,130,"FastAPI · loopback",["Python on 127.0.0.1:8000","Partner/thread checks → /agent/run"])
+    s += box(580,260,410,145,"Express · public /api",["Zod input + demo usage caps","Salesforce Connected App REST read","Fixed Developer Edition allowlist"])
+    s += box(580,460,410,130,"FastAPI · loopback",["Python on 127.0.0.1:8000","Partner/thread checks → /agent/run","Uses scoped registration data"])
     s += box(580,665,410,165,"PostgreSQL checkpoints",["LangGraph AsyncPostgresSaver","Conversation + execution state","Not the support-request queue"])
-    s += box(1085,260,520,145,"LangGraph control flow",["Safety + source-scope gates","Exact-ID planner → bounded tool loop","Requested-source coverage check"])
-    s += box(1085,460,520,130,"LangChain read-only tools",["Deal status · quote status · guide","Source: one shared synthetic JSON"])
-    s += box(1085,665,520,165,"Nebius Token Factory",["ChatOpenAI-compatible adapter","Qwen3-30B-A3B-Instruct-2507","Credential stays on the server"])
+    s += box(1085,260,520,145,"LangGraph control flow",["Safety + partner-scope gates","Exact-ID route → bounded tool loop","Requested-source coverage check"])
+    s += box(1085,460,520,130,"LangChain read-only tools",["Salesforce registration lookup","Synthetic quote · local guide · public RAG","Sources return to the model"])
+    s += box(1085,665,520,165,"Nebius Token Factory",["Chat: Qwen3-30B-A3B-Instruct-2507","Embeddings: Qwen3-Embedding-8B","Credentials stay server-side"])
     s += arrow("M485 330 L580 330")
     s += arrow("M785 405 L785 460")
     s += arrow("M990 510 L1040 510 L1040 330 L1085 330")
@@ -71,35 +71,35 @@ def architecture():
     s += arrow("M1605 370 L1640 370 L1640 625 L1345 625 L1345 665")
     s += arrow("M280 460 L280 405")
     s += arrow("M280 590 L280 665", dashed=True)
-    s += text(72,928,"READS ARE AUTONOMOUS. WRITES ARE HUMAN-CONTROLLED.",23,GREEN,700)
+    s += text(72,928,"READS ARE SOURCE-BOUNDED. WRITES ARE HUMAN-CONTROLLED.",23,GREEN,700)
     s += lines(72,971,[
-        "Responses return through the same API path. The browser never receives the Nebius secret.",
-        "No Salesforce connection, email sending, or automated pricing / credit / eligibility approval.",
-        "Secure sign-in is separate work in progress; demo scope checks are not authenticated tenant isolation."
+        "Salesforce reads are fixed to one Developer Edition org and approved demo registrations; quotes remain synthetic.",
+        "The model cannot update Salesforce, send email, or approve pricing, credit, or eligibility.",
+        "The role switch is not authentication; do not use real partner data in this public demo."
     ],21,MUTED,31)
     return s+"</svg>"
 
 
 def workflow():
-    s = svg_start(1020,"What happens after “Get an answer”","A bounded agent loop with a separate, explicit human-write boundary")
+    s = svg_start(1020,"What happens after “Get an answer”","Record lookup, semantic public-source retrieval, or a deliberate human handoff")
     s += box(40,205,240,145,"Question",["Selected demo partner","Partner-prefixed thread","Validate before execution"],title_size=23)
-    s += box(330,205,260,145,"Safety + scope",["Sensitive or unsupported?","Deterministic human route","No model call on handoff"],title_size=23)
+    s += box(330,205,260,145,"Safety + scope",["Sensitive or unsupported?","Human route when required","No model call on sensitive path"],title_size=23)
     s += box(640,205,260,145,"ID planner",["Exact IDs → scoped lookups","Up to 3 IDs per plan","No model tool-selection step"],title_size=23)
-    s += box(950,205,260,145,"Routine agent",["Nebius synthesizes results","Other requests select tools","Memory resolves references"],title_size=23)
-    s += box(1260,205,365,145,"Evidence check",["Current-turn sources present?","No source → no AI claim","Sources + trace in response"])
+    s += box(950,205,260,145,"Routine agent",["Nebius selects read-only tools","Retrieves before summarizing","Thread context resolves follow-ups"],title_size=23)
+    s += box(1260,205,365,145,"Evidence check",["Requested records / sources present?","Missing source → withhold answer","Citations + trace in response"])
     s += arrow("M280 275 L330 275")
     s += arrow("M590 275 L640 275")
     s += text(596,254,"routine",18,GREEN)
     s += arrow("M900 275 L950 275")
     s += arrow("M1210 275 L1260 275")
-    s += box(950,425,260,140,"Scoped tools",["Read deal / quote / guide","Partner injected by graph","Result returns to the agent"],title_size=23)
+    s += box(950,425,260,140,"Four read-only tools",["Salesforce registration / demo quote","Local guide / public knowledge RAG","Partner scope + evidence"],title_size=23)
     s += arrow("M1080 350 L1080 425")
     s += arrow("M1080 425 L1080 350")
     s += box(1260,425,365,140,"Visible result",["Answer + source timestamps","Expandable execution trace","Or labeled non-AI fallback"])
     s += arrow("M1440 350 L1440 425")
     s += box(330,685,260,135,"Human handoff",["Prepare a support form","No decision was made","No automatic submission"],"#fbf2dc","#d7bc7c",title_size=23)
     s += arrow("M460 350 L460 685",GOLD)
-    s += text(478,550,"sensitive / out of scope",18,GREEN)
+    s += text(478,550,"sensitive / unsupported",18,GREEN)
     s += box(640,685,260,135,"Partner confirms",["Review category + context","Click Save support request","Browser-local write"],"#fbf2dc","#d7bc7c",title_size=23)
     s += box(950,685,260,135,"Staff demo review",["Assign owner / update status","Record a human response","Same-browser queue"],"#fbf2dc","#d7bc7c",title_size=23)
     s += arrow("M590 750 L640 750")
@@ -109,7 +109,7 @@ def workflow():
     s += text(60,905,"RECOVERY CONTROLS",22,GREEN,700)
     s += lines(60,944,[
         "At most 3 executed tool rounds · bounded recent model context · timeout / retry limits",
-        "Requested IDs and obvious source types are checked; this is not a semantic fact-check of every generated claim."
+        "Evidence checks verify expected records and sources; they are not a fact-check of every generated sentence."
     ],21,MUTED,31)
     return s+"</svg>"
 
@@ -130,7 +130,7 @@ def annotated(filename, title, description, callouts):
         s += text(1348,y,str(i),18,"#fff",700)
         s += text(1380,y,heading,20,INK,700)
         s += lines(1335,y+35,wrap(explanation,29),18,MUTED,26)
-    s += text(48,1080,"Actual preview screenshot · synthetic data · annotations explain behavior; no live interaction is simulated.",20,MUTED)
+    s += text(48,1080,"Current preview screenshot · demo-only records · annotations explain behavior; no live interaction is simulated.",20,MUTED)
     return s+"</svg>"
 
 
@@ -195,22 +195,22 @@ def main():
     diagrams={
         "architecture.svg":architecture(),
         "workflow.svg":workflow(),
-        "annotated-home.svg":annotated("partner-home.jpg","01 / Partner home","From a fragmented follow-up process to one synthetic partner workspace",[
-            (1330,55,"Demo identity","Select a synthetic partner. This selector is not secure sign-in."),
-            (940,330,"At-a-glance status","Counts and cards use the shared JSON dataset, not a live CRM."),
-            (760,500,"Source records","Registration IDs link to details. Quotes show recorded status, not a commercial decision."),
-            (1300,720,"Human help","The support route is explicit. No email or CRM write is performed.")
+        "annotated-home.svg":annotated("partner-home.jpg","01 / Partner home","Read-only Salesforce registrations; local synthetic quotes",[
+            (970,35,"Demo source","Red Valley and Bluewater map to a fixed Salesforce Developer Edition record set; the role selector is not sign-in."),
+            (820,330,"Live status","Refresh reads the approved Salesforce demo registrations; only the selected partner's records are passed to the agent."),
+            (600,570,"Registration status","Salesforce registration status and Opportunity stage are distinct fields; the app makes no CRM updates."),
+            (1190,520,"Quote boundary","Quote examples are local synthetic data. Native Salesforce Quotes are not enabled.")
         ]),
-        "annotated-help.svg":annotated("partner-help.jpg","02 / Ask, retrieve, or hand off","The question form connects to the agent; the support form stays human-controlled",[
-            (1040,400,"Ask a question","The generated client sends question, partner ID, and thread ID to the public API."),
-            (940,490,"Run the graph","A completed request shows its answer, sources, and tool trace. This screenshot is the initial state."),
-            (700,680,"Approved guide","The same synthetic registration guide is available on screen and through a read-only tool."),
-            (1300,670,"Explicit submission","The partner reviews and saves the support form. The queue stays in this browser.")
+        "annotated-help.svg":annotated("partner-help.jpg","02 / Ask, retrieve, or hand off","The agent selects read-only sources; the support form remains human-controlled",[
+            (650,300,"Scoped question","The generated client sends question, partner ID, and thread ID through the public API."),
+            (640,500,"Source routing","Record IDs use scoped lookups; broad partner questions use semantic search over curated public snapshots."),
+            (640,650,"Cited guidance","General co-sell/security guidance can cite public sources; this is not company policy or an internal asset catalog."),
+            (1215,455,"Human handoff","The partner reviews and saves a support request; it is stored only in this browser.")
         ]),
-        "annotated-quotes.svg":annotated("quotes.jpg","03 / Quote status","Recorded progress with an owner, timestamp, and next step",[
-            (1270,310,"Find a record","Search filters the selected partner's synthetic quote list."),
-            (1350,395,"Status, not approval","Pricing review is a source-record status. The agent cannot approve pricing."),
-            (1000,720,"Human boundary","Sensitive questions go to human review rather than an autonomous commercial decision.")
+        "annotated-quotes.svg":annotated("quotes.jpg","03 / Quote status","Local synthetic quote examples; no native Salesforce Quote connection",[
+            (755,170,"Data boundary","All quote examples are synthetic; the connected org's native Salesforce Quotes are not enabled."),
+            (825,390,"No matching quote","This Salesforce-backed demo partner has no local quote examples. Switch to a synthetic partner for a quote lookup."),
+            (825,570,"Human-owned decisions","Pricing, credit, and eligibility questions route to a human rather than an autonomous decision.")
         ])
     }
     for name,content in diagrams.items():
